@@ -1,0 +1,2547 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+  dslVersion="1.0.0.0"
+  Id="f3e8b265-4269-4b39-b7bf-48434c72f2d7"
+  name="Controllers"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="b2e21b4e-1e49-4f24-91ef-a7ceac5a6ca8"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DBusinessPermit.Controllers"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="32b09af7-da2a-4dbe-9545-d01c983eefed"
+        name="AuthController"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="19b017ee-1a72-4df5-878f-9f5965506891"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DAuthController"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="5d86deff-3a9c-4505-911e-67383325fd6b"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5df229d7-772e-490b-b7e6-cec4054c229e">
+                <propertyInstance
+                  Id="f5cc3a96-b9ec-47dd-8ed3-5a315ed30916"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6932c73c-ac4c-46b0-bd27-c61f8d4024c7">
+                <propertyInstance
+                  Id="940c71bb-f9aa-4895-92b5-07f0d950ebe4"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="09779a76-556e-4d3d-bebd-7f74bffe2e7f">
+                <propertyInstance
+                  Id="35330d53-6916-477d-980e-6ad780586186"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="80688168-2ce2-4874-96e8-933e9388ec2e">
+                <propertyInstance
+                  Id="e5319cdc-2ac9-4df3-9d82-4368f3d9babd"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0d7d5a09-79f1-404a-9e45-f6d3e1dd6581">
+                <propertyInstance
+                  Id="fa151dbc-f75c-4526-be01-c29725087eeb"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="57b6ae63-3e9e-4693-8300-abcd7de698a5"
+            isSubstitutable="false">
+            <classMoniker
+              Id="e4358d27-00f3-4fbf-9f85-9644165674f4"
+              LastKnownName="BaseController"
+              LastKnownLocation="Package_1058.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="98ef6cae-0d87-458f-9f58-d767c5cdd4d6"
+            name="Index"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="4f1fe16a-02d8-4888-bf1d-dca11baf14f9"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DAuthController Member%3DIndex"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b98e828e-bede-43e8-8820-bc8705553c36"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eb3ef2d7-09f1-4456-8583-8f00be495817">
+                    <propertyInstance
+                      Id="fa9e04d9-9c31-4ec4-8b53-67682849c505"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="66b09ee6-7a41-495e-833f-26cdf71ea6b1">
+                    <propertyInstance
+                      Id="98dbafaf-ca12-4030-adb8-186780032d30"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a08a54ef-38ac-4834-bc22-4e90d5d0cfbc">
+                    <propertyInstance
+                      Id="2db6d620-f69d-4210-81c2-9bfc2afb50c3"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="160fd191-9d4d-4ea2-ac4e-fa0d6aea62b6">
+                    <propertyInstance
+                      Id="6881045d-8ad2-4a7f-b31a-1dcfc39d0b92"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2306b1b7-be1d-490c-8452-2575fd27c620">
+                    <propertyInstance
+                      Id="948abe2d-8c07-4b5c-b95e-928a91768287"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4febe61e-953a-457d-a4f0-237218f1e716">
+                    <propertyInstance
+                      Id="c46c68c8-96ba-4463-b243-696332fbc89f"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0e46d7db-2ea7-4cb6-b6f8-425f227484af"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="63563b52-9762-40a6-aef0-dd210e766573"
+                      LastKnownName="ActionResult"
+                      LastKnownLocation="Package2_1058.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f5f37968-c4db-4962-8d49-6f30c4814778"
+            name="Index"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="24b0bb0d-f24c-4a24-b099-772cbd93b02a"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DAuthController Member%3D(Name%3DIndex OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Models Type%3DLoginViewModel)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="8c144985-b5bd-474e-9705-f2e37d357c6f"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3e382ddd-d908-43da-ba0f-0b7f7584c5d1">
+                    <propertyInstance
+                      Id="9c634dd1-918f-4637-815b-3a8cbd5d64e2"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="82485baa-e63f-4f48-8c35-bbd8c315a362">
+                    <propertyInstance
+                      Id="186b20c1-3310-4dae-ab7d-0579febe3164"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b773b119-7030-4011-9674-f90700deccaa">
+                    <propertyInstance
+                      Id="45537dd7-7161-479e-8caa-0d1e05f5d6e2"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b81277b6-fa48-4994-9a2f-9940c7e9b6c2">
+                    <propertyInstance
+                      Id="3448a029-9be5-42a3-8f85-75b1994aa795"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="112bc411-03b4-4149-b9fc-18a14e562093">
+                    <propertyInstance
+                      Id="69b30942-1297-4bf5-b49d-a305101a48d5"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="42bb5ca8-32a9-43e0-9e0e-e84395ca29e0">
+                    <propertyInstance
+                      Id="1a05abbe-b2ef-48e4-811e-b22c4a2b23cc"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e044dba1-4699-4474-b477-ef06f6a41f63"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="63563b52-9762-40a6-aef0-dd210e766573"
+                      LastKnownName="ActionResult"
+                      LastKnownLocation="Package2_1058.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7cd95f4b-713b-4afc-a694-da58ff9686d1"
+                  name="model"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="de66acd0-70c9-449b-aacf-7ba9add15962"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DAuthController Member%3D(Name%3DIndex OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Models Type%3DLoginViewModel)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dmodel"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="a857ac0c-64a6-444d-9120-ff962bacfb8d"
+                      LastKnownName="LoginViewModel"
+                      LastKnownLocation="Package1_1006.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="88d0957e-ecd2-4127-93b5-79a92db51a9e"
+                  name="returnUrl"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="75c69185-b692-4a00-ac68-5891de8d32ed"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DAuthController Member%3D(Name%3DIndex OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Models Type%3DLoginViewModel)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DreturnUrl"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="bebmodel.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e9ad3ac3-c04a-48ea-90f1-95eb11273221"
+            name="Logout"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="627242c5-3ea2-44c6-9c46-89dbf02116f1"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DAuthController Member%3DLogout"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="58f8a602-9424-413a-ac01-71eee068fbf7"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1743a16e-9a3d-4555-8972-848be7ac9c5c">
+                    <propertyInstance
+                      Id="a6013fd9-2723-4bb0-81d6-404e58bc4b15"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9d42c4e9-e414-4f52-9ab6-75c0b609412c">
+                    <propertyInstance
+                      Id="95fda564-8c1d-4985-99f7-b52c6addf619"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c4ec931e-a193-414b-b915-b1742d6090cf">
+                    <propertyInstance
+                      Id="8e05d32c-8183-420a-88be-07d0fae114bb"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a7febc96-8f1a-4eda-9e26-5c670ee39927">
+                    <propertyInstance
+                      Id="7ab8adbb-3d20-407f-85d8-0595a01b0506"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="de89eca5-9255-41ae-b35f-d8fd2e5857f1">
+                    <propertyInstance
+                      Id="97d57df8-a804-4114-ac90-719f19c7ae71"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="19e6b1bc-663f-4160-bee1-4918f178d507">
+                    <propertyInstance
+                      Id="779a60f7-d0ab-492f-a11d-b25eda051776"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="70099453-f60e-437c-9d43-bac6635ac960"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="63563b52-9762-40a6-aef0-dd210e766573"
+                      LastKnownName="ActionResult"
+                      LastKnownLocation="Package2_1058.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="78bb0888-f7b2-4507-8c48-9ed1ad87d20f"
+            name="AuthController"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="7858af93-c823-4db1-a5d5-651c35fbc651"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DAuthController Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="bd38c484-8add-4780-80d9-ed76cbf24e64"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e892c162-a460-482b-8970-f39770eefcb3">
+                    <propertyInstance
+                      Id="db573b25-3e26-42dd-bcd1-83bd00d32124"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="07bbb929-9c5e-4e3a-ba09-8fb0d291a467">
+                    <propertyInstance
+                      Id="42d36ef7-0672-4222-b88f-6a741a7196cc"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="732474bf-5185-4ee4-a1a8-361320507201">
+                    <propertyInstance
+                      Id="d6a6edba-fe38-4254-aed6-589626e57ed0"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ea13006a-578f-406f-be4a-74a3a4308788">
+                    <propertyInstance
+                      Id="dc743134-5f6e-408b-a73c-d2dbe2aea5e8"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e5632edc-0d9e-411a-b665-c55b81c7aa2f">
+                    <propertyInstance
+                      Id="c61e2c24-b12d-4c75-9245-80ad546f3e55"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a597b346-11fa-4926-9213-13f9b5e59fbf">
+                    <propertyInstance
+                      Id="db64788a-d8cf-48fa-8c70-05779b0e95e8"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="e4358d27-00f3-4fbf-9f85-9644165674f4"
+        name="BaseController"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="b9b40f52-d19a-488d-a923-e6072636d6a2"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DBaseController"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="3f2f1a59-786a-4079-ba32-df26f0f88e0d"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="af69437b-7e6a-4da2-b063-76d8b461768e">
+                <propertyInstance
+                  Id="c353afd4-f58f-47b7-80a6-f77fe7939e3d"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4f116fe8-8087-45ac-9f03-d756205350b2">
+                <propertyInstance
+                  Id="233a8c31-3905-4c5f-b374-c043b3ff15fe"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e61b8805-4c0b-4119-acb7-2fdde63fd779">
+                <propertyInstance
+                  Id="4781c4b6-caec-4cf4-87f4-adfd38eadce7"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="06facccb-bf51-4354-a895-1da948498ae4">
+                <propertyInstance
+                  Id="06812961-e80b-462f-b84f-d633a8487069"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4208ec03-02ec-46f0-8e16-2b5c633c7b16">
+                <propertyInstance
+                  Id="3603e16c-edeb-4c57-ad8a-707d951caff1"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="1083ac30-45a0-451b-a6c1-3cba21ccfe5f"
+            isSubstitutable="false">
+            <classMoniker
+              Id="3a4a3b1b-b0b0-42f3-b4d0-3a60d278a2bc"
+              LastKnownName="Controller"
+              LastKnownLocation="Package2_1058.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="e3ef73f9-b54c-4bd2-90a4-08aa2d405e21"
+            name="CurrentUserId"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="77da5d4b-0067-4393-9add-12f416147053"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DBaseController Member%3DCurrentUserId"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="72e38081-a568-40ba-a55d-b8614172b9f6"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c2addfe4-118b-4883-9502-b043fecc6dc4">
+                    <propertyInstance
+                      Id="1cf21e4e-68a7-4380-8afd-492b7d24b91d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fff9d7b6-7611-47ef-a73b-bfeef824a93d">
+                    <propertyInstance
+                      Id="945b2b01-6b8b-4800-b0b2-79e0954792cb"
+                      name="Get"
+                      value="protected" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b0a07465-314c-445e-b29c-3baa8e2a0528">
+                    <propertyInstance
+                      Id="dae5516c-64b6-49de-b6ea-520a867033cf"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f1ea5ed7-c821-4013-9b6e-cb89d4dd5dc1">
+                    <propertyInstance
+                      Id="7b885396-2421-4bfa-8f5b-56fa22454ca1"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="30a64dce-d80f-48b0-9b57-cdda7c7703db">
+                    <propertyInstance
+                      Id="1c778d08-1724-464a-84ea-9b6a279f4b77"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="68270012-131f-4f08-9976-dd89c0f929e5">
+                    <propertyInstance
+                      Id="3d0d850c-725c-4e6a-b93c-9b635463f826"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="00364e47-ce2d-41be-9a93-aa783526a208">
+                    <propertyInstance
+                      Id="18d06291-1405-4b4d-9acc-2608e4996377"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="bebmodel.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="d914cafe-ec36-4b63-82ce-ad3afd3c48eb"
+            name="CurrentUserFullName"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="8bc9efa7-c655-478b-bc0f-a18364c6e4e5"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DBaseController Member%3DCurrentUserFullName"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="7e910ec5-4408-4ae4-bbb1-c0a5fbf990f9"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="49151db4-cb40-453f-ac0b-6550b0bfe72c">
+                    <propertyInstance
+                      Id="df30759d-2792-4c54-b05e-690f18e7beff"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="943043dc-125c-4534-95e2-176a001c2d7e">
+                    <propertyInstance
+                      Id="3bcfd9ce-239b-4ed4-bac9-078323e23fec"
+                      name="Get"
+                      value="protected" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0432dd18-b71a-4124-91aa-ce375a02e074">
+                    <propertyInstance
+                      Id="c8de11b1-69bb-4bb5-b4d5-7e84716402ed"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="be0bc68d-5409-42e0-8ddc-49a372cd160f">
+                    <propertyInstance
+                      Id="c427df28-db01-45a8-88d9-db653e315982"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b18f8e86-6d98-4bc4-983e-36ea97ef4fc4">
+                    <propertyInstance
+                      Id="2d7a32b4-90bf-42f8-81b8-c743e336953f"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9bc6fde2-c303-4f09-85d9-f92712b949af">
+                    <propertyInstance
+                      Id="a67d9baa-d526-49c5-9d31-467526eaca1a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f29611be-b0ed-4519-b4b1-d94ef76bbd3b">
+                    <propertyInstance
+                      Id="94804d8e-7b96-4812-b584-4cab7ba18dbd"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="bebmodel.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="90aa41f6-0dd9-4aaa-8d97-e73a971a3b6e"
+            name="db"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="78322f51-7eea-43c0-8214-76752616faef"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DBaseController Member%3Ddb"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="36565a59-90fb-4d47-b79b-a5280436822e"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b500f73d-117c-4a79-b3f5-855467943658">
+                    <propertyInstance
+                      Id="e840a18f-9dd7-4b7b-9cd1-fea54e6bcb0d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="77252e46-03fb-4a63-8f8f-7f3d9c625f5c">
+                    <propertyInstance
+                      Id="f8769a14-a30e-40be-9d31-e30d308fc5e5"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4214736f-6c72-49f2-9d5a-13ad3e9d1a24">
+                    <propertyInstance
+                      Id="4aae6ca4-73bd-4354-9ddc-d6454789c693"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e12dfd1f-f7d6-4365-91ed-e08c640de51e">
+                    <propertyInstance
+                      Id="59ef355c-eaf2-4bb8-a71a-1e6af3729b20"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2f6192ba-ce62-4e32-ba43-09925983e3ae">
+                    <propertyInstance
+                      Id="7d9ff5a9-4664-4299-8447-fd2606bef666"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="012d1021-f6fb-4f82-a5bb-5266f5796708"
+                LastKnownName="ApplicationDbContext"
+                LastKnownLocation="Package1_1006.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="ce37df7a-04dc-4e82-b428-6351ee432091"
+            name="SetUserCookie"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="8c11f536-4026-44c9-9534-ddc925db05ae"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DBaseController Member%3D(Name%3DSetUserCookie OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Models Type%3DUsers)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="fa1b5b90-f7cc-44c8-a9ea-3d08e574c246"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c573ca8b-9e5e-4a06-9750-94c4e28b97f2">
+                    <propertyInstance
+                      Id="fd682716-dd21-4cd2-b6ea-ee0be8e9ef5f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a50902f2-e280-493c-b298-715fe025a977">
+                    <propertyInstance
+                      Id="0848b656-2b98-441e-8b26-9731fce0c552"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c156bca3-6bd1-42ec-80fb-1cc4990b55f7">
+                    <propertyInstance
+                      Id="64888d83-fc72-4e38-a692-d3097b5a0f28"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c2a21ed9-2ada-4e46-a51f-6f818d9b798f">
+                    <propertyInstance
+                      Id="146c82f9-bd22-4e82-af86-7354a19b87e4"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d67944e2-22a3-416c-b8d3-9b316b16661a">
+                    <propertyInstance
+                      Id="1395d569-af33-464a-af3e-ccbf2fa8783d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="12143b6c-2e89-4b19-9119-d0d4f1c8cba8">
+                    <propertyInstance
+                      Id="cc9c8984-f98b-430b-8330-d3721093d825"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="75f4fde1-1ded-41ee-931d-1cc698f9a2e5"
+                  name="data"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="f20688f0-71db-4795-a031-357f30cd82c3"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DBaseController Member%3D(Name%3DSetUserCookie OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Models Type%3DUsers)]) ParameterIdentifier%3Ddata"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="3ab09ae1-72d8-4741-906e-61671cb6626a"
+                      LastKnownName="Users"
+                      LastKnownLocation="Package1_1006.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="80205ab5-280a-4ff9-a84c-8a227473f5ff"
+            name="Dispose"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="86bc8b81-b3f2-496a-9a46-620f24742822"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DBaseController Member%3D(Name%3DDispose OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="289b7643-7b85-44b3-9432-758c8d571b7b"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c53332d5-0d8b-47cd-a1da-cc0fa02907a1">
+                    <propertyInstance
+                      Id="162036e6-332c-4808-adf9-e6bb6f1ea88e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="84481a4e-4edf-4c33-8996-dc2b67bda183">
+                    <propertyInstance
+                      Id="ac2c7065-b8bf-4bfa-820f-cf203fdd5d65"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2316e90b-008d-48a4-b3db-c243ac65ac45">
+                    <propertyInstance
+                      Id="d81614a0-0f92-45ad-986b-b0386ee6c45d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4fc4817a-e14f-4efd-a2a1-d257db982974">
+                    <propertyInstance
+                      Id="a5054a78-9468-4116-af33-a035060ac4dd"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="181d762f-f82a-4ad4-aca6-193ec8189563">
+                    <propertyInstance
+                      Id="0e251c23-fc11-4edf-87c2-55981338d203"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6e737cbd-452a-4afe-bc85-434e5b69ee72">
+                    <propertyInstance
+                      Id="b4029b4e-0306-4412-9e4f-c6c4ae4f1d22"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d663d319-8c23-44b0-a46c-29865df17615"
+                  name="disposing"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="9734230b-03e0-4c66-a440-16efa5721f62"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DBaseController Member%3D(Name%3DDispose OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]) ParameterIdentifier%3Ddisposing"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="bebmodel.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="33469541-06a6-4dcb-a226-17309afd1a18"
+            name="BaseController"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="b1c4ed86-41c7-4f26-bec3-f0338149aced"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DBaseController Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d27d5871-e1bb-4995-9bdd-9d040cd9cb64"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="93bb03f4-4183-4a88-aed2-0b758dfa2c0b">
+                    <propertyInstance
+                      Id="bf8f9625-a7d2-4b58-accf-129603862cb2"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="92ebdfb6-e9ac-4b23-bac2-5550cf693c40">
+                    <propertyInstance
+                      Id="5b6fb7e6-66d4-479f-981c-bfbe0f29941d"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="539c672c-368f-4acf-acff-be958fe1829e">
+                    <propertyInstance
+                      Id="283dfcd3-44d4-484d-9f9c-7e6f98c8b0ab"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="31f03656-95e7-4420-9638-d42732e37f4c">
+                    <propertyInstance
+                      Id="3a13312e-f6ca-4681-9a68-b39f0efcc87d"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cff8c8ba-3a6b-4e32-9682-925f9808df80">
+                    <propertyInstance
+                      Id="a943e094-8375-475a-b417-76788896c643"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f769753c-389a-44bf-a8f0-ab0c9f451d22">
+                    <propertyInstance
+                      Id="f4bbd3f8-2dd0-48f8-beb1-ed5dd4effce5"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="0bfcfde2-6b15-4062-9cde-a05c04e8b3c4"
+        name="DashboardController"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="466137e4-d39d-4176-98fe-0ffae3b3daff"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DDashboardController"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="8ce50acd-d08a-41f3-9262-4faeefccacf6"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a0b4f75a-e1f5-4aa6-91aa-ef1c6a853d35">
+                <propertyInstance
+                  Id="a54c825d-1556-41ba-8ee8-2860d464cc26"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="692befe3-38c1-4df2-ab5a-34936255cce4">
+                <propertyInstance
+                  Id="ed3c4259-4ee6-44f3-8dd6-47714c62ed90"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="282cac98-bd5b-49cc-82e5-28dda9d6949a">
+                <propertyInstance
+                  Id="b778e50b-1dd6-4893-83dc-eac72eb60294"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="495b3d8f-2cc2-4fa1-8c14-4ca8006218b4">
+                <propertyInstance
+                  Id="4ece7ad1-c648-4198-a870-0940d7199675"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="59b6df3b-9cd2-4bd4-8d97-964c62109a96">
+                <propertyInstance
+                  Id="c34fac55-1e7f-4c69-8102-7c32b3058456"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="713edba4-1855-4be3-808d-7a6254415d59"
+            isSubstitutable="false">
+            <classMoniker
+              Id="3a4a3b1b-b0b0-42f3-b4d0-3a60d278a2bc"
+              LastKnownName="Controller"
+              LastKnownLocation="Package2_1058.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="4c455f5c-c5b4-4f98-860c-ff74de296970"
+            name="DashboardController"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="28806415-a7ce-468d-ab32-d19a8b2585b7"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DDashboardController Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a6718af8-069b-4ce9-bbc7-ce1123cddeac"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b544d3fc-139d-4599-8858-57f8ce668bcc">
+                    <propertyInstance
+                      Id="1a0285d0-cec4-42c5-8148-88b91ad64933"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4378438e-f8f6-4d89-a499-2ee0c0b2a0ef">
+                    <propertyInstance
+                      Id="ec48856a-c295-449b-abdf-046ed826b0da"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2d06436f-4da3-4228-bdf9-f913ad332c03">
+                    <propertyInstance
+                      Id="0b34fbe8-da8c-49ef-a4ce-cf4938b542f4"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8ee40e56-00f7-4dcc-9f27-5398edf05277">
+                    <propertyInstance
+                      Id="e6cd52dc-a82a-4e7d-8604-a9d7a522c03b"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1a485b1e-3c7c-4746-a5b8-8a658c2db4cf">
+                    <propertyInstance
+                      Id="2dd59285-a9c4-4ba4-8f08-db43e0a7cce7"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fdecfb6a-0a35-42ba-8305-b29780e8bb42">
+                    <propertyInstance
+                      Id="737ccd31-71ca-4508-8305-93290c7f6a51"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="6acdddf2-7c5d-40c7-9f1b-4626d96f8be8"
+            name="Index"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="86c29bc6-83e3-4572-8e82-8147e8441f4e"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DDashboardController Member%3DIndex"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b27a5b54-54ed-46a3-b434-149b83046593"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="76b46020-4379-4ec7-8fc4-129f99c20e48">
+                    <propertyInstance
+                      Id="dafbaa3b-c640-4e3b-84f6-00f2755303fa"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="74d4dfe7-2056-435f-8bba-9b79c9fe2d1f">
+                    <propertyInstance
+                      Id="406950c2-f436-404d-936d-38d502aa5507"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1a483be1-73d2-40b4-964d-9fa1d59653ae">
+                    <propertyInstance
+                      Id="0a361859-d448-4256-a20b-6740c1d35ba7"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cefe0553-4cc2-405e-aaa7-b0b9547dd830">
+                    <propertyInstance
+                      Id="2515d4e2-f401-476e-bfcd-5e14d0e317af"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9197c8c2-f2e5-408b-bfb9-1e8140e4b38d">
+                    <propertyInstance
+                      Id="380452db-ff20-4777-b027-f5bd12dac84f"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e653f201-3a47-4879-bc6b-a327888e33f8">
+                    <propertyInstance
+                      Id="7a543081-efa0-4d70-a03c-6a34297f2c6d"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c432a03b-0b94-4dd6-8e3f-c65a9cdbd74a"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="63563b52-9762-40a6-aef0-dd210e766573"
+                      LastKnownName="ActionResult"
+                      LastKnownLocation="Package2_1058.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="25eebb27-25ea-4c25-81a7-01b9182e87b7"
+        name="TemplateController"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="06764d8d-682a-49cd-b1a5-52f6fcc1976f"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DTemplateController"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="c6329b34-4c2d-4227-ab61-63a24e262551"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5252e4d0-d76d-419a-a715-2099b4c51398">
+                <propertyInstance
+                  Id="1d9ae7bf-095e-4940-b25d-e4d70a7b431d"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ab864c53-075c-45b6-9797-1e963f835d46">
+                <propertyInstance
+                  Id="345bfbf1-c484-469d-95f9-99d0753d4a3f"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c660b6f3-7214-44bc-acab-ff73f9134681">
+                <propertyInstance
+                  Id="2a0a4dd9-48fb-4b20-9fc9-b3c119a94553"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9b6d6f0e-94d5-4ad6-8320-a0321376cad8">
+                <propertyInstance
+                  Id="a91ca0bc-c1f8-4a38-888b-eb4eb3c7379d"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="32de6191-fdbf-41ac-9e9e-e6ccf06569b5">
+                <propertyInstance
+                  Id="fb260019-1923-4bba-a33d-ab1b6b81ef86"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="1b02a4e0-b93a-466d-ab20-71e941f65c5b"
+            isSubstitutable="false">
+            <classMoniker
+              Id="3a4a3b1b-b0b0-42f3-b4d0-3a60d278a2bc"
+              LastKnownName="Controller"
+              LastKnownLocation="Package2_1058.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="427bee70-5fda-4d3f-8282-d0a0e48d0bc7"
+            name="TemplateController"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="4063e321-b3f5-413d-986c-7f7fbfb73b1c"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DTemplateController Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="214e591c-4f68-4797-9d48-deda00193159"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="93bcfc2d-9522-4a23-90e0-2b064ac2e5ce">
+                    <propertyInstance
+                      Id="dc467524-d979-4cf8-94f2-36736b24de2e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7ce8ebf8-a189-45b4-8fb4-13f57ee595cb">
+                    <propertyInstance
+                      Id="9f02acab-c676-44a7-a92c-41d6dbdecbe2"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="888b9238-37e9-4c94-8837-23670e94a2df">
+                    <propertyInstance
+                      Id="07bcd4ab-5493-4fc2-8bce-1cf03c05d110"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6898dd56-2162-4d50-b1ec-09f2e17c43f8">
+                    <propertyInstance
+                      Id="8be6b437-b0b3-44f5-a69d-6c7a86738e9b"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5572da1c-9926-4c24-8594-2d9b65b61423">
+                    <propertyInstance
+                      Id="6d1dc1d0-c40c-4000-8512-bab10962d759"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a088d996-53fd-4218-b377-464777b209dc">
+                    <propertyInstance
+                      Id="2b99f8b3-e135-4e00-ac72-6752bffa22b9"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="7dd240a1-bca0-432b-a7f0-ca6c94d29af9"
+            name="Modal"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="ff344674-513a-4f17-9982-f136759668f3"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DTemplateController Member%3D(Name%3DModal OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Models Type%3DModalTemplate)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="76aef3e9-6736-4800-b647-9fd3700fa0ee"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b4749174-4670-4f94-a776-843020bbd6ef">
+                    <propertyInstance
+                      Id="46cc7aaf-f8de-41ff-b701-583d5e0ede14"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3ac0e7aa-8f75-4419-8d34-68909fff081b">
+                    <propertyInstance
+                      Id="30d7a4b3-e9d0-42d9-af6d-1bca01b54e9f"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ffc2121d-a95f-4ded-9468-29a88adca29a">
+                    <propertyInstance
+                      Id="8fb4fbca-e8a5-4494-8af4-3db7ff96c6f8"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ca366b99-8766-43c1-970a-f70e25c103bf">
+                    <propertyInstance
+                      Id="9a1c8beb-399b-4772-b893-e49f95adf178"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dcae7595-58bd-4cad-9899-f002ba1bf29e">
+                    <propertyInstance
+                      Id="b318cd85-7e5a-483a-a255-49516cbb08b1"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="082c5788-f575-4d40-a986-b68d6d7f1b33">
+                    <propertyInstance
+                      Id="8809d57d-b606-40a2-ba1b-70e55ce8121c"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b6e71bf4-d9c1-455a-af8d-a9a64613423e"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="63563b52-9762-40a6-aef0-dd210e766573"
+                      LastKnownName="ActionResult"
+                      LastKnownLocation="Package2_1058.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1ad769a3-8ca9-4b6e-8a58-3a438eb4f17b"
+                  name="model"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="523e162d-578c-4969-91ba-4d2508c316de"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DTemplateController Member%3D(Name%3DModal OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Models Type%3DModalTemplate)]) ParameterIdentifier%3Dmodel"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="f2ade4f1-d716-4e81-979c-d53bc356d247"
+                      LastKnownName="ModalTemplate"
+                      LastKnownLocation="Package1_1006.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="dda7d852-fae6-4ca6-b0c3-0e9880f56c8d"
+            name="ModalForm"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="9209288f-e079-4907-a8f1-fd88c2ad8737"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DTemplateController Member%3D(Name%3DModalForm OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Models Type%3DModalTemplate)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d13e95bb-8cb7-49b7-b91c-b1e0deb530a7"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="369e273e-6195-4c3c-b556-7a71cdc0d6b6">
+                    <propertyInstance
+                      Id="68be3eb7-4838-4c74-b9ce-a39c0f695304"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="559dfe5b-5232-4293-9c95-4a9dcbeaaf4e">
+                    <propertyInstance
+                      Id="301c4bc8-1b5e-4b18-b6e8-f19623a7082a"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dd4e0fbf-9cc7-40f6-a580-5cfbb8113759">
+                    <propertyInstance
+                      Id="5c8a9462-0887-4411-9a01-467171c338be"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f5343701-d730-4970-9afc-36acb23c9c5c">
+                    <propertyInstance
+                      Id="4d3e863f-fa85-4785-b950-7725436d8719"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bb6b9330-96db-43a6-b53b-3caa7b28d6cf">
+                    <propertyInstance
+                      Id="13027cd0-f1e9-4366-9ec8-532587bcf6bf"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3ac3f9d4-7a5c-46d0-8893-d240e6d1718b">
+                    <propertyInstance
+                      Id="c6343cc3-95a6-449d-9ce0-33918f9089f8"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="528b3a50-57aa-4639-8633-11a173984cca"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="63563b52-9762-40a6-aef0-dd210e766573"
+                      LastKnownName="ActionResult"
+                      LastKnownLocation="Package2_1058.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="da13f1fe-9585-41a7-a9ce-7028c9a3b1c4"
+                  name="model"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="5bbeb6a9-16ec-41bd-9c89-6297fec15fc6"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DTemplateController Member%3D(Name%3DModalForm OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Models Type%3DModalTemplate)]) ParameterIdentifier%3Dmodel"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="f2ade4f1-d716-4e81-979c-d53bc356d247"
+                      LastKnownName="ModalTemplate"
+                      LastKnownLocation="Package1_1006.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="68d3fbbe-4981-406b-8c0c-51684048e54e"
+        name="UsersController"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="57007d07-0976-4b9c-a76e-1f9802360b68"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DUsersController"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="219aebd1-47ec-42f2-bc74-4aa77a01f169"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b59f1895-8347-4797-9c48-2c0491b3c89b">
+                <propertyInstance
+                  Id="847fa4f3-5ca6-4bf9-bf59-2219f231c68a"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="941f4358-0563-4caf-a100-e440d0cf591f">
+                <propertyInstance
+                  Id="bc4fc3f6-67a6-4442-9cd6-ded256b5486e"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="877af0ea-a3b9-43c7-8535-16f92463e9a7">
+                <propertyInstance
+                  Id="8562cc70-fd94-40bc-9132-93395fa3aefa"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1428785f-72a1-4e68-8eb7-77cb29587fe1">
+                <propertyInstance
+                  Id="8422dcc2-6bfd-4f12-85c8-7d00ef59a238"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="06e58384-b299-46eb-9860-c7bfec026126">
+                <propertyInstance
+                  Id="bd5827b5-9783-431c-b809-88b33a3fa9e9"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="eb169420-7ad6-4b81-9b21-07ad21a41b9d"
+            isSubstitutable="false">
+            <classMoniker
+              Id="3a4a3b1b-b0b0-42f3-b4d0-3a60d278a2bc"
+              LastKnownName="Controller"
+              LastKnownLocation="Package2_1058.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="f799a5b0-e7b0-4184-9510-6dba874d2f45"
+            name="db"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="63a24f7b-df9e-4bd3-8ba9-ba2af2e69bf3"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DUsersController Member%3Ddb"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="2728247d-33a1-4912-8f53-280a930d60d5"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eb7228d2-e063-46c6-8edb-1d036258118d">
+                    <propertyInstance
+                      Id="e2ad633a-10cf-4daf-869e-4f1eb1857086"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9f730500-3ed0-4229-aeed-31a22619c304">
+                    <propertyInstance
+                      Id="a5447adc-b95b-43f5-acac-917ca51e26aa"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f712637d-f623-4c89-a574-a17eb9878312">
+                    <propertyInstance
+                      Id="85bc5995-ce67-45df-bef0-fd01b8020bc2"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8bfa0729-30b5-47e5-8b46-a404837c9bc9">
+                    <propertyInstance
+                      Id="0d6aeec5-f4d4-4d2d-833a-6e5108345af3"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="71239463-234a-46b0-91ef-2c4f01a88560">
+                    <propertyInstance
+                      Id="3045cfde-7d23-4786-bdd5-978cee2c1be0"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="012d1021-f6fb-4f82-a5bb-5266f5796708"
+                LastKnownName="ApplicationDbContext"
+                LastKnownLocation="Package1_1006.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="2bb2f8ce-7090-4708-8b22-8ec950c38a17"
+            name="UsersController"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="bf11486c-fc5c-4ade-a14d-d464749c3ef4"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DUsersController Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="cd25df72-57d5-4e65-8acd-eea848df8e98"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5c94b99d-580b-4a70-808a-6b100d717d1e">
+                    <propertyInstance
+                      Id="fe1c43fe-c440-4bf9-95e8-9af62754a0b5"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d9cee2d2-4ab0-47df-ad50-12c0e788921e">
+                    <propertyInstance
+                      Id="4a361c02-2f84-45e7-b50a-73ddf0883267"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ccc71a6a-b9eb-48bb-974d-bc2889600740">
+                    <propertyInstance
+                      Id="a6d3eeef-58ea-4741-8dce-11b0e4dd82e9"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e0d25c94-1192-4455-86ba-230a74c6c319">
+                    <propertyInstance
+                      Id="8cc017eb-84db-4d80-86ba-6507b8adb0c8"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="71e5f26f-aef2-4442-a89e-491eb467ba36">
+                    <propertyInstance
+                      Id="8710c1a0-4d2c-40dc-8aaf-ea41fdd29bd9"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7ea3cce1-9524-47ce-8d96-1b6ed5a3a2b8">
+                    <propertyInstance
+                      Id="3637f80e-2caa-4472-a38b-9654c87b832c"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="c86f113e-51fb-4e9c-b519-8ed76bfb6456"
+            name="Create"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="2cbe31bd-4be6-4330-b0dc-066407864d73"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DUsersController Member%3D(Name%3DCreate OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Models Type%3DUsers)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="20603a59-7551-4373-ad04-bbec986d03b6"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="92f56603-747a-452e-a07f-24206737385e">
+                    <propertyInstance
+                      Id="255ee20b-c022-4bd8-a9b4-4c8da19bc10d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="23254cc6-7388-4fa0-9353-86ad0fab897a">
+                    <propertyInstance
+                      Id="284bbd0d-a4f6-45f2-ba17-dde288f7edef"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="39304dae-ae1b-449e-940d-6c46cc21a8c4">
+                    <propertyInstance
+                      Id="a0bb6821-ec05-4f9a-b976-ce5fa7a8cfa5"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aef4f4f2-4e70-4cdd-9b65-8162d8295755">
+                    <propertyInstance
+                      Id="ff407243-9db0-49db-a619-5d7871e88453"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="33e96ecb-2162-43a7-a120-05eb05796d5f">
+                    <propertyInstance
+                      Id="2a7c94c6-bde9-42d6-adf0-653af81f72f9"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="981246e0-ffd5-4075-9694-48d27e9649e0">
+                    <propertyInstance
+                      Id="133f6cd9-822a-4697-80c1-02078c2228e5"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="858bd4aa-4b0e-411b-bddd-94211843563c"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="63563b52-9762-40a6-aef0-dd210e766573"
+                      LastKnownName="ActionResult"
+                      LastKnownLocation="Package2_1058.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d280533f-c64e-4bd7-a854-7d78779f9d54"
+                  name="users"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="1696b418-ee25-4e35-a0d0-b91a5b9dcb5d"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DUsersController Member%3D(Name%3DCreate OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Models Type%3DUsers)]) ParameterIdentifier%3Dusers"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="3ab09ae1-72d8-4741-906e-61671cb6626a"
+                      LastKnownName="Users"
+                      LastKnownLocation="Package1_1006.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1f0dcb08-3590-4e4a-b414-3aa030270349"
+            name="Delete"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="2ccc3c9e-42a6-45c7-907c-0b090a1b31bd"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DUsersController Member%3D(Name%3DDelete OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="99477dc1-214c-4abd-97d3-35b2abdef99b"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="db8ded27-f593-43eb-8015-ade313ffd119">
+                    <propertyInstance
+                      Id="12a7538e-1cf1-4b15-9521-cef81f93a31d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="275a0564-93a8-4c44-8d7b-e83a8b1ec702">
+                    <propertyInstance
+                      Id="fd0efae6-da26-4841-8de5-d08e2732d4d0"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="053d0068-d9a3-4180-a267-452f818e9ae4">
+                    <propertyInstance
+                      Id="0ec75ddd-79d0-410c-80c0-ec4a22b0b8fa"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6747c690-76df-4bd9-ad22-57c62905d842">
+                    <propertyInstance
+                      Id="d33140bd-146b-42b0-8ee9-8940fe98ffa1"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c1d009a2-4ce6-4e47-8785-d0f0e6dffcd5">
+                    <propertyInstance
+                      Id="7db88fa5-3d1c-46c5-9b41-1b115a3b1725"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="200a91fc-bf05-4214-86c0-0d3c3258360f">
+                    <propertyInstance
+                      Id="e1180392-cfe0-4111-9dac-5b268d8f431b"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4ce0e184-e889-4d0b-b553-13e6c8b0eaf8"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="63563b52-9762-40a6-aef0-dd210e766573"
+                      LastKnownName="ActionResult"
+                      LastKnownLocation="Package2_1058.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c0d461e5-7c04-4a1b-a1d2-884a35e9446d"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="1ee35029-0005-4e06-af84-d888f285fc85"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DUsersController Member%3D(Name%3DDelete OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]))]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="9d11d91f-ece2-41ee-8ca5-79f2d8b9c166"
+                      LastKnownName="Nullable&lt;Int32‎&gt;"
+                      LastKnownLocation="Package2_1004.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="33a7236a-79c0-4031-a9c8-1e6b8715c33d"
+            name="DeleteConfirmed"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="e916632b-a183-43ba-ba9d-d44111f19302"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DUsersController Member%3D(Name%3DDeleteConfirmed OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="ab25620b-dbe3-438a-a968-8183f4912deb"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e2b489bd-cb53-4026-8923-86e0efd55f23">
+                    <propertyInstance
+                      Id="6643444b-75d8-4010-b911-7317dd39cf7b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1aa5e88a-462a-444b-8458-b6a0a7a1cb3f">
+                    <propertyInstance
+                      Id="31e47578-bc0d-4874-aac6-6180245bfdcd"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c743c663-6f97-4bf1-a264-cc1139722fc5">
+                    <propertyInstance
+                      Id="cf771e0e-d3df-47c1-9cdd-0cc7faf59d4a"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="efe8be77-2ee7-4eb7-a288-86a1a097067c">
+                    <propertyInstance
+                      Id="9e2daa5e-e88b-49a5-8ad0-7e39274ef094"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f2da90fb-8678-4c1d-b922-9de18fa1e9ec">
+                    <propertyInstance
+                      Id="925672da-853e-4661-a331-5211378196fd"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f5b5d1c2-a904-460a-8956-f31a931ad64e">
+                    <propertyInstance
+                      Id="b594fac8-edda-45e2-8a61-05b09d8569e6"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="04ed7586-de3d-4e9e-9f8e-b3f40648d786"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="63563b52-9762-40a6-aef0-dd210e766573"
+                      LastKnownName="ActionResult"
+                      LastKnownLocation="Package2_1058.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9d6a103f-ada8-43ec-9bb9-872f09ce63bd"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="1ca33c59-168a-4b55-a18c-17e0881c12d4"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DUsersController Member%3D(Name%3DDeleteConfirmed OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="bebmodel.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="3d0728ec-688d-4e44-8a9e-6c629a448cf2"
+            name="Details"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="621a1539-4bf1-4d60-b904-43405877d2c6"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DUsersController Member%3D(Name%3DDetails OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="ecde6e59-e6cf-4e6f-8891-7435a7c88085"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cc7b6999-fdbf-4814-9714-45d7d4198b93">
+                    <propertyInstance
+                      Id="1efb3b5c-bd23-472d-8166-2c504c709436"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d84ae9b3-5505-4ada-843b-097265082117">
+                    <propertyInstance
+                      Id="9a15a5cb-77fb-4208-8467-6dfb08b4ac89"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d18e4d55-38aa-4360-aaab-c8e37c40001b">
+                    <propertyInstance
+                      Id="5c8a3c6d-aa18-454e-a6e3-571096501fc1"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="72a2ce16-9456-46cd-a3db-993b83ebea11">
+                    <propertyInstance
+                      Id="139ff094-b114-4470-803d-947f72e251ed"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="78260a4a-f11a-49a8-ad57-740cfedc8640">
+                    <propertyInstance
+                      Id="7abbfb6f-b320-4730-9634-c615d2ece206"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2985bb30-219d-44ea-8640-1d03a39642a4">
+                    <propertyInstance
+                      Id="9546ed95-9a7e-4c7a-998d-e4a1bf04f6a5"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="38c72909-cf1d-49a5-8a2b-f41fb494a1d3"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="63563b52-9762-40a6-aef0-dd210e766573"
+                      LastKnownName="ActionResult"
+                      LastKnownLocation="Package2_1058.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e54ea0d0-7c66-4497-9e8a-c7dc96e82141"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="fff5263a-4d45-4551-ad46-ae15d869c079"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DUsersController Member%3D(Name%3DDetails OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]))]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="9d11d91f-ece2-41ee-8ca5-79f2d8b9c166"
+                      LastKnownName="Nullable&lt;Int32‎&gt;"
+                      LastKnownLocation="Package2_1004.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="92a95e9f-c449-426b-99b8-4d2d149c004e"
+            name="Dispose"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="d66680c9-5f12-45b8-9215-9c59a0df3f5d"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DUsersController Member%3D(Name%3DDispose OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="6fe4338a-3ce0-4d0c-b5bc-90128fbeae1b"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="23e3a2ef-bbaf-4401-b0d0-5cce77a36961">
+                    <propertyInstance
+                      Id="8e49e198-17f2-472d-a9ca-3e88a7cb2754"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="97296cbb-e714-48fa-ae6a-fc810ae6fafa">
+                    <propertyInstance
+                      Id="f77fcd54-1bd1-4838-8d36-f259d52ee9c1"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5c9479d9-5d5a-4421-926f-ba1837cafc5d">
+                    <propertyInstance
+                      Id="d5594b2c-4bc0-4203-a03e-2d8adc382429"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7b962016-b638-4aa2-a0e9-0d88a6971dae">
+                    <propertyInstance
+                      Id="df1c0134-0ec6-48b3-bdf0-06cb7c94b650"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="56ed1f5b-4fc3-4ac1-a01f-ebef14f24938">
+                    <propertyInstance
+                      Id="54f58c35-2c6a-4e8a-a139-7ee86e809c36"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="052e72cf-eda0-49a7-8ccb-116cde268d26">
+                    <propertyInstance
+                      Id="7c785c11-9237-4788-b3b4-0163f329498f"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ecc610dc-7b2e-472e-8623-ad2c9502374d"
+                  name="disposing"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="2617b024-0aea-47ff-a5ae-7e14c26f9155"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DUsersController Member%3D(Name%3DDispose OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]) ParameterIdentifier%3Ddisposing"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="bebmodel.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="44727316-8bd2-4ca2-b064-76d83aa98030"
+            name="Edit"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="2477114e-7611-4063-b2c0-c3946d391af2"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DUsersController Member%3D(Name%3DEdit OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="5299d06e-5b18-4e02-8b99-0a8678629564"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9652abd1-9aba-44a2-90e7-061e68757e96">
+                    <propertyInstance
+                      Id="7e6d1091-20e6-449c-ade4-f5cd0522ec76"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d06828cb-df01-4ffc-851e-4a2074cb0cf0">
+                    <propertyInstance
+                      Id="5b400f96-9045-419a-9966-ce2b4a7cf8ce"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3a958efa-9160-43e6-a368-0b6ac7f60233">
+                    <propertyInstance
+                      Id="c69dcf80-ddbd-4761-8398-16cc463a805d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2f0f034c-51c2-43ee-b2ca-04f411b5897c">
+                    <propertyInstance
+                      Id="886e052b-9a09-45f9-b602-2aa1cbc834ad"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5aafe7d8-26e6-4385-a24c-5ee88ae562f3">
+                    <propertyInstance
+                      Id="598c53e9-6ad0-4fc2-a4ff-1f593f7cf015"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aa392324-3fa6-4f96-9401-7032f13b6dcc">
+                    <propertyInstance
+                      Id="424dfa94-5710-4c39-ac29-4ef8c8c6fb72"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2f7934fc-7a3c-451c-9f93-b4b5f2c067d9"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="63563b52-9762-40a6-aef0-dd210e766573"
+                      LastKnownName="ActionResult"
+                      LastKnownLocation="Package2_1058.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d8bc6030-de14-4b06-ae3f-bdbf89ecbadf"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="947bceaf-0b55-4254-966e-5842487cefca"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DUsersController Member%3D(Name%3DEdit OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]))]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="9d11d91f-ece2-41ee-8ca5-79f2d8b9c166"
+                      LastKnownName="Nullable&lt;Int32‎&gt;"
+                      LastKnownLocation="Package2_1004.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="9a279c52-4065-42ab-a23a-09cd2bba4823"
+            name="Edit"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="e615d211-1075-4d67-aa86-98c4c8818d97"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DUsersController Member%3D(Name%3DEdit OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Models Type%3DUsers)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="509e4056-6769-48e1-8ee4-cc815c3b8f1c"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="810b5936-36aa-4c7c-a30e-a868e7c61c14">
+                    <propertyInstance
+                      Id="c466cf6e-d646-40d1-9393-44ea417588b0"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b9ddbf0a-c2ef-4d6d-81be-fefb431d36d8">
+                    <propertyInstance
+                      Id="117c5712-b337-476b-a341-1ad7a5986c64"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5b71b103-56cd-46dd-9456-9fe966c557e6">
+                    <propertyInstance
+                      Id="3d29aa89-ccb4-4e75-ac4a-2e423da86d5e"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a0a8e5ad-4fe3-4e5a-aedd-1045e5c65993">
+                    <propertyInstance
+                      Id="4f291c1f-3095-4c78-8277-a70da0ad7f06"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="63f27dea-335f-441c-ab15-2167887bd5a4">
+                    <propertyInstance
+                      Id="52a64ba7-04b0-48f0-a5f7-1164ce76e409"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="87645b7c-da32-4d23-a6df-e47402b9a3e8">
+                    <propertyInstance
+                      Id="1f95f14b-1893-4688-8f1c-2634327795ae"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6f197390-c49f-49f5-b8ce-193d6039004e"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="63563b52-9762-40a6-aef0-dd210e766573"
+                      LastKnownName="ActionResult"
+                      LastKnownLocation="Package2_1058.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9b367e4a-2b33-4109-bad5-a84d980f1647"
+                  name="users"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="0dd70bcc-8f01-4b8b-8360-fa714bcbc867"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DUsersController Member%3D(Name%3DEdit OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Models Type%3DUsers)]) ParameterIdentifier%3Dusers"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="3ab09ae1-72d8-4741-906e-61671cb6626a"
+                      LastKnownName="Users"
+                      LastKnownLocation="Package1_1006.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e4c50920-ce8e-423e-bd90-2f00f89ec84d"
+            name="Create"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="0e5d5e44-e172-4286-8f54-a6144293312d"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DUsersController Member%3DCreate"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4371ae62-17a6-47d5-aa4a-4ac924cadf19"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dbfed8f8-c31f-4670-8f3a-1d34cd71b225">
+                    <propertyInstance
+                      Id="1e618fcc-bdeb-4675-8dfa-908c206fd1a3"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d9a14e55-7104-4683-bfcb-73721851a0a7">
+                    <propertyInstance
+                      Id="cd772c9a-7c86-4cad-99d3-bb7eaa05a83b"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d8bcfa15-7ef5-4f29-b14f-b95aaee7ab44">
+                    <propertyInstance
+                      Id="390ce8f6-8fc0-49aa-a11b-86ebd4628c3b"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f338e6fc-a00c-43a5-9697-8db5613cbe01">
+                    <propertyInstance
+                      Id="85298d47-3924-412f-8455-4f7c3f2f5cb8"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e500bb98-1c3d-488b-ae15-9c8f0fe35dc5">
+                    <propertyInstance
+                      Id="c6a28378-8391-4614-805b-57e8c7e559b5"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0efe13a4-fd9f-42cd-a047-61a2e4ba7117">
+                    <propertyInstance
+                      Id="778b2f92-9982-49e2-8e66-8bd76117d13b"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f9f273f7-2fa9-4ee7-b0fd-5071dfc0bc9e"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="63563b52-9762-40a6-aef0-dd210e766573"
+                      LastKnownName="ActionResult"
+                      LastKnownLocation="Package2_1058.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="72b65ebf-157a-4b77-95dd-08dab5ddabcf"
+            name="Index"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="75e5ea70-aba5-48b1-987c-a737c7c1c952"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DBusinessPermit.Controllers Type%3DUsersController Member%3DIndex"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="9a49a0b1-0fef-4e73-8b65-48a37f4827f7"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="18e46f81-70d4-40eb-a547-9fedde375810">
+                    <propertyInstance
+                      Id="73a289bc-7b6d-44d3-9eed-dba290c7a169"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="da08dde5-213b-4da5-b661-afd766fd15bd">
+                    <propertyInstance
+                      Id="383e4f18-9beb-4a2b-8738-29aef368a754"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e9554bd2-96ba-48f7-8984-1d52ca23e664">
+                    <propertyInstance
+                      Id="7b61a607-d8c0-48f4-b86a-33b3e6f75d21"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="019e69be-9f43-4b5b-a060-5eab30f95fcc">
+                    <propertyInstance
+                      Id="acb2d175-1d31-42f6-ad79-7f2055d7ed97"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e27e5c0d-a011-4121-ba7b-5fa51fa25d9a">
+                    <propertyInstance
+                      Id="2d777bab-06fd-45b0-ad5c-f968387a7de7"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="db44cf0b-89e6-4a59-85a3-0bc0b6b0f02a">
+                    <propertyInstance
+                      Id="027bb61b-6938-42f0-88ef-7a9871374249"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f884e962-9ceb-417f-ac16-a4d1e7564f2f"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="63563b52-9762-40a6-aef0-dd210e766573"
+                      LastKnownName="ActionResult"
+                      LastKnownLocation="Package2_1058.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

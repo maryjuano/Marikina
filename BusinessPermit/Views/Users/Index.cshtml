@@ -1,0 +1,82 @@
+﻿@model IEnumerable<BusinessPermit.Models.Users>
+
+@{
+    ViewBag.Title = "User";
+    ViewBag.CurrentEntity = "User";
+    ViewBag.WebPageTitle = "User List";
+}
+
+@section toolbarleft {
+    <li class="breadcrumb-item"><a href="~/">Home</a></li>
+    <li class="breadcrumb-item active">User List</li>
+}
+@section ToolbarRight {
+    <li><a href="~/Users/Create" title="New User"><span class="fa fa-plus"></span>&nbsp;NEW</a></li>
+}
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Password)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MiddleName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FullName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Password)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmployeeId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MiddleName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FullName)
+                </td>
+                <td>
+                    @Html.LinkWithIcon("Users", "Edit", item.UserId, "fa fa-pencil")
+                    @Html.LinkWithIcon("Users", "Details", item.UserId, "fa fa-info")
+                    
+
+                    @*@Html.ActionLink("Edit", "Edit", new { id = item.UserId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.UserId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.UserId })*@
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

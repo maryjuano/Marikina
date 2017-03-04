@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+  dslVersion="1.0.0.0"
+  Id="44d2c8ef-495d-4fb1-a895-48768d2c35fc"
+  name="Ajax"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="229b96d1-f9cc-49b6-b941-ab7207ac6a2e"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSystem.Web.Mvc.Ajax"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="3b48dc2c-8aae-4e16-be09-cf2c74c22f20"
+        name="AjaxOptions"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="a8b15a46-e979-4f88-a357-eb98b7a129cf"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2Fpackages%2FMicrosoft.AspNet.Mvc.5.0.0%2Flib%2Fnet45%2FSystem.Web.Mvc.dll Namespace%3DSystem.Web.Mvc.Ajax Type%3DAjaxOptions"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="98a6217c-dd05-4cd4-8725-093d225ae5ce"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="02ffc39e-db5b-4090-a724-0fef77cfebd0">
+                <propertyInstance
+                  Id="3306fa8f-2eee-4269-9dd3-1041f1285afe"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="494a7566-146d-4421-8e80-fce15ee4f47f">
+                <propertyInstance
+                  Id="cfb2817f-c509-4a75-84f8-5b021294c66d"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="be757967-df5e-449d-bdda-5e0e3187082c">
+                <propertyInstance
+                  Id="6c1bfd97-85bc-44dd-9965-8555ed3a3a4b"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f0d0c826-a122-4fa0-88e3-83880cae175b">
+                <propertyInstance
+                  Id="ccdc20df-26bb-46a5-be3d-bf55022a7108"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="adff738f-0a36-4a6d-a2b1-f439c94a780b">
+                <propertyInstance
+                  Id="6634e53b-935b-4306-a2c0-8a997dec804a"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

@@ -1,0 +1,766 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+  dslVersion="1.0.0.0"
+  Id="f79ebf37-3046-45bc-9c7c-aad6770748f8"
+  name="Models"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="bb322622-f9f8-4f02-8311-c5bbfab9dc74"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DFinessaAesthetica.Models"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="6c6dfa6b-cde6-4579-a62f-eb5d83ffd83d"
+        name="ApplicationDbContext"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="3a0693c5-b7aa-43b1-ad79-83106df46505"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DFinessaAesthetica.Models Type%3DApplicationDbContext"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="9e9aa816-db21-4ac6-97fe-0ddcfb83879e"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="52612b1b-3469-43ea-97aa-17451c00e6de">
+                <propertyInstance
+                  Id="6b37a18d-9446-416f-a58e-6d3fe71e5f8a"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c07fed3a-b8aa-4356-b54b-5a2ce0db9d79">
+                <propertyInstance
+                  Id="e1261690-f41f-4572-960d-4c4c2c616309"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e94c7fbf-26c2-4536-8884-63924965b4e7">
+                <propertyInstance
+                  Id="275d6336-c607-42b4-8361-56feadee4814"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0c2958be-b42d-4c8d-a4df-5550f53c5ba5">
+                <propertyInstance
+                  Id="6f81477c-522b-46f4-b330-52816a4ea72c"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e625bcf5-5116-4043-9401-706eb9d7e823">
+                <propertyInstance
+                  Id="800eaae3-d28c-442b-939d-43b0286052cc"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="4805605e-19ad-4ab5-89d7-122a1972b7ed"
+            isSubstitutable="false">
+            <classMoniker
+              Id="c75f60f7-cec5-4414-ab5b-825bd21010f7"
+              LastKnownName="DbContext"
+              LastKnownLocation="Package4_1004.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="24a3a313-c061-4082-8a5a-0bcca8e26035"
+            isDerived="false"
+            sourceEndRoleName="ApplicationDbContext"
+            targetEndRoleName="Status"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="ebe2d6ef-a71f-4ea1-ae4d-b1d97e13b2d4"
+              LastKnownName="DbSet&lt;Status‎&gt;"
+              LastKnownLocation="Package4_1004.uml" />
+            <description>Property Status references type DbSet&lt;Status‎&gt;.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="12737049-b220-4e74-963f-aede455e113e"
+                  name="ApplicationDbContext"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="8b13488e-31ea-4047-815a-9873df4a0868"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="52546699-2850-42d8-b76c-5b284c3c0494"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="31cf9afc-72d5-4a70-b10b-7031137d6369"
+                  name="Status"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="68ade897-d03d-41b6-ae4a-7176542c810b"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="93ec7778-25aa-4ed1-a93f-92136e1547a8"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="70b91538-9bfd-4389-830d-758cdf6880de"
+            isDerived="false"
+            sourceEndRoleName="ApplicationDbContext"
+            targetEndRoleName="Suppliers"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="5d3fba36-2160-40e0-8ac4-cc7dbfa8aeb5"
+              LastKnownName="DbSet&lt;Supplier‎&gt;"
+              LastKnownLocation="Package4_1004.uml" />
+            <description>Property Suppliers references type DbSet&lt;Supplier‎&gt;.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="83c0215e-f316-4667-aa25-b6adfbc94d74"
+                  name="ApplicationDbContext"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="02ea50ce-7f67-4b21-abbf-758101c4266d"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="be2b4868-190a-490f-ae43-25104cd48b2e"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e0810b12-3243-443b-a2c8-9ccefcd856cf"
+                  name="Suppliers"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="aaf94d1a-74f9-4f38-b120-15ed344e638d"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="688a8bc6-8120-4c1e-a458-a768be85097a"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="caf48f43-a641-43ec-8704-4d6907a7ff1f"
+            isDerived="false"
+            sourceEndRoleName="ApplicationDbContext"
+            targetEndRoleName="Users"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="fbe7b176-21a5-4817-a861-b54b0661113f"
+              LastKnownName="DbSet&lt;Users‎&gt;"
+              LastKnownLocation="Package4_1004.uml" />
+            <description>Property Users references type DbSet&lt;Users‎&gt;.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5fb720a1-039d-4a4e-8e8b-dd70fbba665a"
+                  name="ApplicationDbContext"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="f77d4f2d-996e-4757-bc32-5528100f92c4"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="eaa507ad-ae7a-406e-adf5-b27d80d2d0f3"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cb198ddc-14b3-43d4-8603-247c6a80d771"
+                  name="Users"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="0041c4b6-11c2-4248-8eb8-34e2608e59ef"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="08fc8fbb-7954-4b7a-8037-869a60c58bd7"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="f33cbce2-4027-4560-89cf-bb1e27009cfd"
+            name="Status"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="66b07779-0382-44f2-83b8-554a5236ca41"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DFinessaAesthetica.Models Type%3DApplicationDbContext Member%3DStatus"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1fa19350-0958-49c3-8b8c-a0c27b5b82df"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="387c78ad-4698-4643-96a8-a22f369a728e">
+                    <propertyInstance
+                      Id="a2bc004e-5a2d-4810-8db8-66d14d07f36a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8eb0ff20-9031-4830-87e8-bac7f4a88037">
+                    <propertyInstance
+                      Id="a9550cae-d980-4e48-bd33-2991b642614e"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4b8f848c-79d2-46a5-bdc2-a9d5c7b7d9d3">
+                    <propertyInstance
+                      Id="b75ea773-cdad-4003-acca-7eb5018a18cb"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4679c3ed-b189-42db-874e-58bdac5df90f">
+                    <propertyInstance
+                      Id="f922f7cb-c14d-4e41-b608-a5d20f2eb8ee"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3d9788fb-3c01-45b2-8d92-46415f651167">
+                    <propertyInstance
+                      Id="552fa084-cdb4-4285-94f3-9ef76e7ecaa5"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a58007d8-c5c2-4eb0-952f-3a25f3836b68">
+                    <propertyInstance
+                      Id="3362a501-c981-40cb-928f-59aa31cfe308"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f34bf242-ab68-44a5-910d-48eed6b10b36">
+                    <propertyInstance
+                      Id="2b68a01a-ef9d-4dcf-858d-219512604b0d"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="ebe2d6ef-a71f-4ea1-ae4d-b1d97e13b2d4"
+                LastKnownName="DbSet&lt;Status‎&gt;"
+                LastKnownLocation="Package4_1004.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="d7755060-c690-4e19-b6af-348fde5e4ed5"
+            name="Suppliers"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="08f128d3-0349-4aa1-8d59-8ba17980c9bd"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DFinessaAesthetica.Models Type%3DApplicationDbContext Member%3DSuppliers"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="40770352-e262-4992-8099-0268464c5ead"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b998da86-8378-4bbc-aaeb-a9b028d53980">
+                    <propertyInstance
+                      Id="312ac0e8-9c79-4941-89fb-ea8671151ce7"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="448689fd-6999-491d-9dc3-ed967a03205b">
+                    <propertyInstance
+                      Id="56e852f3-acd1-4f3c-9920-8d17e1bc29a0"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cf4964a4-c7e1-4a7e-b5bf-56d019ae0db3">
+                    <propertyInstance
+                      Id="38be1a45-8115-43c4-9ddb-c2095a70ff16"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="642e707a-b006-425e-8e9f-fd331559a8e5">
+                    <propertyInstance
+                      Id="f630f0f7-cdca-461f-9f1a-6aea2f83611c"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ca90994e-bdf1-49e5-a1f4-035a787504f8">
+                    <propertyInstance
+                      Id="29688a48-9742-4779-9ccb-5d1f61e45295"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7ab571d4-4dfd-4da8-a731-e00da9358207">
+                    <propertyInstance
+                      Id="30ff8f73-4f1d-4c26-ae89-53af86f2d37b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fa55000b-0221-4fb3-a1a9-d64a53f761b8">
+                    <propertyInstance
+                      Id="14297b62-2f38-4fbc-93f7-8bf3af47fa37"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="5d3fba36-2160-40e0-8ac4-cc7dbfa8aeb5"
+                LastKnownName="DbSet&lt;Supplier‎&gt;"
+                LastKnownLocation="Package4_1004.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="10a89240-8102-4c14-b458-f2819d340f9a"
+            name="Users"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="c81a2762-bac7-49cd-a3b0-183a1e9ae8e7"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DFinessaAesthetica.Models Type%3DApplicationDbContext Member%3DUsers"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="37acf17f-a21a-4c9e-b004-7398cfdcff09"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c6c05bea-526f-4192-985d-9248ddd8d1e6">
+                    <propertyInstance
+                      Id="495dd738-df67-402b-adbf-9f9c8e3705a7"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7b53cc4e-c12d-4c2c-b8b2-35da93093279">
+                    <propertyInstance
+                      Id="f9e68071-04b9-4785-ae85-e412690db4e0"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e907d61e-432c-4602-97a7-47126cbb2beb">
+                    <propertyInstance
+                      Id="f9add163-831a-46ac-939e-e6663b2d508a"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="75bd567e-87d6-4121-8054-5cf6671c16a3">
+                    <propertyInstance
+                      Id="b6f5c0a5-8f55-4e5b-af86-da9b48ef7aee"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="68ec927d-0cf3-4de3-b686-2fb2eb695b7d">
+                    <propertyInstance
+                      Id="db580d8c-932f-4595-8348-ad3be67af746"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4be1d7cd-2559-460e-ab46-d70149a3c5e1">
+                    <propertyInstance
+                      Id="049cf8b3-2405-4740-bf8b-3f9ff6009b25"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2a82632e-ce82-4521-9f8b-fb8bd8acd229">
+                    <propertyInstance
+                      Id="c4de5e03-93a2-4f28-b968-9a8a18c520dd"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="fbe7b176-21a5-4817-a861-b54b0661113f"
+                LastKnownName="DbSet&lt;Users‎&gt;"
+                LastKnownLocation="Package4_1004.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="50f24c01-f8f0-48f5-8cef-94837fd03d83"
+            name="ApplicationDbContext"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="10004877-c295-4d08-b775-fc9b530b727c"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DFinessaAesthetica.Models Type%3DApplicationDbContext Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d5558d71-a61c-44c6-aea2-3ab12450f86d"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="826aed02-cf0f-4849-967e-1ff74d922594">
+                    <propertyInstance
+                      Id="f735a0ee-b0ff-4e71-aada-ba5f1206472c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="173bdfd3-387b-419e-a81d-54eb71038c7d">
+                    <propertyInstance
+                      Id="315a285a-e8c0-4012-a653-badec0330da3"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a405bf6b-eb8f-481f-aded-8a663215dbcf">
+                    <propertyInstance
+                      Id="13c62e90-ee9d-4f4e-82a4-083b55cf5553"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3bcafc05-8eb6-4d2f-b911-d28483a5ae99">
+                    <propertyInstance
+                      Id="f699d400-82b8-4ac9-9451-ad097e31d09e"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c4dc6ff6-c999-4aab-920d-ff518552d629">
+                    <propertyInstance
+                      Id="3382022b-7a18-454d-bcd0-d12b26904e2c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fe6849e1-88c5-4cba-9969-41a4c4a8c10b">
+                    <propertyInstance
+                      Id="344465c3-daac-44a3-b95d-0cb7646bebcc"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="8c09c569-7995-4d7f-a8e3-a2036e39d237"
+        name="Status"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="5fc67f51-bd45-42f2-8d9d-0e1b0ee5e1ec"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DFinessaAesthetica.Models Type%3DStatus"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="5b2e4d98-3fb8-41d1-a230-775d23b2abf1"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a2341d41-ac6f-4f97-ac60-9ddc4ec37988">
+                <propertyInstance
+                  Id="7e9cdefe-394e-49a1-951f-d7c2ef5a8168"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9dbe4e73-1ee6-498e-bef4-12eb018a57d5">
+                <propertyInstance
+                  Id="4bc5f559-406d-43dd-b26c-85319672cde5"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9f6b89be-19d8-4162-8691-7067ab254a8d">
+                <propertyInstance
+                  Id="3985da15-5ed3-4ab4-b920-ef5a5baf0d37"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d602eb51-73b0-43b2-a49c-0d3a58cda2b6">
+                <propertyInstance
+                  Id="cec239e6-2f3c-4817-9499-314a52e57edf"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d6c09947-a227-4b02-b5ce-c7c547224b4e">
+                <propertyInstance
+                  Id="95fa014b-c1f6-445f-ae80-f6c50ec235e3"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2fb95d80-b906-440b-b22c-76169a01167b"
+        name="Supplier"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="12f48999-bac5-4825-9536-6edb096fa3e0"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DFinessaAesthetica.Models Type%3DSupplier"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="c7aa5d9e-1a68-4a49-a614-5ff41796becd"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a9ea4959-1635-4d54-a965-d62c377632ad">
+                <propertyInstance
+                  Id="8ccc3d9b-f141-4b74-9547-14f53e141972"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e20ec224-c18e-428f-ae85-8a0e6fa89faa">
+                <propertyInstance
+                  Id="f5bf1d08-4861-4a80-9868-a4a4ebf07afa"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0be2884d-65d4-4e0e-b705-5b2459accef3">
+                <propertyInstance
+                  Id="8dd3efae-4b72-4622-a8d5-8c6b952d556c"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7b8ebe99-f833-4767-a631-0c43be924554">
+                <propertyInstance
+                  Id="cb889eea-5584-4b97-b4d1-eaf934af7852"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3015e80f-61d4-4951-8041-da2c060d1141">
+                <propertyInstance
+                  Id="6b0e1930-1cd7-456e-b880-7a9ebbb10c97"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="56cefc77-a1e0-4726-b504-6a1cbb1e6aad"
+        name="Users"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="fbb02f98-a100-4ef1-9529-206e4842f51c"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2FBusinessPermit%2Fbin%2FFinessaAesthetica.dll Namespace%3DFinessaAesthetica.Models Type%3DUsers"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="09bcc601-98d8-4d7a-9773-6f1cb5a15763"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="07bf79fa-2108-4cc7-a7f5-d7a9fce7bf7e">
+                <propertyInstance
+                  Id="b9b83ede-d18c-498b-a83e-76875e8744dc"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="140587ef-212e-4966-9f64-5a0af2fc3d3f">
+                <propertyInstance
+                  Id="74e15c77-4780-401e-8a35-7252f2927acd"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7b3496f1-b37c-4cba-a04c-99585684fd7f">
+                <propertyInstance
+                  Id="700f6d48-475e-4801-b070-5731e5a9fd63"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2475d2be-04db-45ff-a3c4-5ae116044fe8">
+                <propertyInstance
+                  Id="c4ae6e78-62a5-48bd-8091-bb67c6651f19"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="dbcd5a52-a8d8-43a4-88d6-4050bb770694">
+                <propertyInstance
+                  Id="fbbe985e-1b5e-43bb-ba94-bf8cf270a3d3"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

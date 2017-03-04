@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 12.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/ReverseEngineeringLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2017-03-01T11:00:24" Importance="High" Text="Reverse Engineering Started." />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: '0f9bd665-e1bf-42b4-8f96-8bb481eb3acf' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: '508b702c-207d-46a2-96ff-771aadc36946' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit' -  (Package)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models' -  (Package)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Medium" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::ApplicationDbContext' -  (Class)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::ApplicationDbContext::ApplicationDbContext' -  (Operation)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::ApplicationDbContext::ApplicationForms' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::ApplicationDbContext::ApplicationTypes' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::ApplicationDbContext::Audits' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::ApplicationDbContext::Fees' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::ApplicationDbContext::OnModelCreating' -  (Operation)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::ApplicationDbContext::OnModelCreating::modelBuilder' -  (Parameter)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::ApplicationDbContext::Status' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::ApplicationDbContext::UserRoles' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::ApplicationDbContext::Users' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Medium" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::ApplicationForms' -  (Class)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::ApplicationForms::ApplicationForms' -  (Operation)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::ApplicationForms::ApplicationId' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::ApplicationForms::ApplicationType' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::ApplicationForms::ApplicationTypeId' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::ApplicationForms::ReferenceNumber' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::ApplicationForms::Requirements' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::ApplicationForms::Status' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::ApplicationForms::TotalPayment' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Medium" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::ApplicationType' -  (Class)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::ApplicationType::ApplicationType' -  (Operation)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::ApplicationType::ApplicationTypeId' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::ApplicationType::Description' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::ApplicationType::Fees' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Medium" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::Audit' -  (Class)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::Audit::Audit' -  (Operation)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::Audit::CreatedOn' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::Audit::Description' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::Audit::Entity' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::Audit::Id' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::Audit::Status' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Medium" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::Fee' -  (Class)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::Fee::ApplicationType' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::Fee::ApplicationTypeId' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::Fee::Description' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::Fee::Fee' -  (Operation)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::Fee::FeeId' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::Fee::Price' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Medium" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::LoginViewModel' -  (Class)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::LoginViewModel::LoginViewModel' -  (Operation)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::LoginViewModel::Password' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::LoginViewModel::RememberMe' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::LoginViewModel::UserName' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Medium" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::ModalTemplate' -  (Class)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::ModalTemplate::Body' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::ModalTemplate::HeaderIcon' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::ModalTemplate::HeaderTitle' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::ModalTemplate::Id' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::ModalTemplate::ModalTemplate' -  (Operation)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::ModalTemplate::PartialUrlPath' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Medium" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::RecordInformation' -  (Class)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::RecordInformation::CreatedBy' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::RecordInformation::CreatedById' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::RecordInformation::CreatedOn' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::RecordInformation::LastModifiedBy' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::RecordInformation::LastModifiedById' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::RecordInformation::LastModifiedOn' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::RecordInformation::RecordInformation' -  (Operation)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::RecordInformation::SetOnCreate' -  (Operation)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::RecordInformation::SetOnCreate::userId' -  (Parameter)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::RecordInformation::SetOnModified' -  (Operation)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::RecordInformation::SetOnModified::userId' -  (Parameter)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::RecordInformation::Status' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::RecordInformation::StatusId' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Medium" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::Status' -  (Class)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::Status::Description' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::Status::Status' -  (Operation)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::Status::StatusId' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Medium" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::UserRoles' -  (Class)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::UserRoles::RoleId' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::UserRoles::RoleName' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::UserRoles::UserRoles' -  (Operation)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Medium" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::Users' -  (Class)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::Users::_fullname' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::Users::EmployeeId' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::Users::FirstName' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::Users::FullName' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::Users::LastName' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::Users::MiddleName' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::Users::Password' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::Users::Status' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::Users::UserId' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::Users::UserName' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::Users::UserRole' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::Users::UserRoleId' -  (Property)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::BusinessPermit::Models::Users::Users' -  (Operation)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::System' -  (Package)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::System::Byte' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::System::Collections' -  (Package)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::System::Collections::Generic' -  (Package)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::System::Collections::Generic::ICollection' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::System::Collections::Generic::ICollection&lt;Fee‎&gt;' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::System::Data' -  (Package)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::System::Data::Entity' -  (Package)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::System::Data::Entity::DbContext' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::System::Data::Entity::DbModelBuilder' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::System::Data::Entity::DbSet' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::System::Data::Entity::DbSet&lt;ApplicationForms‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::System::Data::Entity::DbSet&lt;ApplicationType‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::System::Data::Entity::DbSet&lt;Audit‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::System::Data::Entity::DbSet&lt;Fee‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::System::Data::Entity::DbSet&lt;Status‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::System::Data::Entity::DbSet&lt;UserRoles‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::System::Data::Entity::DbSet&lt;Users‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::System::DateTime' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bebmodel::System::Single' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Boolean' -  (PrimitiveType)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Integer' -  (PrimitiveType)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'String' -  (PrimitiveType)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: bebmodel::BusinessPermit::Models::Audit to bebmodel::System::DateTime (Association)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: bebmodel::BusinessPermit::Models::Fee to bebmodel::BusinessPermit::Models::ApplicationType (Association)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: bebmodel::BusinessPermit::Models::Fee to bebmodel::System::Single (Association)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: bebmodel::BusinessPermit::Models::RecordInformation to bebmodel::BusinessPermit::Models::Status (Association)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: bebmodel::BusinessPermit::Models::RecordInformation to bebmodel::BusinessPermit::Models::Users (Association)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: bebmodel::BusinessPermit::Models::RecordInformation to bebmodel::System::DateTime (Association)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: bebmodel::BusinessPermit::Models::RecordInformation to bebmodel::BusinessPermit::Models::Users (Association)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: bebmodel::BusinessPermit::Models::RecordInformation to bebmodel::System::DateTime (Association)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: bebmodel::BusinessPermit::Models::Users to bebmodel::BusinessPermit::Models::UserRoles (Association)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: bebmodel::BusinessPermit::Models::ApplicationDbContext to bebmodel::System::Data::Entity::DbSet&lt;Status‎&gt; (Association)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: bebmodel::BusinessPermit::Models::ApplicationDbContext to bebmodel::System::Data::Entity::DbSet&lt;ApplicationForms‎&gt; (Association)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: bebmodel::BusinessPermit::Models::ApplicationDbContext to bebmodel::System::Data::Entity::DbSet&lt;ApplicationType‎&gt; (Association)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: bebmodel::BusinessPermit::Models::ApplicationDbContext to bebmodel::System::Data::Entity::DbSet&lt;Audit‎&gt; (Association)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: bebmodel::BusinessPermit::Models::ApplicationDbContext to bebmodel::System::Data::Entity::DbSet&lt;Fee‎&gt; (Association)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: bebmodel::BusinessPermit::Models::ApplicationDbContext to bebmodel::System::Data::Entity::DbSet&lt;UserRoles‎&gt; (Association)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: bebmodel::BusinessPermit::Models::ApplicationDbContext to bebmodel::System::Data::Entity::DbSet&lt;Users‎&gt; (Association)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: bebmodel::BusinessPermit::Models::ApplicationDbContext to bebmodel::System::Data::Entity::DbContext (Generalization)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: bebmodel::BusinessPermit::Models::ApplicationForms to bebmodel::BusinessPermit::Models::ApplicationType (Association)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: bebmodel::BusinessPermit::Models::ApplicationForms to bebmodel::System::Byte (Association)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: bebmodel::BusinessPermit::Models::ApplicationForms to bebmodel::System::Single (Association)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: bebmodel::BusinessPermit::Models::ApplicationType to bebmodel::System::Collections::Generic::ICollection&lt;Fee‎&gt; (Association)" />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="High" Text="(11) type(s) fully reverse engineered." />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="High" Text="(15) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
+  <Message Timestamp="2017-03-01T11:00:27" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
+</Log>
