@@ -13,6 +13,7 @@ namespace BusinessPermit.Models
         }
         [Key]
         public int ApplicationTypeId { get; set; }
+      //[DataType(DataType.EmailAddress, )]
         public string Description { get; set; }
         public virtual ICollection<Fee> Fees { get; set; }
     }

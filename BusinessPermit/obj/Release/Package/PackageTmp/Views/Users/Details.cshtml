@@ -1,4 +1,4 @@
-﻿@model FinessaAesthetica.Models.Users
+﻿@model BusinessPermit.Models.Users
 
 @{
     ViewBag.Title = "User Details";
@@ -83,7 +83,7 @@
 </div>
 
 <span hidden="hidden">
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new { @class = "EditTrigger" })
+    @Html.ActionLink("Edit", "Edit", new { id = Model.UserRoleId }, new { @class = "EditTrigger" })
 </span>
 
 @section Scripts {

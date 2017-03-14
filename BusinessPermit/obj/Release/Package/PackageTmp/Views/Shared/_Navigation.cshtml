@@ -1,4 +1,4 @@
-﻿
+﻿@using System.Configuration
 <nav class="navbar navbar-default navbar-static-top top-navbar">
     <ul class="nav navbar-nav navbar-left">
         <li class="dropdown nav-toggle" onclick="CloseDropDownFromToggle(this);">
@@ -13,64 +13,24 @@
                             <span>Dashboard</span>
                         </a>
                     </li>
-                </div>   
+                </div>
                 <div class="col-md-1 col-sm-1 col-xs-6">
                     <li>
-                        <a href="~/Product/">
-                            <i class="fa fa-product-hunt text-primary fa-3x"></i>
-                            <span>Product</span>
+                        <a href="~/Fee/">
+                            <i class="fa fa-credit-card text-primary fa-3x"></i>
+                            <span>Fees</span>
                         </a>
                     </li>
-                </div>    
+                </div>
                 <div class="col-md-1 col-sm-1 col-xs-6">
                     <li>
-                        <a href="~/MainInventory/">
-                            <i class="fa fa-database text-primary fa-3x"></i>
-                            <span>Inventory</span>
+                        <a href="~/ApplicationType/">
+                            <i class="fa fa-file-archive-o text-primary fa-3x"></i>
+                            <span>Application Type</span>
                         </a>
                     </li>
-                </div>   
+                </div>                   
                 <div class="col-md-1 col-sm-1 col-xs-6">
-                    <li>
-                        <a href="~/Category/">
-                            <i class="fa fa-bookmark-o text-primary fa-3x"></i>
-                            <span>Category</span>
-                        </a>
-                    </li>
-                </div>   
-                <div class="col-md-1 col-sm-1 col-xs-6">
-                    <li>
-                        <a href="~/Colors/">
-                            <i class="fa fa-eyedropper text-primary fa-3x"></i>
-                            <span>Color</span>
-                        </a>
-                    </li>
-                </div>    
-                <div class="col-md-1 col-sm-1 col-xs-6">
-                    <li>
-                        <a href="~/Service/">
-                            <i class="fa fa-user-md text-primary fa-3x"></i>
-                            <span>Service</span>
-                        </a>
-                    </li>
-                </div>     
-                <div class="col-md-1 col-sm-1 col-xs-6">
-                    <li>
-                        <a href="~/Branch/">
-                            <i class="fa fa-home text-primary fa-3x"></i>
-                            <span>Branch</span>
-                        </a>
-                    </li>
-                </div>                     
-                <div class="col-md-1 col-sm-1 col-xs-6">
-                    <li>
-                        <a href="~/Supplier/">
-                            <i class="fa fa-truck text-primary fa-3x"></i>
-                            <span>Supplier</span>
-                        </a>
-                    </li>
-                </div>      
-                <div class="col-md-1 col-sm-1  col-xs-6">
                     <li>
                         <a href="#">
                             <i class="fa fa-file-o text-primary fa-3x"></i>
@@ -78,41 +38,65 @@
                         </a>
                     </li>
                 </div>
-                <div class="col-md-1 col-sm-1  col-xs-6">
+                <div class="col-md-1 col-sm-1 col-xs-6">
                     <li>
                         <a href="~/Users/">
                             <i class="fa fa-users text-primary fa-3x"></i>
                             <span>Users</span>
                         </a>
                     </li>
-                </div>     
-                <div class="col-md-1 col-sm-1  col-xs-6">
+                </div>       
+                <div class="col-md-1 col-sm-1 col-xs-6">
                     <li>
-                        <a href="~/POS/">
-                            <i class="fa fa-credit-card-alt text-primary fa-3x"></i>
-                            <span>POS</span>
+                        <a href="~/UserRoles/">
+                            <i class="fa fa-tasks text-primary fa-3x"></i>
+                            <span>User Roles</span>
                         </a>
                     </li>
-                </div>           
+                </div>
+                <div class="col-md-1 col-sm-1 col-xs-6">
+                    <li>
+                        <a href="~/ZoningForm/">
+                            <i class="fa fa-file-o text-primary fa-3x"></i>
+                            <span>Zoning</span>
+                        </a>
+                    </li>
+                </div>    
+                <div class="col-md-1 col-sm-1 col-xs-6">
+                    <li>
+                        <a href="~/ZoningForm/">
+                            <i class="fa fa-file-o text-primary fa-3x"></i>
+                            <span>Locational</span>
+                        </a>
+                    </li>
+                </div>        
+                <div class="col-md-1 col-sm-1 col-xs-6">
+                    <li>
+                        <a href="~/ZoningForm/">
+                            <i class="fa fa-file-o text-primary fa-3x"></i>
+                            <span>Business Permit</span>
+                        </a>
+                    </li>
+                </div>  
             </ul>
         </li>
     </ul>
     <div class="navbar-header">
-        <a href="~/Dashboard/Index" class="navbar-brand">Cosmetix Unlimited</a>
+        <a href="~/Dashboard/Index" class="navbar-brand">@ConfigurationManager.AppSettings["customer"]</a>
     </div>
 
     <ul class="nav navbar-nav navbar-right">
         <li><a href="#">@if(Request.Cookies["App"] != null){ @Request.Cookies["App"]["fullName"].ToString() } </a></li>
         <li class="dropdown user-info">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                <img src="~/Images/rex.jpg" class="img-square nav-image" alt="User Image">
+                <img src="~/Images/2x2.jpg" class="img-square nav-image" alt="User Image">
             </a>
             <ul class="dropdown-menu">
                 <li class="body-menu">
-                    <img src="~/Images/rex.jpg" class="profile-image" alt="User Image">
+                    <img src="~/Images/2x2.jpg" class="profile-image" alt="User Image">
                     <p class="username">@if (Request.Cookies["App"] != null)
 { @Request.Cookies["App"]["fullName"].ToString() }</p>
-                    <p class="position">Cosmetix Unlimited</p>
+                    <p class="position">@ConfigurationManager.AppSettings["customer"]</p>
                     <div class="pull-left">
                         <a href="#" class="btn btn-sm btn-primary">
                             Profile

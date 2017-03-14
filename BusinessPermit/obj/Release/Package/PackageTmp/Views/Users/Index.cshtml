@@ -1,4 +1,4 @@
-﻿@model IEnumerable<FinessaAesthetica.Models.Users>
+﻿@model IEnumerable<BusinessPermit.Models.Users>
 
 @{
     ViewBag.Title = "User";
@@ -7,7 +7,8 @@
 }
 
 @section toolbarleft {
-    <li class="breadcrumb-item active"><i class="fa fa-home"></i> User List</li>
+    <li class="breadcrumb-item"><a href="~/">Home</a></li>
+    <li class="breadcrumb-item active">User List</li>
 }
 @section ToolbarRight {
     <li><a href="~/Users/Create" title="New User"><span class="fa fa-plus"></span>&nbsp;NEW</a></li>
@@ -67,9 +68,13 @@
                     @Html.DisplayFor(modelItem => item.FullName)
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.UserId }) |
+                    @Html.LinkWithIcon("Users", "Edit", item.UserId, "fa fa-pencil")
+                    @Html.LinkWithIcon("Users", "Details", item.UserId, "fa fa-info")
+                    
+
+                    @*@Html.ActionLink("Edit", "Edit", new { id = item.UserId }) |
                     @Html.ActionLink("Details", "Details", new { id = item.UserId }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.UserId })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.UserId })*@
                 </td>
             </tr>
         }

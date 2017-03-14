@@ -1,4 +1,4 @@
-﻿@model FinessaAesthetica.Models.Users
+﻿@model BusinessPermit.Models.Users
 
 @{
     ViewBag.Title = "New User";
@@ -7,7 +7,8 @@
 }
 
 @section toolbarleft {
-    <li class="breadcrumb-item"><a href="~/Users/"><i class="fa fa-home"></i> User List</a></li>
+    <li class="breadcrumb-item"><a href="~/">Home</a></li>
+    <li class="breadcrumb-item"><a href="~/Users/">User List</a></li>
     <li class="breadcrumb-item actions">New User</li>
 }
 
@@ -83,9 +84,11 @@
                             </div>
 
                         </div>
+
                     </div>
                 </div>
             </div>
+            @Html.Partial("~/Views/Shared/_RecordInformationCreate.cshtml")
         </div>
     </div>
 

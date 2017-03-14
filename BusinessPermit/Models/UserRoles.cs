@@ -6,7 +6,7 @@ using System.Web;
 
 namespace BusinessPermit.Models
 {
-    public class UserRoles
+    public class UserRoles : RecordInformation
     {
         [Key]
         public int RoleId { get; set; }

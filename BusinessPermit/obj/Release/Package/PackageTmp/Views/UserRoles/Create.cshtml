@@ -1,0 +1,59 @@
+﻿@model BusinessPermit.Models.UserRoles
+
+@{
+    ViewBag.Title = "New User Role";
+    ViewBag.CurrentEntity = "User Roles";
+    ViewBag.WebPageTitle = "New User Roles";
+}
+
+@section toolbarleft {
+    <li class="breadcrumb-item"><a href="~/">Home</a></li>
+    <li class="breadcrumb-item"><a href="~/UserRoles/">User Role List</a></li>
+    <li class="breadcrumb-item actions">New User Role</li>
+}
+
+@section toolbarright {
+    <li><a href="#" id="btnSaveTrigger" title="Create User Role"><span class="fa fa-save"></span>&nbsp;SAVE</a></li>
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="ibox-content">
+        <div class="form-horizontal">
+            @Html.ValidationSummary(true)
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="page-header">
+                        <h4>General Information</h4>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.RoleName, new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.TextBoxFor(model => model.RoleName, new { @class = "form-control", @placeholder = "Role Name" })
+                                    @Html.ValidationMessageFor(model => model.RoleName)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @Html.Partial("~/Views/Shared/_RecordInformationCreate.cshtml")
+        </div>
+    </div>
+
+    <input id="submitButton" type="submit" class="hidden" />
+}
+@section Scripts {
+
+    <script>
+        $('#btnSaveTrigger').click(function () {
+            $('#submitButton').click();
+            return false;
+        });
+    </script>
+}

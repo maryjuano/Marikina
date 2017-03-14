@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BusinessPermit.RouteConfig">
+    <Position X="20.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\RouteConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessPermit.CustomHtmlHelpers">
+    <Position X="13" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAQAIAAAAAAAAAAAAAAAAAAEAAAAAAABAAAAA=</HashCode>
+      <FileName>Customizations\CustomHtmlHelpers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessPermit.Encryption">
+    <Position X="16.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Customizations\Encryption.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessPermit.Controllers.ApplicationTypeController">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAACAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\ApplicationTypeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessPermit.Controllers.AuditController" Collapsed="true">
+    <Position X="3.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAACAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\AuditController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessPermit.Controllers.AuthController">
+    <Position X="8.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\AuthController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessPermit.Controllers.BaseController">
+    <Position X="6.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAACAQAAAAAAAAACAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\BaseController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessPermit.Controllers.DashboardController">
+    <Position X="1.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\DashboardController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessPermit.Controllers.FeeController">
+    <Position X="3.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAACAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\FeeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessPermit.Controllers.TemplateController">
+    <Position X="14.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAEAAA=</HashCode>
+      <FileName>Controllers\TemplateController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessPermit.Controllers.UserRoleController">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAACAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\UserRoleController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessPermit.Controllers.UsersController">
+    <Position X="9.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAACAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\UsersController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessPermit.Models.ApplicationDbContext">
+    <Position X="14.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABBCAEAIAAAAAAAAAAAAAAEAAAAAgAAAAAAAQAAAA=</HashCode>
+      <FileName>Models\ApplicationDbContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessPermit.Models.ApplicationForms">
+    <Position X="18.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAgAAAQABAAAAAAIAAAAAAAAIAAAAIAA=</HashCode>
+      <FileName>Models\ApplicationForms.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessPermit.Models.ApplicationType">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAgAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ApplicationType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessPermit.Models.Audit">
+    <Position X="16.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAEAAAgAAAAAAAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Audit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessPermit.Models.LoginViewModel">
+    <Position X="22" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAQAAAAAgAAA=</HashCode>
+      <FileName>Models\Auth.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessPermit.Models.Fee">
+    <Position X="16.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAkAAAAAAABAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Models\Fee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessPermit.Models.RecordInformation">
+    <Position X="18.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQMQCAgAAAAAAAAAAAAAAACAAAABAAAAAAAACE=</HashCode>
+      <FileName>Models\RecordInformation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessPermit.Models.Status">
+    <Position X="13" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Status.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessPermit.Models.ModalTemplate">
+    <Position X="20.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAQAAAAAAAAAAAABAAAAAAAAAAAAAAAQAAAIAAA=</HashCode>
+      <FileName>Models\TemplateObjects.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessPermit.Models.UserRoles">
+    <Position X="20.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Models\UserRoles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessPermit.Models.Users">
+    <Position X="22" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAEAAAAAIAAAAAQAAoAAAAAAAgCAQAAAAACAgg=</HashCode>
+      <FileName>Models\Users.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

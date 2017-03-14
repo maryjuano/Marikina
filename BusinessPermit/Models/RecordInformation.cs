@@ -17,12 +17,9 @@ namespace BusinessPermit.Models
         public virtual int LastModifiedById { get; set; }
         public virtual Users LastModifiedBy { get; set; }
         [Display(Name = "Created On")]
-        public virtual DateTime CreatedOn { get; set; }
+        public virtual DateTime? CreatedOn { get; set; }
         [Display(Name = "Last Modified")]
-        public virtual DateTime LastModifiedOn { get; set; }
-        [Display(Name = "Status")]
-        public virtual int StatusId { get; set; }
-        public virtual Status Status { get; set; }
+        public virtual DateTime? LastModifiedOn { get; set; }      
 
         public virtual void SetOnCreate(int userId = 1)
         {
@@ -34,10 +31,6 @@ namespace BusinessPermit.Models
 
         public virtual void SetOnModified(int userId = 1)
         {
-            if (this.CreatedOn != null)
-            {
-                this.CreatedOn = DateTime.UtcNow;
-            }
             this.LastModifiedOn = DateTime.UtcNow;
             this.LastModifiedById = userId;
         }

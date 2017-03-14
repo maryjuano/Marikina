@@ -65,3 +65,9 @@ C:\Users\i-jcadiao\Documents\beb\Sol'n\BusinessPermit\obj\Debug\FinessaAesthetic
 C:\Users\i-jcadiao\Documents\beb\Sol'n\BusinessPermit\obj\Debug\BusinessPermit.csproj.GenerateResource.Cache
 C:\Users\i-jcadiao\Documents\beb\Sol'n\BusinessPermit\obj\Debug\FinessaAesthetica.Migrations.userrole.resources
 C:\Users\i-jcadiao\Documents\beb\Sol'n\BusinessPermit\obj\Debug\FinessaAesthetica.Migrations.dbupdate.resources
+C:\Users\i-jcadiao\Documents\beb\Sol'n\BusinessPermit\obj\Debug\FinessaAesthetica.Migrations.Permit.resources
+C:\Users\i-jcadiao\Documents\beb\Sol'n\BusinessPermit\obj\Debug\FinessaAesthetica.Migrations.remodeling.resources
+C:\Users\i-jcadiao\Documents\beb\Sol'n\BusinessPermit\obj\Debug\FinessaAesthetica.Migrations.ZoningForm.resources
+C:\Users\i-jcadiao\Documents\beb\Sol'n\BusinessPermit\obj\Debug\FinessaAesthetica.Migrations.Hello.resources
+C:\Users\i-jcadiao\Documents\beb\Sol'n\BusinessPermit\obj\Debug\FinessaAesthetica.Migrations.ZoningClearance.resources
+C:\Users\i-jcadiao\Documents\beb\Sol'n\BusinessPermit\obj\Debug\FinessaAesthetica.Migrations.Status.resources

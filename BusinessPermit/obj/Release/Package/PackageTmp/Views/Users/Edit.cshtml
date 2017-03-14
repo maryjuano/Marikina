@@ -1,4 +1,4 @@
-﻿@model FinessaAesthetica.Models.Users
+﻿@model BusinessPermit.Models.Users
 
 @{
     ViewBag.Title = "Edit User";
@@ -8,7 +8,8 @@
 }
 
 @section toolbarleft {
-    <li class="breadcrumb-item"><a href="~/Users/"><i class="fa fa-home"></i> User List</a></li>
+    <li class="breadcrumb-item"><a href="~/">Home</a></li>
+    <li class="breadcrumb-item"><a href="~/Users/">User List</a></li>
     <li class="breadcrumb-item actions">Edit User</li>
 }
 
@@ -89,9 +90,9 @@
                     </div>
                 </div>
             </div>
-
+            @Html.Partial("~/Views/Shared/_RecordInformationCreate.cshtml")
             <div hidden="hidden">
-                @Html.ActionLink("Delete", "Delete", new { id = Model.Id }, new { @class = "DeleteTrigger" })
+                @Html.ActionLink("Delete", "Delete", new { id = Model.UserId }, new { @class = "DeleteTrigger" })
                 <input id="submitButton" type="submit" />
             </div>
         </div>
@@ -99,7 +100,7 @@
 }
 
 @section Scripts {
-  
+
     <script>
         $('#btnSaveTrigger').click(function () {
             $('#submitButton').click();

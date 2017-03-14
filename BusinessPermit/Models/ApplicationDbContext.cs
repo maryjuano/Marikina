@@ -10,18 +10,18 @@ namespace BusinessPermit.Models
     {
         public ApplicationDbContext() : base("DefaultConnection") { }
 
-        public DbSet<Users> Users { get; set; }       
-        public DbSet<Status> Status { get; set; }
+        public DbSet<Users> Users { get; set; }      
 
         public DbSet<UserRoles> UserRoles { get; set; }
 
         public DbSet<Fee> Fees { get; set; }
 
-        public DbSet<ApplicationType> ApplicationTypes { get; set; }
-
-        public DbSet<ApplicationForms> ApplicationForms { get; set; }
+        public DbSet<ApplicationType> ApplicationTypes { get; set; }    
 
         public DbSet<Audit> Audits { get; set; }
+
+        public DbSet<ZoningClearance> ZoningClearance { get; set; }
+        public DbSet<LocationalClearance> LocationalClearance { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

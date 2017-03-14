@@ -11,11 +11,12 @@ using BusinessPermit.Models;
 namespace BusinessPermit.Controllers
 {
     public class FeeController : BaseController
-    {
+    {       
+
         // GET: /Fee/
         public ActionResult Index()
         {
-            var fees = db.Fees.Include(f => f.ApplicationType);
+            var fees = db.Fees.Include(f => f.ApplicationType).Include(f => f.CreatedBy);
             return View(fees.ToList());
         }
 
@@ -46,10 +47,11 @@ namespace BusinessPermit.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="FeeId,Description,Price,ApplicationTypeId")] Fee fee)
+        public ActionResult Create([Bind(Include="FeeId,Description,Price,ApplicationTypeId,CreatedById,LastModifiedById,CreatedOn,LastModifiedOn")] Fee fee)
         {
             if (ModelState.IsValid)
             {
+                fee.SetOnCreate(CurrentUserId);
                 db.Fees.Add(fee);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -67,11 +69,15 @@ namespace BusinessPermit.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Fee fee = db.Fees.Find(id);
+
             if (fee == null)
             {
                 return HttpNotFound();
             }
             ViewBag.ApplicationTypeId = new SelectList(db.ApplicationTypes, "ApplicationTypeId", "Description", fee.ApplicationTypeId);
+            ViewBag.CreatedBy = db.Users.SingleOrDefault(u => u.UserId == fee.CreatedById).FullName;
+            ViewBag.ModifiedBy = db.Users.SingleOrDefault(u => u.UserId == fee.LastModifiedById).FullName;
+            
             return View(fee);
         }
 
@@ -80,10 +86,11 @@ namespace BusinessPermit.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include="FeeId,Description,Price,ApplicationTypeId")] Fee fee)
+        public ActionResult Edit([Bind(Include="FeeId,Description,Price,ApplicationTypeId,CreatedById,LastModifiedById,CreatedOn,LastModifiedOn")] Fee fee)
         {
             if (ModelState.IsValid)
             {
+                fee.SetOnModified(CurrentUserId);
                 db.Entry(fee).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -116,7 +123,6 @@ namespace BusinessPermit.Controllers
             db.Fees.Remove(fee);
             db.SaveChanges();
             return RedirectToAction("Index");
-        }
-
+        }     
     }
 }

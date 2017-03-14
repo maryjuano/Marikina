@@ -1,0 +1,43 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Marikina City</title>
+    <link href="~/dist/css/metro-bootstrap.min.css" rel="stylesheet" />
+    <link href="~/dist/css/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/dist/css/marikina.css" rel="stylesheet" />
+    <link href="~/dist/css/inspinia/animate.css" rel="stylesheet" />
+    <link href="~/dist/css/site-template.css" rel="stylesheet" />
+    @RenderSection("css", required: false)
+</head>
+<body>
+    <div id="headerWrapper">
+        <div id="headerCenter">
+            <div id="headerTitles">
+                <img src="http://marikina.gov.ph/img/marikinacity.png" width="451" height="79" border="0" usemap="#Map">
+                <map name="Map" id="Map">
+                    <area shape="rect" coords="27,25,425,53" href="http://marikina.gov.ph">
+                </map>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="padding-top:10px;">
+        <div class="animated fadeIn">
+            @RenderBody()
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="~/dist/js/jQuery-2.1.4.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="~/dist/js/bootstrap.min.js"></script>
+    <!-- Theme JavaScript -->
+    @RenderSection("scripts", required: false)
+</body>
+</html>

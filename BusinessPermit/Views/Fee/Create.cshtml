@@ -1,52 +1,78 @@
 ﻿@model BusinessPermit.Models.Fee
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "New Fee";
+    ViewBag.CurrentEntity = "Fee";
+    ViewBag.WebPageTitle = "New Fee";
 }
 
-<h2>Create</h2>
+@section toolbarleft {
+    <li class="breadcrumb-item"><a href="~/Dashboard/Index">Home</a></li>
+    <li class="breadcrumb-item"><a href="~/Fee/">Fee List</a></li>
+    <li class="breadcrumb-item actions">New Fee</li>
+}
+
+@section toolbarright {
+    <li><a href="#" id="btnSaveTrigger" title="Create User"><span class="fa fa-save"></span>&nbsp;SAVE</a></li>
+}
+
 
 @using (Html.BeginForm()) 
 {
-    @Html.AntiForgeryToken()
+    @Html.AntiForgeryToken()  
     
-    <div class="form-horizontal">
-        <h4>Fee</h4>
-        <hr />
+     <div class="ibox-content">
         @Html.ValidationSummary(true)
+        <div class="form-horizontal">
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Description, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Description)
-                @Html.ValidationMessageFor(model => model.Description)
-            </div>
-        </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="page-header" style="margin:0;">
+                        <h4>General Information</h4>
+                    </div>
+                    <div class="row">                      
+                        <div class="col-sm-6">                         
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ApplicationTypeId, "ApplicationTypeId", new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.DropDownListFor(model => model.ApplicationTypeId,
+                               (SelectList)ViewBag.ApplicationTypeId,
+                                         "Select Application Type",
+                                         new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.ApplicationTypeId)
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Price, new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.TextBoxFor(model => model.Price, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.Price)
+                                </div>
+                            </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Price, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Price)
-                @Html.ValidationMessageFor(model => model.Price)
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Description, new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.TextBoxFor(model => model.Description, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.Description)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.ApplicationTypeId, "ApplicationTypeId", new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("ApplicationTypeId", String.Empty)
-                @Html.ValidationMessageFor(model => model.ApplicationTypeId)
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
+            @Html.Partial("~/Views/Shared/_RecordInformationCreate.cshtml")
         </div>
     </div>
+
+    <input id="submitButton" type="submit" class="hidden" />
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+@section Scripts {
+    <script>
+        $('#btnSaveTrigger').click(function () {
+            $('#submitButton').click();
+            return false;
+        });
+    </script>
+}

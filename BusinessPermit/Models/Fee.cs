@@ -5,7 +5,7 @@ using System.Web;
 
 namespace BusinessPermit.Models
 {
-    public class Fee
+    public class Fee : RecordInformation
     {
         public int FeeId { get; set; }
         public string Description { get; set; }

@@ -16,6 +16,7 @@ namespace BusinessPermit.Controllers
         // GET: /ApplicationType/
         public ActionResult Index()
         {
+            var applicationType = db.ApplicationTypes;
             return View(db.ApplicationTypes.ToList());
         }
 

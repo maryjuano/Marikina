@@ -7,7 +7,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <_PublishTargetUrl>ftp://ftp.Smarterasp.net/site1</_PublishTargetUrl>
-    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAUd2sSMs85kiEduN11tVy0gAAAAACAAAAAAADZgAAwAAAABAAAAATWQIxSvqX13g2yJScgJkXAAAAAASAAACgAAAAEAAAACLhzvf8HveM7T0AFXsjyaggAAAASB+TpQua1B9Sqz/WDqSlwzx3QDuuWJ3gHnOvKS7giAcUAAAAKtrJ+0M0urAyTfSfMaw323168nk=</EncryptedPassword>
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAUd2sSMs85kiEduN11tVy0gAAAAACAAAAAAADZgAAwAAAABAAAABeaHh9rog8AzAwyunXVhdVAAAAAASAAACgAAAAEAAAACRtk8bjEUAJld7sfueyAJggAAAA6LGQO9/7cT2P5367s/gChMlUhAe+EllhhDv7h0jesuIUAAAAD2oTqL4a2Mm7X8yQBHUdSOLruQ8=</EncryptedPassword>
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Antlr3.Runtime.dll">
@@ -23,7 +23,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/16/2017 10:17:47</publishTime>
     </File>
     <File Include="bin/FinessaAesthetica.dll">
-      <publishTime>02/21/2017 20:47:06</publishTime>
+      <publishTime>03/13/2017 19:12:09</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
       <publishTime>02/16/2017 10:17:48</publishTime>
@@ -103,6 +103,15 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/WebGrease.dll">
       <publishTime>02/16/2017 10:17:49</publishTime>
     </File>
+    <File Include="ClassDiagram1.cd">
+      <publishTime>03/01/2017 11:07:03</publishTime>
+    </File>
+    <File Include="ClassDiagram2.cd">
+      <publishTime>03/01/2017 11:20:02</publishTime>
+    </File>
+    <File Include="dist/css/agency.min.css">
+      <publishTime>03/13/2017 00:55:58</publishTime>
+    </File>
     <File Include="dist/css/font-awesome-4.5.0/css/font-awesome.css">
       <publishTime>02/16/2017 10:17:45</publishTime>
     </File>
@@ -136,11 +145,20 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="dist/css/login.css">
       <publishTime>02/16/2017 10:17:45</publishTime>
     </File>
+    <File Include="dist/css/marikina.css">
+      <publishTime>03/13/2017 17:01:11</publishTime>
+    </File>
     <File Include="dist/css/metro-bootstrap.min.css">
       <publishTime>02/16/2017 10:17:45</publishTime>
     </File>
     <File Include="dist/css/site-template.css">
-      <publishTime>02/19/2017 23:07:39</publishTime>
+      <publishTime>03/13/2017 00:20:59</publishTime>
+    </File>
+    <File Include="dist/js/agency.js">
+      <publishTime>03/13/2017 00:57:46</publishTime>
+    </File>
+    <File Include="dist/js/agency.min.js">
+      <publishTime>03/13/2017 00:57:46</publishTime>
     </File>
     <File Include="dist/js/angular/angular.min.js">
       <publishTime>02/19/2017 15:10:33</publishTime>
@@ -160,11 +178,17 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="dist/js/bootstrap.min.js">
       <publishTime>02/16/2017 10:17:45</publishTime>
     </File>
+    <File Include="dist/js/contact_me.js">
+      <publishTime>03/13/2017 00:57:46</publishTime>
+    </File>
     <File Include="dist/js/helpers.js">
       <publishTime>02/16/2017 14:59:14</publishTime>
     </File>
     <File Include="dist/js/inspinia/inspinia.js">
       <publishTime>02/16/2017 10:17:45</publishTime>
+    </File>
+    <File Include="dist/js/jqBootstrapValidation.js">
+      <publishTime>03/13/2017 00:57:46</publishTime>
     </File>
     <File Include="dist/js/jQuery-2.1.4.min.js">
       <publishTime>02/16/2017 10:17:45</publishTime>
@@ -239,7 +263,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/16/2017 10:17:46</publishTime>
     </File>
     <File Include="Global.asax">
-      <publishTime>02/16/2017 10:17:43</publishTime>
+      <publishTime>03/01/2017 10:06:20</publishTime>
+    </File>
+    <File Include="Images/2x2.jpg">
+      <publishTime>02/28/2017 11:16:42</publishTime>
     </File>
     <File Include="packages.config">
       <publishTime>02/16/2017 10:17:46</publishTime>
@@ -281,7 +308,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/16/2017 10:17:43</publishTime>
     </File>
     <File Include="Scripts/_references.js">
-      <publishTime>02/21/2017 16:49:59</publishTime>
+      <publishTime>03/13/2017 00:57:46</publishTime>
+    </File>
+    <File Include="Views/Admin/Index.cshtml">
+      <publishTime>03/13/2017 18:47:54</publishTime>
+    </File>
+    <File Include="Views/ApplicationType/Create.cshtml">
+      <publishTime>03/04/2017 22:08:13</publishTime>
+    </File>
+    <File Include="Views/ApplicationType/Delete.cshtml">
+      <publishTime>03/04/2017 22:08:14</publishTime>
+    </File>
+    <File Include="Views/ApplicationType/Details.cshtml">
+      <publishTime>03/04/2017 22:08:15</publishTime>
+    </File>
+    <File Include="Views/ApplicationType/Edit.cshtml">
+      <publishTime>03/04/2017 22:08:15</publishTime>
+    </File>
+    <File Include="Views/ApplicationType/Index.cshtml">
+      <publishTime>03/12/2017 19:23:49</publishTime>
     </File>
     <File Include="Views/Auth/Index.cshtml">
       <publishTime>02/21/2017 16:55:22</publishTime>
@@ -362,7 +407,34 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/16/2017 10:17:44</publishTime>
     </File>
     <File Include="Views/Dashboard/Index.cshtml">
-      <publishTime>02/16/2017 10:17:44</publishTime>
+      <publishTime>02/28/2017 11:19:15</publishTime>
+    </File>
+    <File Include="Views/Fee/Create.cshtml">
+      <publishTime>03/12/2017 19:04:01</publishTime>
+    </File>
+    <File Include="Views/Fee/Delete.cshtml">
+      <publishTime>03/04/2017 22:13:14</publishTime>
+    </File>
+    <File Include="Views/Fee/Details.cshtml">
+      <publishTime>03/04/2017 22:13:15</publishTime>
+    </File>
+    <File Include="Views/Fee/Edit.cshtml">
+      <publishTime>03/12/2017 19:06:08</publishTime>
+    </File>
+    <File Include="Views/Fee/Index.cshtml">
+      <publishTime>03/12/2017 19:17:55</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>03/13/2017 17:05:29</publishTime>
+    </File>
+    <File Include="Views/Locational/ApplicationSuccess.cshtml">
+      <publishTime>03/13/2017 17:12:38</publishTime>
+    </File>
+    <File Include="Views/Locational/Create.cshtml">
+      <publishTime>03/13/2017 17:04:47</publishTime>
+    </File>
+    <File Include="Views/Locational/Index.cshtml">
+      <publishTime>03/13/2017 00:24:49</publishTime>
     </File>
     <File Include="Views/MainInventory/Create.cshtml">
       <publishTime>02/16/2017 13:58:56</publishTime>
@@ -412,11 +484,20 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/Service/Index.cshtml">
       <publishTime>02/17/2017 16:17:35</publishTime>
     </File>
+    <File Include="Views/Shared/_FrontEnd.cshtml">
+      <publishTime>03/13/2017 18:44:04</publishTime>
+    </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>02/21/2017 20:54:10</publishTime>
+      <publishTime>03/12/2017 22:46:32</publishTime>
     </File>
     <File Include="Views/Shared/_Navigation.cshtml">
-      <publishTime>02/21/2017 16:55:09</publishTime>
+      <publishTime>03/13/2017 00:29:15</publishTime>
+    </File>
+    <File Include="Views/Shared/_RecordInformationCreate.cshtml">
+      <publishTime>02/28/2017 11:28:52</publishTime>
+    </File>
+    <File Include="Views/Shared/_RecordInformationEdit.cshtml">
+      <publishTime>02/28/2017 11:28:52</publishTime>
     </File>
     <File Include="Views/Supplier/Create.cshtml">
       <publishTime>02/20/2017 14:03:12</publishTime>
@@ -434,34 +515,61 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/20/2017 15:59:36</publishTime>
     </File>
     <File Include="Views/Template/Modal.cshtml">
-      <publishTime>02/16/2017 10:17:44</publishTime>
+      <publishTime>03/01/2017 10:06:22</publishTime>
     </File>
     <File Include="Views/Template/ModalForm.cshtml">
-      <publishTime>02/16/2017 20:50:37</publishTime>
+      <publishTime>03/01/2017 10:06:22</publishTime>
+    </File>
+    <File Include="Views/UserRoles/Create.cshtml">
+      <publishTime>03/13/2017 18:58:21</publishTime>
+    </File>
+    <File Include="Views/UserRoles/Delete.cshtml">
+      <publishTime>03/12/2017 19:13:19</publishTime>
+    </File>
+    <File Include="Views/UserRoles/Details.cshtml">
+      <publishTime>03/12/2017 19:13:19</publishTime>
+    </File>
+    <File Include="Views/UserRoles/Edit.cshtml">
+      <publishTime>03/13/2017 18:59:24</publishTime>
+    </File>
+    <File Include="Views/UserRoles/Index.cshtml">
+      <publishTime>03/13/2017 18:54:31</publishTime>
     </File>
     <File Include="Views/Users/Create.cshtml">
-      <publishTime>02/16/2017 21:20:10</publishTime>
+      <publishTime>03/01/2017 10:06:22</publishTime>
     </File>
     <File Include="Views/Users/Delete.cshtml">
-      <publishTime>02/16/2017 21:19:39</publishTime>
+      <publishTime>03/01/2017 10:06:22</publishTime>
     </File>
     <File Include="Views/Users/Details.cshtml">
-      <publishTime>02/16/2017 21:19:39</publishTime>
+      <publishTime>03/04/2017 21:58:55</publishTime>
     </File>
     <File Include="Views/Users/Edit.cshtml">
-      <publishTime>02/16/2017 21:20:10</publishTime>
+      <publishTime>03/01/2017 10:06:22</publishTime>
     </File>
     <File Include="Views/Users/Index.cshtml">
-      <publishTime>02/21/2017 12:28:52</publishTime>
+      <publishTime>03/04/2017 21:57:06</publishTime>
     </File>
     <File Include="Views/Web.config">
-      <publishTime>02/21/2017 14:34:45</publishTime>
+      <publishTime>03/01/2017 10:06:22</publishTime>
+    </File>
+    <File Include="Views/ZoningForm/ApplicationSuccess.cshtml">
+      <publishTime>03/13/2017 18:47:11</publishTime>
+    </File>
+    <File Include="Views/ZoningForm/Create.cshtml">
+      <publishTime>03/13/2017 18:46:00</publishTime>
+    </File>
+    <File Include="Views/ZoningForm/Edit.cshtml">
+      <publishTime>03/13/2017 00:40:43</publishTime>
+    </File>
+    <File Include="Views/ZoningForm/Index.cshtml">
+      <publishTime>03/13/2017 00:24:57</publishTime>
     </File>
     <File Include="Views/_ViewStart.cshtml">
       <publishTime>02/16/2017 10:17:44</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>02/21/2017 20:54:29</publishTime>
+      <publishTime>03/13/2017 19:12:18</publishTime>
     </File>
   </ItemGroup>
 </Project>

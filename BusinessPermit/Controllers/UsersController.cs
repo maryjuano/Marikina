@@ -16,7 +16,8 @@ namespace BusinessPermit.Controllers
         // GET: /Users/
         public ActionResult Index()
         {
-            return View(db.Users.ToList());
+            var users = db.Users;
+            return View(users.ToList());
         }
 
         // GET: /Users/Details/5

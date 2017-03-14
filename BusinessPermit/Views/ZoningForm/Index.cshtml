@@ -1,0 +1,86 @@
+﻿@model IEnumerable<BusinessPermit.Models.ZoningClearance>
+
+@{
+    ViewBag.Title = "Pending Application";
+    ViewBag.CurrentEntity = "Zoning Clearance";
+    ViewBag.WebPageTitle = "Pending Application";
+}
+
+@section toolbarleft {
+    <li class="breadcrumb-item"><a href="~/Dashboard/Index">Home</a></li>
+    <li class="breadcrumb-item active">Pending Application<li>
+}
+
+<br />
+<table class="table table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ApplicationNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateApplied)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BusinessName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OwnerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BusinessAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BusinessNature)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContactNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MainOffice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalFloorArea)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FloorAreaBusiness)
+        </th>      
+       
+    </tr>
+
+@foreach (var item in Model)
+{
+    <tr ondblclick="OpenRecord('/ZoningForm/Edit/' + @item.ZoningClearanceId);" style="cursor:pointer">
+        <td>
+            @Html.DisplayFor(modelItem => item.ApplicationNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateApplied)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BusinessName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OwnerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BusinessAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BusinessNature)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContactNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MainOffice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalFloorArea)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FloorAreaBusiness)
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,82 @@
+﻿@model BusinessPermit.Models.ZoningClearance
+
+@{
+    Layout = null;
+}
+<link href="~/dist/css/metro-bootstrap.min.css" rel="stylesheet" />
+<link href="~/dist/css/site-template.css" rel="stylesheet" />
+<style>
+    #headerWrapper {
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#503C3C3C,endColorstr=#503C3C3C);
+        background-color: #003366;
+        /* background-color: #004203; */
+        border-bottom: 1px #999 solid;
+        box-shadow: 0 0 5px #555;
+    }
+
+    #headerWrapper {
+        position: relative;
+        width: 100%;
+        min-height: 20px;
+    }
+
+    nav > a:hover {
+        color: #FFF;
+        background-color: #888;
+        background-color: rgba(60, 60, 60, 0.6);
+        border-radius: 10px;
+    }
+
+    a:hover {
+        color: #999;
+    }
+
+    nav > a {
+        color: #FFF;
+        font-size: 14px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 10px;
+    }
+
+    nav > a, #navItems > a {
+        padding: 7px 3px 5px 3px;
+        margin: 0;
+        display: inline-block;
+        z-index: inherit;
+        cursor: pointer;
+        height: auto;
+        width: 95px;
+        -webkit-transition: background 100ms ease-in;
+        -moz-transition: background 100ms ease-in;
+        -o-transition: background 100ms ease-in;
+        -ms-transition: background 100ms ease-in;
+        transition: background 100ms ease-in;
+    }
+</style>
+<div id="headerWrapper">
+    <div id="headerCenter">
+        <div id="headerTitles">
+            <img src="http://marikina.gov.ph/img/marikinacity.png" width="451" height="79" border="0" usemap="#Map">
+            <map name="Map" id="Map">
+                <area shape="rect" coords="27,25,425,53" href="http://marikina.gov.ph">
+            </map>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="animated fadeIn">   
+        <center>
+            <div class="alert alert-success" style="width:250px" role="alert">
+                You sucessfully submitted your application, please wait for us to respond.
+            </div>
+        </center>             
+    </div>
+</div>
+
+
+<script src="~/dist/js/jQuery-2.1.4.min.js"></script>
+<script src="~/dist/js/bootstrap.min.js"></script>
+<script src="~/dist/js/app.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
