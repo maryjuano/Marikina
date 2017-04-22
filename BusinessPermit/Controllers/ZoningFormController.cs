@@ -7,17 +7,18 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using BusinessPermit.Models;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.IO;
 
-namespace FinessaAesthetica.Controllers
+namespace BusinessPermit.Controllers
 {
-    public class ZoningFormController : Controller
+    public class ZoningFormController : BaseController
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
-
         // GET: /ZoningForm/
         public ActionResult Index()
         {
-            return View(db.ZoningClearance.ToList());
+            return View(db.ZoningClearance.Where(z => z.Status == "Pending").ToList());
         }
 
         // GET: /ZoningForm/Details/5
@@ -38,7 +39,10 @@ namespace FinessaAesthetica.Controllers
         // GET: /ZoningForm/Create
         public ActionResult Create()
         {
-            return View();
+            //   ViewBag.Fees = db.Fees.Include(p => p.ApplicationType).Where(p => p.ApplicationType.Description.Contains("Zoning"));
+            List<Fee> fees = db.Fees.Include(p => p.ApplicationType).Where(p => p.ApplicationType.Description.Contains("Zoning")).ToList();
+
+            return View(new ZoningClearance { Fees = fees });
         }
 
         // POST: /ZoningForm/Create
@@ -46,10 +50,11 @@ namespace FinessaAesthetica.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="ZoningClearanceId,ApplicationNumber,DateApplied,BusinessName,OwnerName,BusinessAddress,BusinessNature,ContactNumber,MainOffice,TotalFloorArea,FloorAreaBusiness,Attachments")] ZoningClearance zoningclearance)
+        public ActionResult Create([Bind(Include = "ZoningClearanceId,ApplicationNumber,DateApplied,BusinessName,OwnerName,BusinessAddress,BusinessNature,ContactNumber,MainOffice,TotalFloorArea,FloorAreaBusiness,EmailAddress,Fees")] ZoningClearance zoningclearance, HttpPostedFileBase attachments)
         {
-            if (ModelState.IsValid)
+            if (attachments != null)
             {
+                zoningclearance.Attachments = base.GetFileBytes(attachments);
                 zoningclearance.DateApplied = DateTime.Now;
                 zoningclearance.ApplicationNumber = GenerateApplicationNumber();
                 zoningclearance.Status = "Pending";
@@ -68,9 +73,10 @@ namespace FinessaAesthetica.Controllers
             {
                 return HttpNotFound();
             }
-            zoningclearance.Status = "Passed Assessment";
+            zoningclearance.Status = "Approved";
             db.Entry(zoningclearance).State = EntityState.Modified;
             db.SaveChanges();
+            EmailSender.SendMail(zoningclearance.EmailAddress, "Zoning Clearance Application : Approved", "Thank you");
             return RedirectToAction("Index");
         }
 
@@ -82,9 +88,10 @@ namespace FinessaAesthetica.Controllers
             {
                 return HttpNotFound();
             }
-            zoningclearance.Status = "Disapproved";
+            zoningclearance.Status = "Denied";
             db.Entry(zoningclearance).State = EntityState.Modified;
             db.SaveChanges();
+            EmailSender.SendMail(zoningclearance.EmailAddress, "Zoning Clearance Application : Denied", "Thank you");
             return RedirectToAction("Index");
         }
 
@@ -92,6 +99,7 @@ namespace FinessaAesthetica.Controllers
         {
             return View();
         }
+
         // GET: /ZoningForm/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -112,7 +120,7 @@ namespace FinessaAesthetica.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ZoningClearanceId,ApplicationNumber,DateApplied,BusinessName,OwnerName,BusinessAddress,BusinessNature,ContactNumber,MainOffice,TotalFloorArea,FloorAreaBusiness,Attachments")] ZoningClearance zoningclearance)
+        public ActionResult Edit([Bind(Include = "ZoningClearanceId,ApplicationNumber,DateApplied,BusinessName,OwnerName,BusinessAddress,BusinessNature,ContactNumber,MainOffice,TotalFloorArea,FloorAreaBusiness,Attachments,EmailAddress")] ZoningClearance zoningclearance)
         {
             if (ModelState.IsValid)
             {
@@ -149,15 +157,30 @@ namespace FinessaAesthetica.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpGet]
+        public FileResult DownloadAttachment(int id)
+        {
+            var record = db.ZoningClearance.Find(id);
+
+            if (record == null)
+            {
+                Byte[] array = new Byte[64];
+                return File(array, System.Net.Mime.MediaTypeNames.Application.Octet, "record-not-found");
+            }
+
+            return File(record.Attachments, System.Net.Mime.MediaTypeNames.Application.Octet, record.ApplicationNumber + ".xlsx");
+        }
+
         private string GenerateApplicationNumber()
         {
-            var purchaseOrderNumber = db.ZoningClearance.OrderByDescending(p => p.DateApplied).First();
-            string lastNumber = purchaseOrderNumber.ApplicationNumber;
+            var purchaseOrderNumber = db.ZoningClearance.OrderByDescending(p => p.DateApplied).FirstOrDefault();
 
-            if (lastNumber == null)
+            if (purchaseOrderNumber == null)
             {
-                return "ZO-00000001";
+                return "ZC-00000001";
             }
+
+            string lastNumber = purchaseOrderNumber.ApplicationNumber;
 
             string numberOnly = lastNumber.Remove(0, lastNumber.IndexOf('-') + 1);
             int numberResult = Convert.ToInt32(numberOnly);
@@ -171,13 +194,5 @@ namespace FinessaAesthetica.Controllers
             return string.Format("ZC-{0}{1}", numberOnly, numberResult.ToString());
         }
 
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
-        }
     }
 }

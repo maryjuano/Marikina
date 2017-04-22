@@ -1,6 +1,7 @@
 ﻿using BusinessPermit.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -51,6 +52,22 @@ namespace BusinessPermit.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        protected byte[] GetFileBytes(HttpPostedFileBase file)
+        {
+            byte[] data;
+            using (Stream inputStream = file.InputStream)
+            {              
+                MemoryStream memoryStream = inputStream as MemoryStream;
+                if (memoryStream == null)
+                {
+                    memoryStream = new MemoryStream();
+                    inputStream.CopyTo(memoryStream);
+                }
+                data = memoryStream.ToArray();             
+            }
+            return data;
         }
     }
 }

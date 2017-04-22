@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="d7d380cc-b1dd-4d1c-acca-cd52f329634f"
   name="Entity"
@@ -99,7 +99,7 @@
         <referencesInternal>
           <reference
             Id="4dd78848-b126-45db-a57f-55bdf4a51820"
-            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2Fpackages%2FEntityFramework.6.0.0%2Flib%2Fnet45%2FEntityFramework.dll Namespace%3DSystem.Data.Entity Type%3D(Name%3DDbSet GenericParameterCount%3D1)"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fz%2FMarikina-master%2Fpackages%2FEntityFramework.6.0.0%2Flib%2Fnet45%2FEntityFramework.dll Namespace%3DSystem.Data.Entity Type%3D(Name%3DDbSet GenericParameterCount%3D1)"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -157,7 +157,7 @@
                 <referencesInternal>
                   <reference
                     Id="792c0d1e-e396-48c2-8bc7-4fa47a25c58b"
-                    handle="viewcode://./CodeSchema_GenericParameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2Fpackages%2FEntityFramework.6.0.0%2Flib%2Fnet45%2FEntityFramework.dll Namespace%3DSystem.Data.Entity Type%3D(Name%3DDbSet GenericParameterCount%3D1) ParameterIdentifier%3D0"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fz%2FMarikina-master%2Fpackages%2FEntityFramework.6.0.0%2Flib%2Fnet45%2FEntityFramework.dll Namespace%3DSystem.Data.Entity Type%3D(Name%3DDbSet GenericParameterCount%3D1) ParameterIdentifier%3D0"
                     tag="ViewCode" />
                 </referencesInternal>
                 <ownedParameterableElement>
@@ -340,7 +340,7 @@
         <referencesInternal>
           <reference
             Id="95a9e288-a0f4-4986-b14f-73cb6242ed7d"
-            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2Fpackages%2FEntityFramework.6.0.0%2Flib%2Fnet45%2FEntityFramework.dll Namespace%3DSystem.Data.Entity Type%3DDbContext"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fz%2FMarikina-master%2Fpackages%2FEntityFramework.6.0.0%2Flib%2Fnet45%2FEntityFramework.dll Namespace%3DSystem.Data.Entity Type%3DDbContext"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -398,7 +398,7 @@
         <referencesInternal>
           <reference
             Id="c6f36090-640f-4326-9ef1-7e05d6de77bc"
-            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fbeb%2FSol'n%2Fpackages%2FEntityFramework.6.0.0%2Flib%2Fnet45%2FEntityFramework.dll Namespace%3DSystem.Data.Entity Type%3DDbModelBuilder"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fi-jcadiao%2FDocuments%2Fz%2FMarikina-master%2Fpackages%2FEntityFramework.6.0.0%2Flib%2Fnet45%2FEntityFramework.dll Namespace%3DSystem.Data.Entity Type%3DDbModelBuilder"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -822,6 +822,162 @@
                     <classMoniker
                       Id="95d160b5-0f27-4c83-8991-d002b9d85196"
                       LastKnownName="Audit"
+                      LastKnownLocation="Package1_1006.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="508b702c-207d-46a2-96ff-771aadc36946"
+                      LastKnownLocation="Package4_1004.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="8332af39-30d0-4dd2-b77a-f59b92f094b6"
+        name="DbSet&lt;ZoningClearance‎&gt;"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="0328afcc-7ea8-45b9-85d9-8b02ba62246f"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="02591223-c0bf-4451-9b87-a4db25aec0b5">
+                <propertyInstance
+                  Id="55c4a97a-678d-463a-a6c3-25ef65be9f60"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a8eaa8c9-008e-482b-b857-8e4370e6d8db">
+                <propertyInstance
+                  Id="f9e5159f-55c2-443a-9bcb-7a4081caaedd"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a6611e85-eb69-49b0-a6a4-54ca1b268354">
+                <propertyInstance
+                  Id="1a089ec3-4e54-4454-a05b-3cd8347da534"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fa6822e4-ac70-44f8-963e-6416da8353b4">
+                <propertyInstance
+                  Id="e7e6bfda-8dd9-47e1-bd1a-ec7df29fa718"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3618807e-8239-4394-be01-230fcf8104f0">
+                <propertyInstance
+                  Id="5ff48892-6b24-4f17-b08a-8b65d01d6d90"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="fb8ca93b-e4e7-42e9-abe0-afcbba55e74a">
+            <redefinableTemplateSignatureMoniker
+              Id="410efd88-bc58-45e1-8358-6c243351769f"
+              LastKnownLocation="Package4_1004.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="4ed19ac0-5444-4471-9acd-5fcd4b691556">
+                  <actuals>
+                    <classMoniker
+                      Id="33a54f72-63fb-4754-985d-90e06688a865"
+                      LastKnownName="ZoningClearance"
+                      LastKnownLocation="Package1_1006.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="508b702c-207d-46a2-96ff-771aadc36946"
+                      LastKnownLocation="Package4_1004.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="51642120-b424-48bb-ad44-6bd6bd98a0fb"
+        name="DbSet&lt;LocationalClearance‎&gt;"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="1f16f839-cd52-4b5a-a429-d57e2542c74c"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6c4cbb12-a98a-4eaf-9249-91f7ab018b08">
+                <propertyInstance
+                  Id="ff8d1080-ae5c-4db8-860d-f402345013ce"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d95c52bb-2922-4356-91b8-e6d2f2ed6ba6">
+                <propertyInstance
+                  Id="3cf29645-4ffa-466b-b3c0-1d63a0dc0ac1"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fb62f589-4ba4-441b-9ee6-dace4f90ebee">
+                <propertyInstance
+                  Id="4550eafb-a482-42d8-a4fe-b90d2acf708f"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="57346452-8da7-432b-b865-7da346b35186">
+                <propertyInstance
+                  Id="bcb6477e-8617-4acc-8550-0f74ddaaca1f"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9129d42e-7df9-46e0-a018-dc87ea7e4fa0">
+                <propertyInstance
+                  Id="93c5a678-c69d-41da-9b48-b0e959b95c39"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="b766c4fd-0441-4e0b-abc2-538dd8903bb6">
+            <redefinableTemplateSignatureMoniker
+              Id="410efd88-bc58-45e1-8358-6c243351769f"
+              LastKnownLocation="Package4_1004.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="eb38cb1e-52a4-4adf-ae35-d3064092848f">
+                  <actuals>
+                    <classMoniker
+                      Id="c3ecf916-c3e6-4433-8a68-2579531baa51"
+                      LastKnownName="LocationalClearance"
                       LastKnownLocation="Package1_1006.uml" />
                   </actuals>
                   <formal>

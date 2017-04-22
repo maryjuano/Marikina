@@ -8,7 +8,7 @@
 }
 
 @section toolbarleft {
-    <li class="breadcrumb-item"><a href="~/">Home</a></li>
+    <li class="breadcrumb-item"><a href="~/Dashboard/Index">Home</a></li>
     <li class="breadcrumb-item"><a href="~/UserRoles/">User Role List</a></li>
     <li class="breadcrumb-item actions">@Model.RoleName</li>
 }
@@ -24,7 +24,7 @@
     <div class="ibox-content">
         <div class="form-horizontal">
             @Html.ValidationSummary(true)
-
+            @Html.HiddenFor(model => model.RoleId)
             <div class="row">
                 <div class="col-sm-12">
                     <div class="page-header">

@@ -1,0 +1,56 @@
+﻿@model IEnumerable<BusinessPermit.Models.Payment>
+
+
+@{
+    ViewBag.Title = "Payment";
+    ViewBag.CurrentEntity = "Payment";
+    ViewBag.WebPageTitle = "Pending Payment List";
+}
+
+@section toolbarleft {
+    <li class="breadcrumb-item"><a href="~/Dashboard/Index">Home</a></li>
+    <li class="breadcrumb-item active">Pending Payment List</li>
+}
+
+@section ToolbarRight {
+
+}
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ReferenceNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateApplied)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DatePaid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+        </tr>
+    </thead>
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReferenceNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateApplied)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DatePaid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+        </tr>
+    }
+
+</table>

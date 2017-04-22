@@ -8,12 +8,10 @@ using System.Web;
 using System.Web.Mvc;
 using BusinessPermit.Models;
 
-namespace FinessaAesthetica.Controllers
+namespace BusinessPermit.Controllers
 {
-    public class LocationalController : Controller
-    {
-        private ApplicationDbContext db = new ApplicationDbContext();
-
+    public class LocationalController : BaseController
+    {       
         // GET: /Locational/
         public ActionResult Index()
         {
@@ -49,11 +47,11 @@ namespace FinessaAesthetica.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="LocationalClearanceId,ApplicationNumber,DateApplied,LCPermitNumber,DateIssued,Project,Location,Address,Firm,FloorArea,LandArea,UsableOpenSpace,TCTNumber,Attachments")] LocationalClearance locationalclearance)
+        public ActionResult Create([Bind(Include = "LocationalClearanceId,ApplicationNumber,DateApplied,LCPermitNumber,DateIssued,Project,Location,Address,Firm,FloorArea,LandArea,UsableOpenSpace,TCTNumber,EmailAddress")] LocationalClearance locationalclearance, HttpPostedFileBase attachments)
         {
-            if (ModelState.IsValid)
+            if (attachments != null)
             {
+                locationalclearance.Attachments = base.GetFileBytes(attachments);
                 locationalclearance.DateApplied = DateTime.Now;
                 locationalclearance.DateIssued = DateTime.Now;
                 locationalclearance.ApplicationNumber = GenerateApplicationNumber();
@@ -63,6 +61,36 @@ namespace FinessaAesthetica.Controllers
             }
 
             return View(locationalclearance);
+        }
+
+        [HttpPost]
+        public ActionResult ApproveApplication(int? id)
+        {
+            LocationalClearance clearance = db.LocationalClearance.Find(id);
+            if (clearance == null)
+            {
+                return HttpNotFound();
+            }
+            clearance.Status = "Approved";
+            db.Entry(clearance).State = EntityState.Modified;
+            db.SaveChanges();
+            EmailSender.SendMail(clearance.EmailAddress, "Locational Clearance Application : Approved", "Thank you");
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public ActionResult DisqualifyApplication(int? id)
+        {
+            LocationalClearance clearance = db.LocationalClearance.Find(id);
+            if (clearance == null)
+            {
+                return HttpNotFound();
+            }
+            clearance.Status = "Denied";
+            db.Entry(clearance).State = EntityState.Modified;
+            db.SaveChanges();
+            EmailSender.SendMail(clearance.EmailAddress, "Locational Clearance Application : Denied", "Thank you");
+            return RedirectToAction("Index");
         }
 
         // GET: /Locational/Edit/5
@@ -85,7 +113,7 @@ namespace FinessaAesthetica.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include="LocationalClearanceId,ApplicationNumber,DateApplied,LCPermitNumber,DateIssued,Project,Location,Address,Firm,FloorArea,LandArea,UsableOpenSpace,TCTNumber,Attachments")] LocationalClearance locationalclearance)
+        public ActionResult Edit([Bind(Include = "LocationalClearanceId,ApplicationNumber,DateApplied,LCPermitNumber,DateIssued,Project,Location,Address,Firm,FloorArea,LandArea,UsableOpenSpace,TCTNumber,Attachments,EmailAddress")] LocationalClearance locationalclearance)
         {
             if (ModelState.IsValid)
             {
@@ -122,15 +150,32 @@ namespace FinessaAesthetica.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpGet]
+        public FileResult DownloadAttachment(int id)
+        {
+            var record = db.LocationalClearance.Find(id);
+
+            if (record == null)
+            {
+                Byte[] array = new Byte[64];
+                return File(array, System.Net.Mime.MediaTypeNames.Application.Octet, "record-not-found");
+            }
+
+            return File(record.Attachments, System.Net.Mime.MediaTypeNames.Application.Octet, record.ApplicationNumber + ".docx");
+        }
+
         private string GenerateApplicationNumber()
         {
-            var purchaseOrderNumber = db.LocationalClearance.OrderByDescending(p => p.DateApplied).First();
+            var purchaseOrderNumber = db.LocationalClearance.OrderByDescending(p => p.DateApplied).FirstOrDefault();
+
+            if (purchaseOrderNumber == null)
+            {
+                return "ZC-00000001";
+            }
+
             string lastNumber = purchaseOrderNumber.ApplicationNumber;
 
-            if (lastNumber == null)
-            {
-                return "LC-00000001";
-            }
+            
 
             string numberOnly = lastNumber.Remove(0, lastNumber.IndexOf('-') + 1);
             int numberResult = Convert.ToInt32(numberOnly);
@@ -142,15 +187,6 @@ namespace FinessaAesthetica.Controllers
             numberResult++;
 
             return string.Format("LC-{0}{1}", numberOnly, numberResult.ToString());
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
         }
     }
 }

@@ -1,0 +1,237 @@
+﻿@model IEnumerable<BusinessPermit.Models.BuildingPermit>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BuildingTypePermit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApplicationNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AreaNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Owner)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MiddleInitial)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TIN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FormOfOwnerShip)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OwnerStreetNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OwnerStreet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OwnerBarangay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OwnerCity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OwnerZipCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TelephoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LocationLotNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LocationBlockNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LocationTCTNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LocationTaxDescriptionNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LocationStreet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LocationBarangay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LocationCity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ScopeOfWork)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ScopeOfWorkOther)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BuildingUse)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BuildingUseOther)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OccupancyClassified)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfUnits)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalFloorArea)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalEstimatedCost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProposedConstructionDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExpectedCompletionDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Attachment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LocationalId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BuildingTypePermit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApplicationNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AreaNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Owner)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MiddleInitial)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TIN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FormOfOwnerShip)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OwnerStreetNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OwnerStreet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OwnerBarangay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OwnerCity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OwnerZipCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TelephoneNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LocationLotNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LocationBlockNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LocationTCTNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LocationTaxDescriptionNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LocationStreet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LocationBarangay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LocationCity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ScopeOfWork)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ScopeOfWorkOther)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BuildingUse)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BuildingUseOther)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OccupancyClassified)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumberOfUnits)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalFloorArea)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalEstimatedCost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProposedConstructionDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExpectedCompletionDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Attachment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LocationalId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.BuildingPermitId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.BuildingPermitId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.BuildingPermitId })
+        </td>
+    </tr>
+}
+
+</table>

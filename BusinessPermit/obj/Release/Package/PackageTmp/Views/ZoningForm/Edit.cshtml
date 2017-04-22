@@ -1,8 +1,22 @@
 ﻿@model BusinessPermit.Models.ZoningClearance
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Pending Application";
+    ViewBag.CurrentEntity = "Zoning Clearance";
+    ViewBag.WebPageTitle = Model.ApplicationNumber;
 }
+
+@section toolbarleft {
+    <li class="breadcrumb-item"><a href="~/Dashboard/Index">Home</a></li>
+    <li class="breadcrumb-item"><a href="~/ZoningForm/">Pending Applications</a></li>
+    <li class="breadcrumb-item active">@Model.ApplicationNumber<li>
+}
+
+@section toolbarright {
+<li><a href="#" id="btnApprove" title="Save User"><span class="fa fa-check"></span>&nbsp;APPROVE</a></li>
+<li><a href="#" id="btnDisqualify" title="Save User"><span class="fa fa-ban"></span>&nbsp;DENIED</a></li>
+}
+
 
 @using (Html.BeginForm())
 {
@@ -11,6 +25,7 @@
         <center><h3>Zoning Clearance</h3></center>
         <br />
         @Html.ValidationSummary(true)
+       
         <div class="form-horizontal">
             <div class="row">
                 <div class="col-md-12">
@@ -58,6 +73,13 @@
                                 @Html.ValidationMessageFor(model => model.BusinessNature)
                             </div>
                         </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Attachments</label>
+                            <div class="col-md-9">
+                                <a style="margin-top:5px;" href="~/ZoningForm/DownloadAttachment?id=@Model.ZoningClearanceId">Download File Attachments</a>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
@@ -96,9 +118,31 @@
                 </div>
             </div>
         </div>
-        <div class="pull-right">
-            <button class="btn btn-success">APPROVE</button>
-        </div>
     </div>
     <input type="submit" value="Create" class="btn btn-default hidden" />
 }
+
+@section scripts {
+    <script>
+        $('#btnApprove').click(function () {
+            $.ajax({
+                url: '/ZoningForm/ApproveApplication', type: 'POST',
+                data: { id: '@Model.ZoningClearanceId' }
+            }).then(function () {
+                alert('Zoning Application has been approved!');
+                window.location.href = "/ZoningForm/";
+            })
+        });
+
+        $('#btnDisqualify').click(function () {
+            $.ajax({
+                url: '/ZoningForm/DisqualifyApplication', type: 'POST',
+                data: { id: '@Model.ZoningClearanceId' }
+            }).then(function () {
+                alert('Zoning Application has been denied!');
+                window.location.href = "/ZoningForm/";
+            })
+        })
+    </script>
+}
+

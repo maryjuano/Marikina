@@ -16,3 +16,4 @@ function OpenDropDown(nav, e) {
 function OpenRecord(url) {
     window.location.href = url;
 }
+

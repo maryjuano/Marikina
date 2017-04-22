@@ -7,12 +7,12 @@
 }
 
 @section toolbarleft {
-    <li class="breadcrumb-item"><a href="~/">Home</a></li>
+    <li class="breadcrumb-item"><a href="~/Dashboard/Index">Home</a></li>
     <li class="breadcrumb-item active">Pending Application<li>
 }
 
 @section ToolbarRight {
-<li><a href="#" title="Approve"><span class="fa fa-check"></span>&nbsp;APPROVE</a></li>
+
 }
 
 
@@ -53,14 +53,13 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.TCTNumber)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Attachments)
-        </th>      
+        </th>            
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
+@foreach (var item in Model)
+{
+    <tr ondblclick="OpenRecord('/Locational/Edit/' + @item.LocationalClearanceId);" style="cursor:pointer">
+        
         <td>
             @Html.DisplayFor(modelItem => item.ApplicationNumber)
         </td>
@@ -97,9 +96,6 @@
         <td>
             @Html.DisplayFor(modelItem => item.TCTNumber)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Attachments)
-        </td>       
     </tr>
 }
 

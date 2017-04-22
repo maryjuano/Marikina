@@ -1,0 +1,314 @@
+﻿@model BusinessPermit.Models.BusinessPermit
+
+@{
+    Layout = "~/Views/Shared/_FrontEnd.cshtml";
+}
+
+@using (Html.BeginForm("Create", "BusinessPermit", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="ibox-content">
+
+        <div class="pull-right" style="margin-right: 15px;">
+            <button class="btn btn-success">SUBMIT</button>
+            <a href="~/" class="btn btn-default">CANCEL</a>
+        </div>
+        <div class="pull-left" style="margin-left: 15px;">
+            <span style="font-size:24px;">Business Permit Form</span>
+        </div>
+
+        <br />
+        <br />
+        <br />
+        @Html.ValidationSummary(true)
+        <div class="form-horizontal">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-4"> 
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Is New?</label>
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.IsNew)
+                                @Html.ValidationMessageFor(model => model.IsNew)
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Account No.</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.BusinessAccountNumber, new { @class = "form-control", @placeholder = "Business Acount Number" })
+                                @Html.ValidationMessageFor(model => model.BusinessAccountNumber)
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Zoning Permit</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.ZoningClearanceReferenceNumber, new { @class = "form-control", @placeholder = "Zoning Clearance Reference Number" })
+                                @Html.ValidationMessageFor(model => model.ZoningClearanceReferenceNumber)
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Date Applied</label>
+                            <div class="col-md-9">
+                                <input type="text" value="@DateTime.Now.ToShortDateString()" readonly="readonly" class="form-control" />
+                                @Html.ValidationMessageFor(model => model.DateApplied)
+                            </div>
+                        </div>                     
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Delivery Vehicles</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.DeliveryVehicles, new { @class = "form-control", @placeholder = "Delivery Vehicles" })
+                                @Html.ValidationMessageFor(model => model.DeliveryVehicles)
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Total Area</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.TotalAreaBusiness, new { @class = "form-control", @placeholder = "Total Area Business" })
+                                @Html.ValidationMessageFor(model => model.TotalAreaBusiness)
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Contact Number</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.ContactNumber, new { @class = "form-control", @placeholder = "Contact Number" })
+                                @Html.ValidationMessageFor(model => model.ContactNumber)
+                            </div>                         
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Total Employee</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.TotalEmployee, new { @class = "form-control", @placeholder = "Total Employee" })
+                                @Html.ValidationMessageFor(model => model.TotalEmployee)
+                            </div>   
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Rented Owner</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.RentedOwnerName, new { @class = "form-control", @placeholder = "Rented Owner Name" })
+                                @Html.ValidationMessageFor(model => model.RentedOwnerName)
+                            </div>
+                        </div>
+                                             
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Monthly Rental</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.MonthlyRental, new { @class = "form-control", @placeholder = "Monthly Rental" })
+                                @Html.ValidationMessageFor(model => model.MonthlyRental)
+                            </div>
+                        </div>                          
+                         
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Previous License </label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.PreviousBasisLicenseTax, new { @class = "form-control", @placeholder = "Previous Basis LicenseTax" })
+                                @Html.ValidationMessageFor(model => model.PreviousBasisLicenseTax)
+                            </div>
+                        </div>   
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Current License</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.CurrentBasisLicenseTax, new { @class = "form-control", @placeholder = "Current Basis LicenseTax" })
+                                @Html.ValidationMessageFor(model => model.CurrentBasisLicenseTax)
+                            </div>
+                        </div>                                              
+                    </div>
+                    <div class="col-md-4">     
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3">January Gross</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.JanGrossReceipt, new { @class = "form-control", @placeholder = "January Gross Receipt" })
+                                @Html.ValidationMessageFor(model => model.JanGrossReceipt)
+                            </div>
+                        </div> 
+                        
+                        <div class="form-group">
+                            <label class="control-label col-md-3">February Gross</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.FebGrossReceipt, new { @class = "form-control", @placeholder = "February Gross Receipt" })
+                                @Html.ValidationMessageFor(model => model.FebGrossReceipt)
+                            </div>
+                        </div>               
+                        
+                        <div class="form-group">
+                            <label class="control-label col-md-3">March Gross</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.MarGrossReceipt, new { @class = "form-control", @placeholder = "March Gross Receipt" })
+                                @Html.ValidationMessageFor(model => model.MarGrossReceipt)
+                            </div>
+                        </div>       
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3">April Gross</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.AprGrossReceipt, new { @class = "form-control", @placeholder = "April Gross Receipt" })
+                                @Html.ValidationMessageFor(model => model.AprGrossReceipt)
+                            </div>
+                        </div>      
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3">May Gross</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.MayGrossReceipt, new { @class = "form-control", @placeholder = "May Gross Receipt" })
+                                @Html.ValidationMessageFor(model => model.MayGrossReceipt)
+                            </div>
+                        </div>   
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3">June Gross</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.JunGrossReceipt, new { @class = "form-control", @placeholder = "June Gross Receipt" })
+                                @Html.ValidationMessageFor(model => model.JunGrossReceipt)
+                            </div>
+                        </div>
+                     
+                        <div class="form-group">
+                            <label class="control-label col-md-3">July Gross</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.JulGrossReceipt, new { @class = "form-control", @placeholder = "July Gross Receipt" })
+                                @Html.ValidationMessageFor(model => model.JulGrossReceipt)
+                            </div>
+                        </div>    
+                        
+                        <div class="form-group">
+                            <label class="control-label col-md-3">August Gross</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.AugGrossReceipt, new { @class = "form-control", @placeholder = "August Gross Receipt" })
+                                @Html.ValidationMessageFor(model => model.AugGrossReceipt)
+                            </div>
+                        </div>          
+                        
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Sept Gross</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.SepGrossReceipt, new { @class = "form-control", @placeholder = "September Gross Receipt" })
+                                @Html.ValidationMessageFor(model => model.SepGrossReceipt)
+                            </div>
+                        </div>      
+                        
+                        <div class="form-group">
+                            <label class="control-label col-md-3">October Gross</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.OctGrossReceipt, new { @class = "form-control", @placeholder = "October Gross Receipt" })
+                                @Html.ValidationMessageFor(model => model.OctGrossReceipt)
+                            </div>
+                        </div>       
+                        
+                        <div class="form-group">
+                            <label class="control-label col-md-3">November Gross</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.NovGrossReceipt, new { @class = "form-control", @placeholder = "November Gross Receipt" })
+                                @Html.ValidationMessageFor(model => model.NovGrossReceipt)
+                            </div>
+                        </div>    
+                        
+                        <div class="form-group">
+                            <label class="control-label col-md-3">December Gross</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.DecGrossReceipt, new { @class = "form-control", @placeholder = "December Gross Receipt" })
+                                @Html.ValidationMessageFor(model => model.DecGrossReceipt)
+                            </div>
+                        </div>                     
+                       
+                    </div>
+                    <div class="col-md-4">
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Total Gross</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.TotalGrossReceipt, new { @class = "form-control", @placeholder = "Total Gross Receipt" })
+                                @Html.ValidationMessageFor(model => model.TotalGrossReceipt)
+                            </div>
+                        </div>    
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Capital</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.CapitalInvestment, new { @class = "form-control", @placeholder = "Capital Investment" })
+                                @Html.ValidationMessageFor(model => model.CapitalInvestment)
+                            </div>
+                        </div>    
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Date Remarks</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.DateStartedRemarks, new { @class = "form-control", @placeholder = "Date Started Remarks" })
+                                @Html.ValidationMessageFor(model => model.DateStartedRemarks)
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Remarks</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.CapitalInvestmentRemarks, new { @class = "form-control", @placeholder = "Capital Investment Remarks" })
+                                @Html.ValidationMessageFor(model => model.CapitalInvestmentRemarks)
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Area Remarks</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.AreaRemarks, new { @class = "form-control", @placeholder = "Area Remarks" })
+                                @Html.ValidationMessageFor(model => model.AreaRemarks)
+                            </div>
+                        </div>                     
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Sales Per Day</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.GrossSalesPerDay, new { @class = "form-control", @placeholder = "Gross Sales Per Day" })
+                                @Html.ValidationMessageFor(model => model.GrossSalesPerDay)
+                            </div>
+                        </div>             
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Sales Per Year</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.GrossSalesPerYear, new { @class = "form-control", @placeholder = "Gross Sales Per Year" })
+                                @Html.ValidationMessageFor(model => model.GrossSalesPerYear)
+                            </div>
+                        </div>
+                                              
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Amount</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.AssessedAmount, new { @class = "form-control", @placeholder = "Assessed Amount" })
+                                @Html.ValidationMessageFor(model => model.AssessedAmount)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-horizontal">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="control-label col-md-1">Attachments</label>
+                    <div class="col-md-11">
+                        <input id="Attachments" style="margin-top:5px;" name="uploadFile" class="attachments" type="file">
+                        @Html.ValidationMessageFor(model => model.Attachments)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="submit" value="Create" class="btn btn-default hidden" />
+}
+
+@section scripts {
+    <script>
+        $('.money.form-control').mask("#,##0.00", { reverse: true });
+    </script>
+    <script src="~/dist/js/app.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+}
+
+
+

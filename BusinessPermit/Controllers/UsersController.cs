@@ -38,6 +38,7 @@ namespace BusinessPermit.Controllers
         // GET: /Users/Create
         public ActionResult Create()
         {
+            ViewBag.UserRoleId = new SelectList(db.UserRoles, "RoleId", "RoleName");
             return View();
         }
 
@@ -46,7 +47,7 @@ namespace BusinessPermit.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="Id,UserName,Password,EmployeeId,FirstName,MiddleName,LastName,FullName")] Users users)
+        public ActionResult Create([Bind(Include = "UserId,UserName,Password,EmployeeId,FirstName,MiddleName,LastName,FullName,UserRoleId")] Users users)
         {
             if (ModelState.IsValid)
             {
@@ -66,6 +67,7 @@ namespace BusinessPermit.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Users users = db.Users.Find(id);
+            ViewBag.UserRoleId = new SelectList(db.UserRoles, "RoleId", "RoleName", users.UserRoleId);
             if (users == null)
             {
                 return HttpNotFound();
@@ -78,7 +80,7 @@ namespace BusinessPermit.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include="Id,UserName,Password,EmployeeId,FirstName,MiddleName,LastName,FullName")] Users users)
+        public ActionResult Edit([Bind(Include = "UserId,UserName,Password,EmployeeId,FirstName,MiddleName,LastName,FullName,UserRoleId")] Users users)
         {
             if (ModelState.IsValid)
             {

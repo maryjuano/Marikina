@@ -178,17 +178,23 @@
     <Compile Include="Controllers\ApplicationTypeController.cs" />
     <Compile Include="Controllers\AuditController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\awController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\BuildingPermitController.cs" />
+    <Compile Include="Controllers\BusinessPermitController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\FeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LocationalController.cs" />
+    <Compile Include="Controllers\PaymentController.cs" />
     <Compile Include="Controllers\TemplateController.cs" />
     <Compile Include="Controllers\UserRolesController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\ZoningFormController.cs" />
     <Compile Include="Customizations\CustomHtmlHelpers.cs" />
+    <Compile Include="Customizations\CustomProvider.cs" />
     <Compile Include="Customizations\Encryption.cs" />
+    <Compile Include="Customizations\EmailSender.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -196,37 +202,41 @@
     <Compile Include="Migrations\201703010209421_Initial.Designer.cs">
       <DependentUpon>201703010209421_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201703010234127_user-role.cs" />
-    <Compile Include="Migrations\201703010234127_user-role.Designer.cs">
-      <DependentUpon>201703010234127_user-role.cs</DependentUpon>
+    <Compile Include="Migrations\201704111021237_BusinessPermit.cs" />
+    <Compile Include="Migrations\201704111021237_BusinessPermit.Designer.cs">
+      <DependentUpon>201704111021237_BusinessPermit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201703010256388_db-update.cs" />
-    <Compile Include="Migrations\201703010256388_db-update.Designer.cs">
-      <DependentUpon>201703010256388_db-update.cs</DependentUpon>
+    <Compile Include="Migrations\201704170634031_AttachmentUpdate.cs" />
+    <Compile Include="Migrations\201704170634031_AttachmentUpdate.Designer.cs">
+      <DependentUpon>201704170634031_AttachmentUpdate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201703120918060_Permit.cs" />
-    <Compile Include="Migrations\201703120918060_Permit.Designer.cs">
-      <DependentUpon>201703120918060_Permit.cs</DependentUpon>
+    <Compile Include="Migrations\201704180715509_PaymentsIncluded.cs" />
+    <Compile Include="Migrations\201704180715509_PaymentsIncluded.Designer.cs">
+      <DependentUpon>201704180715509_PaymentsIncluded.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201703120921438_remodeling.cs" />
-    <Compile Include="Migrations\201703120921438_remodeling.Designer.cs">
-      <DependentUpon>201703120921438_remodeling.cs</DependentUpon>
+    <Compile Include="Migrations\201704190934294_BusinessPermitUpdate.cs" />
+    <Compile Include="Migrations\201704190934294_BusinessPermitUpdate.Designer.cs">
+      <DependentUpon>201704190934294_BusinessPermitUpdate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201703121326004_ZoningForm.cs" />
-    <Compile Include="Migrations\201703121326004_ZoningForm.Designer.cs">
-      <DependentUpon>201703121326004_ZoningForm.cs</DependentUpon>
+    <Compile Include="Migrations\201704190956123_BusinessPermitUpdate1.cs" />
+    <Compile Include="Migrations\201704190956123_BusinessPermitUpdate1.Designer.cs">
+      <DependentUpon>201704190956123_BusinessPermitUpdate1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201703121428160_Hello.cs" />
-    <Compile Include="Migrations\201703121428160_Hello.Designer.cs">
-      <DependentUpon>201703121428160_Hello.cs</DependentUpon>
+    <Compile Include="Migrations\201704221437340_BuildingPermit.cs" />
+    <Compile Include="Migrations\201704221437340_BuildingPermit.Designer.cs">
+      <DependentUpon>201704221437340_BuildingPermit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201703121454333_ZoningClearance.cs" />
-    <Compile Include="Migrations\201703121454333_ZoningClearance.Designer.cs">
-      <DependentUpon>201703121454333_ZoningClearance.cs</DependentUpon>
+    <Compile Include="Migrations\201704221453160_BuildingPermitUpdate.cs" />
+    <Compile Include="Migrations\201704221453160_BuildingPermitUpdate.Designer.cs">
+      <DependentUpon>201704221453160_BuildingPermitUpdate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201703131412141_Status.cs" />
-    <Compile Include="Migrations\201703131412141_Status.Designer.cs">
-      <DependentUpon>201703131412141_Status.cs</DependentUpon>
+    <Compile Include="Migrations\201704221629000_BUildingPermitUpdate2.cs" />
+    <Compile Include="Migrations\201704221629000_BUildingPermitUpdate2.Designer.cs">
+      <DependentUpon>201704221629000_BUildingPermitUpdate2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704221634087_BUildingPermitUpdate3.cs" />
+    <Compile Include="Migrations\201704221634087_BUildingPermitUpdate3.Designer.cs">
+      <DependentUpon>201704221634087_BUildingPermitUpdate3.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -234,7 +244,11 @@
     <Compile Include="Models\ApplicationType.cs" />
     <Compile Include="Models\Audit.cs" />
     <Compile Include="Models\Auth.cs" />
+    <Compile Include="Models\BuildingPermit.cs" />
+    <Compile Include="Models\BusinessPermit.cs" />
     <Compile Include="Models\Fee.cs" />
+    <Compile Include="Models\LocationalClearance.cs" />
+    <Compile Include="Models\Payment.cs" />
     <Compile Include="Models\RecordInformation.cs" />
     <Compile Include="Models\TemplateObjects.cs" />
     <Compile Include="Models\UserRoles.cs" />
@@ -245,6 +259,49 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="dist\css\agency.min.css" />
+    <Content Include="dist\css\bootstrap-fileinput\css\fileinput.css" />
+    <Content Include="dist\css\bootstrap-fileinput\css\fileinput.min.css" />
+    <Content Include="dist\css\bootstrap-fileinput\img\loading-sm.gif" />
+    <Content Include="dist\css\bootstrap-fileinput\img\loading.gif" />
+    <Content Include="dist\css\bootstrap-fileinput\js\fileinput.js" />
+    <Content Include="dist\css\bootstrap-fileinput\js\fileinput.min.js" />
+    <Content Include="dist\css\bootstrap-fileinput\js\locales\ar.js" />
+    <Content Include="dist\css\bootstrap-fileinput\js\locales\bg.js" />
+    <Content Include="dist\css\bootstrap-fileinput\js\locales\ca.js" />
+    <Content Include="dist\css\bootstrap-fileinput\js\locales\cr.js" />
+    <Content Include="dist\css\bootstrap-fileinput\js\locales\cz.js" />
+    <Content Include="dist\css\bootstrap-fileinput\js\locales\da.js" />
+    <Content Include="dist\css\bootstrap-fileinput\js\locales\de.js" />
+    <Content Include="dist\css\bootstrap-fileinput\js\locales\el.js" />
+    <Content Include="dist\css\bootstrap-fileinput\js\locales\es.js" />
+    <Content Include="dist\css\bootstrap-fileinput\js\locales\fa.js" />
+    <Content Include="dist\css\bootstrap-fileinput\js\locales\fi.js" />
+    <Content Include="dist\css\bootstrap-fileinput\js\locales\fr.js" />
+    <Content Include="dist\css\bootstrap-fileinput\js\locales\hu.js" />
+    <Content Include="dist\css\bootstrap-fileinput\js\locales\id.js" />
+    <Content Include="dist\css\bootstrap-fileinput\js\locales\it.js" />
+    <Content Include="dist\css\bootstrap-fileinput\js\locales\ja.js" />
+    <Content Include="dist\css\bootstrap-fileinput\js\locales\LANG.js" />
+    <Content Include="dist\css\bootstrap-fileinput\js\locales\nl.js" />
+    <Content Include="dist\css\bootstrap-fileinput\js\locales\pl.js" />
+    <Content Include="dist\css\bootstrap-fileinput\js\locales\pt-BR.js" />
+    <Content Include="dist\css\bootstrap-fileinput\js\locales\pt.js" />
+    <Content Include="dist\css\bootstrap-fileinput\js\locales\ro.js" />
+    <Content Include="dist\css\bootstrap-fileinput\js\locales\ru.js" />
+    <Content Include="dist\css\bootstrap-fileinput\js\locales\sk.js" />
+    <Content Include="dist\css\bootstrap-fileinput\js\locales\th.js" />
+    <Content Include="dist\css\bootstrap-fileinput\js\locales\tr.js" />
+    <Content Include="dist\css\bootstrap-fileinput\js\locales\uk.js" />
+    <Content Include="dist\css\bootstrap-fileinput\js\locales\zh-TW.js" />
+    <Content Include="dist\css\bootstrap-fileinput\js\locales\zh.js" />
+    <Content Include="dist\css\bootstrap-fileinput\js\plugins\canvas-to-blob.js" />
+    <Content Include="dist\css\bootstrap-fileinput\js\plugins\canvas-to-blob.min.js" />
+    <Content Include="dist\css\bootstrap-fileinput\js\plugins\purify.js" />
+    <Content Include="dist\css\bootstrap-fileinput\js\plugins\purify.min.js" />
+    <Content Include="dist\css\bootstrap-fileinput\js\plugins\sortable.js" />
+    <Content Include="dist\css\bootstrap-fileinput\js\plugins\sortable.min.js" />
+    <Content Include="dist\css\bootstrap-fileinput\themes\fa\fa.js" />
+    <Content Include="dist\css\bootstrap-fileinput\themes\gly\gly.js" />
     <Content Include="dist\css\marikina.css" />
     <Content Include="dist\js\agency.js" />
     <Content Include="dist\js\agency.min.js" />
@@ -266,6 +323,8 @@
     <Content Include="dist\js\inspinia\inspinia.js" />
     <Content Include="dist\js\jqBootstrapValidation.js" />
     <Content Include="dist\js\jQuery-2.1.4.min.js" />
+    <Content Include="dist\js\jquery.mask.js" />
+    <Content Include="dist\js\masking.js" />
     <Content Include="dist\js\plugins\demo\chartjs-demo.js" />
     <Content Include="dist\js\plugins\demo\flot-demo.js" />
     <Content Include="dist\js\plugins\demo\morris-demo.js" />
@@ -281,8 +340,7 @@
     <Content Include="dist\js\plugins\flot\jquery.flot.symbol.js" />
     <Content Include="dist\js\plugins\flot\jquery.flot.time.js" />
     <Content Include="dist\js\plugins\flot\jquery.flot.tooltip.min.js" />
-    <Content Include="ClassDiagram1.cd" />
-    <Content Include="ClassDiagram2.cd" />
+    <Content Include="dist\css\bootstrap-fileinput\sass\fileinput.scss" />
     <None Include="dist\js\plugins\jvalidate\jquery.validate-vsdoc.js" />
     <Content Include="dist\js\plugins\jvalidate\jquery.validate.js" />
     <Content Include="dist\js\plugins\jvalidate\jquery.validate.min.js" />
@@ -294,6 +352,8 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Images\2x2.jpg" />
+    <Content Include="Images\default-thumbnail.jpg" />
+    <Content Include="Images\Marikina.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="dist\css\font-awesome-4.5.0\fonts\fontawesome-webfont.eot" />
@@ -365,13 +425,29 @@
     <Content Include="Views\Locational\ApplicationSuccess.cshtml" />
     <Content Include="Views\Shared\_FrontEnd.cshtml" />
     <Content Include="Views\Locational\Edit.cshtml" />
+    <Content Include="Views\Payment\Create.cshtml" />
+    <Content Include="Views\Payment\Delete.cshtml" />
+    <Content Include="Views\Payment\Details.cshtml" />
+    <Content Include="Views\Payment\Edit.cshtml" />
+    <Content Include="Views\Payment\Index.cshtml" />
+    <Content Include="Views\BusinessPermit\Index.cshtml" />
+    <Content Include="Views\BusinessPermit\Create.cshtml" />
+    <Content Include="Views\BusinessPermit\View1.cshtml" />
+    <Content Include="Views\BusinessPermit\ApplicationSuccess.cshtml" />
+    <Content Include="Views\BusinessPermit\Edit.cshtml" />
+    <Content Include="Views\BuildingPermit\Create.cshtml" />
+    <Content Include="Views\BuildingPermit\Delete.cshtml" />
+    <Content Include="Views\BuildingPermit\Details.cshtml" />
+    <Content Include="Views\BuildingPermit\Edit.cshtml" />
+    <Content Include="Views\BuildingPermit\Index.cshtml" />
+    <Content Include="Views\BuildingPermit\aw.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="dist\js\angular\Directives\" />
     <Folder Include="dist\js\angular\Filters\" />
     <Folder Include="Views\Audit\" />
-    <Folder Include="Views\UserRole\" />
+    <Folder Include="Views\aw\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -381,29 +457,32 @@
     <EmbeddedResource Include="Migrations\201703010209421_Initial.resx">
       <DependentUpon>201703010209421_Initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703010234127_user-role.resx">
-      <DependentUpon>201703010234127_user-role.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201704111021237_BusinessPermit.resx">
+      <DependentUpon>201704111021237_BusinessPermit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703010256388_db-update.resx">
-      <DependentUpon>201703010256388_db-update.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201704170634031_AttachmentUpdate.resx">
+      <DependentUpon>201704170634031_AttachmentUpdate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703120918060_Permit.resx">
-      <DependentUpon>201703120918060_Permit.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201704180715509_PaymentsIncluded.resx">
+      <DependentUpon>201704180715509_PaymentsIncluded.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703120921438_remodeling.resx">
-      <DependentUpon>201703120921438_remodeling.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201704190934294_BusinessPermitUpdate.resx">
+      <DependentUpon>201704190934294_BusinessPermitUpdate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703121326004_ZoningForm.resx">
-      <DependentUpon>201703121326004_ZoningForm.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201704190956123_BusinessPermitUpdate1.resx">
+      <DependentUpon>201704190956123_BusinessPermitUpdate1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703121428160_Hello.resx">
-      <DependentUpon>201703121428160_Hello.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201704221437340_BuildingPermit.resx">
+      <DependentUpon>201704221437340_BuildingPermit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703121454333_ZoningClearance.resx">
-      <DependentUpon>201703121454333_ZoningClearance.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201704221453160_BuildingPermitUpdate.resx">
+      <DependentUpon>201704221453160_BuildingPermitUpdate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703131412141_Status.resx">
-      <DependentUpon>201703131412141_Status.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201704221629000_BUildingPermitUpdate2.resx">
+      <DependentUpon>201704221629000_BUildingPermitUpdate2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704221634087_BUildingPermitUpdate3.resx">
+      <DependentUpon>201704221634087_BUildingPermitUpdate3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

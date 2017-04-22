@@ -14,7 +14,7 @@
 
 @section toolbarright {
 <li><a href="#" id="btnApprove" title="Save User"><span class="fa fa-check"></span>&nbsp;APPROVE</a></li>
-<li><a href="#" id="btnDisqualify" title="Save User"><span class="fa fa-ban"></span>&nbsp;DISQUALIFY</a></li>
+<li><a href="#" id="btnDisqualify" title="Save User"><span class="fa fa-ban"></span>&nbsp;DENIED</a></li>
 }
 
 
@@ -73,6 +73,13 @@
                                 @Html.ValidationMessageFor(model => model.BusinessNature)
                             </div>
                         </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Attachments</label>
+                            <div class="col-md-9">
+                                <a style="margin-top:5px;" href="~/ZoningForm/DownloadAttachment?id=@Model.ZoningClearanceId">Download File Attachments</a>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
@@ -118,10 +125,21 @@
 @section scripts {
     <script>
         $('#btnApprove').click(function () {
-            $.ajax({ url: '/ZoningForm/ApproveApplication', type: 'POST', 
-                data: { id : '@Model.ZoningClearanceId' }
+            $.ajax({
+                url: '/ZoningForm/ApproveApplication', type: 'POST',
+                data: { id: '@Model.ZoningClearanceId' }
             }).then(function () {
                 alert('Zoning Application has been approved!');
+                window.location.href = "/ZoningForm/";
+            })
+        });
+
+        $('#btnDisqualify').click(function () {
+            $.ajax({
+                url: '/ZoningForm/DisqualifyApplication', type: 'POST',
+                data: { id: '@Model.ZoningClearanceId' }
+            }).then(function () {
+                alert('Zoning Application has been denied!');
                 window.location.href = "/ZoningForm/";
             })
         })

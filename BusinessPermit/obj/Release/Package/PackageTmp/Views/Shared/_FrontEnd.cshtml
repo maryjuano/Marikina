@@ -9,12 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Marikina City</title>
+    <title>@*Marikina City*@</title>
     <link href="~/dist/css/metro-bootstrap.min.css" rel="stylesheet" />
     <link href="~/dist/css/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
     <link href="~/dist/css/marikina.css" rel="stylesheet" />
     <link href="~/dist/css/inspinia/animate.css" rel="stylesheet" />
     <link href="~/dist/css/site-template.css" rel="stylesheet" />
+    <link href="~/dist/css/bootstrap-fileinput/css/fileinput.min.css" rel="stylesheet" />
     @RenderSection("css", required: false)
 </head>
 <body>
@@ -37,7 +38,108 @@
     <script src="~/dist/js/jQuery-2.1.4.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="~/dist/js/bootstrap.min.js"></script>
+    <script src="~/dist/js/jquery.mask.js"></script>
+    <script src="~/dist/js/masking.js"></script>
+    <script src="~/dist/css/bootstrap-fileinput/js/plugins/canvas-to-blob.min.js"></script>
+    <script src="~/dist/css/bootstrap-fileinput/js/plugins/purify.min.js"></script>
+    <script src="~/dist/css/bootstrap-fileinput/js/fileinput.js"></script>
+    <script>
+        $(document).ready(function () {
+           
+            var files = null;
+            var modal = '<section aria-hidden="true" id="photoUploadModal" class="modal fade modal-delete" data-backdrop="static" role="dialog" tabindex="-1"> \
+                          <div class="modal-dialog"> \
+                              <div class="modal-content"> \
+                                    <div class="modal-header"> \
+                                        <button class="close" data-dismiss="modal" type="button"> \
+                                            <span aria-hidden="true">×</span><span class="sr-only">Close</span> \
+                                        </button> \
+                                        <h1 class="modal-title h4">Edit Image</h1> \
+                                        <h1 class="modal-title h6">Change or edit image.</h1> \
+                                    </div> \
+                                    <div class="modal-body"> \
+                                          <div class="col-sm-3">\
+                                                <img id="preview" style="height:100px;width:100px;"> \
+                                          </div>\
+                                          <div class="col-sm-9"><br/>\
+                                                <input id="photoUploader" type="file"><br/>   \
+                                                <b>Upload a picture from your computer</b><br/> (under 5 MB) \
+                                          </div>\
+                                           <br/><br/><br/><br/><br/>\
+                                    </div> \
+                                    <div class="modal-footer">\
+                                        <button id="submitPhoto" class="btn btn-default btn-dialog disabled" type="button"><i class="fa fa-check"></i> SUBMIT</button> \
+                                        <button id="cancelPhotoUpload" class="btn btn-default btn-dialog" data-dismiss="modal" type="button"><i class="fa fa-remove"></i> CANCEL</button> \
+                                    </div> \
+                               </div> \
+                           </div> \
+                    </section>';
+            //var image = $('<img />');
+            //image.attr('src', '~/images/account/' + accountid + '.jpg');
+            //image.attr('onError', "this.onerror=null;this.src='~/Images/default-thumbnail.jpg'");
+            //image.attr('data-toggle', 'modal');
+            //image.attr('data-target', '#photoUploadModal');
+            //image.addClass("account-image");
+
+            //$('table[data-name="HeaderSection"]').prepend(image);           
+
+            //$('.container').append(modal);
+            //$('#preview').attr('src', '~/images/account/' + accountid + '.jpg');
+            //$('#preview').attr('onError', "this.onerror=null;this.src='~/Images/default-thumbnail.jpg'");
+
+            $(".attachments").fileinput({
+                showUpload: false,
+                showUploadedThumbs: false,
+                showCancel: false,
+                showRemove: true,
+                showCaption: false,
+                showPreview: true,               
+                browseClass: "btn btn-default",              
+                uploadAsync: true,
+                dropZoneTitle: 'Drop attachments here!',
+                previewFileIconSettings: {
+                    'docx': '<i class="fa fa-file-word-o text-primary"></i>',
+                    'xlsx': '<i class="fa fa-file-excel-o text-success"></i>',
+                    'pptx': '<i class="fa fa-file-powerpoint-o text-danger"></i>',
+                    'jpg': '<i class="fa fa-file-photo-o text-warning"></i>',
+                    'pdf': '<i class="fa fa-file-pdf-o text-danger"></i>',
+                    'zip': '<i class="fa fa-file-archive-o text-muted"></i>',
+                },
+                uploadUrl: '/DMS_Api/FileUpload/Upload' 
+            });
+
+            function readURL(input) {
+
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        $('#preview').attr('src', e.target.result);
+                    }
+
+                    reader.readAsDataURL(input.files[0]);
+
+                    $('#submitPhoto').removeClass('disabled');
+                }
+            }
+
+            $("#photoUploader").change(function (evt) {
+                readURL(this);
+                files = evt.target.files;
+            });
+
+            $("#cancelPhotoUpload").click(function () {
+                $('#photoUploader').val("");
+                $('#submitPhoto').addClass('disabled');
+            });
+
+            $("#submitPhoto").on("click", function () {
+                $("#photoUploader").fileinput('upload');
+            });
+
+        });
+    </script>
     <!-- Theme JavaScript -->
-    @RenderSection("script", required: false)
+    @RenderSection("scripts", required: false)
 </body>
 </html>

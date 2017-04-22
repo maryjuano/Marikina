@@ -19,10 +19,11 @@ namespace BusinessPermit.Models
         public DbSet<ApplicationType> ApplicationTypes { get; set; }    
 
         public DbSet<Audit> Audits { get; set; }
-
         public DbSet<ZoningClearance> ZoningClearance { get; set; }
         public DbSet<LocationalClearance> LocationalClearance { get; set; }
-
+        public DbSet<Payment> Payments { get; set; }
+        public DbSet<BusinessPermit> BusinessPermits { get; set; }
+        public DbSet<BuildingPermit> BuildingPermits { get; set; } 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             //one-to-many 

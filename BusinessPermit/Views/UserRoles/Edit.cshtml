@@ -24,7 +24,7 @@
     <div class="ibox-content">
         <div class="form-horizontal">
             @Html.ValidationSummary(true)
-
+            @Html.HiddenFor(model => model.RoleId)
             <div class="row">
                 <div class="col-sm-12">
                     <div class="page-header">

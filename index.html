@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page Title</title>    
+</head>
+<body ng-app="customer">    
+       <div ng-controller="CustomerController as customer">
+            <h1> {{ customer.FirstName }}</h1>
+              <h1> {{ customer.LastName }}</h1>
+              <input type="text" ng-model="customer.FirstName">
+               <input type="text" ng-model="customer.LastName">
+               <button ng-click="customer.Save(customer.FirstName, customer.LastName)">Save</button>
+       </div>
+     
+  <script src="angular.min.js"></script>
+  <script>
+      var customer = angular.module('customer', []);
+       
+      var CustomerController = function () {
+          var that = this;         
+         
+
+          that.Save = function (firstName, lastName) {
+              alert('saved to database ' + FirstName + lastName);
+          }
+      };
+
+      customer.controller('CustomerController', CustomerController);
+  </script>
+
+</body>
+</html>

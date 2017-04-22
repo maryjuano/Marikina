@@ -1,0 +1,74 @@
+﻿@model IEnumerable<BusinessPermit.Models.BusinessPermit>
+
+
+@{
+    ViewBag.Title = "Business Permit";
+    ViewBag.CurrentEntity = "Business Permit";
+    ViewBag.WebPageTitle = "Business Permit List";
+}
+
+@section toolbarleft {
+    <li class="breadcrumb-item"><a href="~/Dashboard/Index">Home</a></li>
+    <li class="breadcrumb-item active">Business Permit List</li>
+}
+
+@section ToolbarRight {
+
+}
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>
+              Is New
+            </th>
+            <th>
+              Account Number
+            </th>
+            <th>
+               Business Name
+            </th>
+            <th>
+               Owner Name
+            </th>            
+            <th>
+                Business Nature
+            </th>
+            <th>
+                Assessed Amount            
+            </th>
+            <th>
+                Status
+            </th>
+        </tr>
+    </thead>
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsNew)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BusinessAccountNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BusinessName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OwnerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BusinessNature)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AssessedAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+        </tr>
+    }
+
+</table>

@@ -7,7 +7,7 @@
 }
 
 @section toolbarleft {
-    <li class="breadcrumb-item"><a href="~/">Home</a></li>
+    <li class="breadcrumb-item"><a href="~/Dashboard/Index">Home</a></li>
     <li class="breadcrumb-item"><a href="~/Users/">User List</a></li>
     <li class="breadcrumb-item actions">New User</li>
 }
@@ -55,7 +55,17 @@
                                     @Html.ValidationMessageFor(model => model.Password, null, new { @class = "text-danger" })
                                 </div>
                             </div>
-
+                           
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.UserRoleId, "Role", new { @class = "control-label col-sm-3 label-left" })
+                                <div class="col-sm-9">
+                                    @Html.DropDownListFor(model => model.UserRoleId,
+                                        (SelectList)ViewBag.UserRoleId,
+                                         "Select Role",
+                                         new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.UserRoleId, null, new { @class = "text-danger" })
+                                </div>
+                            </div>                           
                         </div>
 
                         <div class="col-sm-6">

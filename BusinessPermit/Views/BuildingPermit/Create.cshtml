@@ -1,0 +1,164 @@
+﻿@model BusinessPermit.Models.BuildingPermit
+
+@{
+    Layout = "~/Views/Shared/_FrontEnd.cshtml";
+}
+
+@using (Html.BeginForm("Create", "BuildingPermit", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="ibox-content">
+
+        <div class="pull-right" style="margin-right: 15px;">
+            <button class="btn btn-success">SUBMIT</button>
+            <a href="~/" class="btn btn-default">CANCEL</a>
+        </div>
+        <div class="pull-left" style="margin-left: 15px;">
+            <span style="font-size:24px;">Business Permit Form</span>
+        </div>
+
+        <br />
+        <br />
+        <br />
+        @Html.ValidationSummary(true)
+
+
+        <div class="form-horizontal">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label col-md-3">App No.</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.ApplicationNumber, new { @class = "form-control", @placeholder = "Application Number", @readonly = true })
+                                @Html.ValidationMessageFor(model => model.ApplicationNumber)
+                            </div>
+                        </div>                       
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Area No.</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.AreaNumber, new { @class = "form-control", @placeholder = "Area Number",  })
+                                @Html.ValidationMessageFor(model => model.AreaNumber)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label col-md-3">TIN</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.TIN, new { @class = "form-control", @placeholder = "Tax Identification Number", })
+                                @Html.ValidationMessageFor(model => model.TIN)
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="form-horizontal">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Firstname</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control", @placeholder = "First Name" })
+                                @Html.ValidationMessageFor(model => model.FirstName)
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Occupancy</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.OccupancyClassified, new { @class = "form-control", @placeholder = "Occupancy Classified", })
+                                @Html.ValidationMessageFor(model => model.OccupancyClassified)
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Total Cost</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.TotalEstimatedCost, new { @class = "form-control", @placeholder = "Total Estimated Cost", })
+                                @Html.ValidationMessageFor(model => model.TotalEstimatedCost)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Middlename</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.MiddleInitial, new { @class = "form-control", @placeholder = "Middle Name" })
+                                @Html.ValidationMessageFor(model => model.MiddleInitial)
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3">No. Of Units</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.NumberOfUnits, new { @class = "form-control", @placeholder = "Number Of Units", })
+                                @Html.ValidationMessageFor(model => model.NumberOfUnits)
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Proposed</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.ProposedConstructionDate, new { @class = "form-control", @placeholder = "Proposed Construction Date", })
+                                @Html.ValidationMessageFor(model => model.ProposedConstructionDate)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Lastname</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.LastName, new { @class = "form-control", @placeholder = "Last Name" })
+                                @Html.ValidationMessageFor(model => model.LastName)
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Floor Area</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.TotalFloorArea  , new { @class = "form-control", @placeholder = "Total Floor Area", })
+                                @Html.ValidationMessageFor(model => model.TotalFloorArea)
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Expected</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.ExpectedCompletionDate, new { @class = "form-control", @placeholder = "Expected Completion Date", })
+                                @Html.ValidationMessageFor(model => model.ExpectedCompletionDate)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-horizontal">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="control-label col-md-1">Attachments</label>
+                    <div class="col-md-11">
+                        <input id="Attachments" style="margin-top:5px;" name="uploadFile" class="attachments" type="file">
+                        @Html.ValidationMessageFor(model => model.Attachment)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="submit" value="Create" class="btn btn-default hidden" />
+}
+
+@section scripts {
+    <script>
+        $('.money.form-control').mask("#,##0.00", { reverse: true });
+    </script>
+    <script src="~/dist/js/app.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+}
+
+
+
+
+
+
