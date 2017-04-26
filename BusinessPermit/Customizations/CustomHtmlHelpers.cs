@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Reflection;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Mvc.Ajax;
@@ -10,6 +12,34 @@ namespace BusinessPermit
 {
     public static class CustomHtmlHelpers
     {
+        public static System.Web.Mvc.SelectList ToSelectList<TEnum>(this TEnum obj)
+          where TEnum : struct, IComparable, IFormattable, IConvertible
+        {
+
+            return new SelectList(Enum.GetValues(typeof(TEnum)).OfType<Enum>()
+                .Select(x =>
+                    new SelectListItem
+                    {
+                        Text =  x.GetEnumDescription(),
+                        Value = (Convert.ToInt32(x)).ToString()
+                    }), "Value", "Text");
+        }
+
+        public static string GetEnumDescription(this Enum value)
+        {
+            FieldInfo fi = value.GetType().GetField(value.ToString());
+
+            DescriptionAttribute[] attributes =
+                (DescriptionAttribute[])fi.GetCustomAttributes(
+                typeof(DescriptionAttribute),
+                false);
+
+            if (attributes != null &&
+                attributes.Length > 0)
+                return attributes[0].Description;
+            else
+                return value.ToString();
+        }
 
         public static IHtmlString DisplayForBoolean(this HtmlHelper html, bool value)
         {
@@ -27,7 +57,6 @@ namespace BusinessPermit
             string htmlString = String.Format("P{0}", value);
             return new HtmlString(htmlString);
         }
-
 
         public static IHtmlString DisplayForCheckbox(this HtmlHelper html, bool value)
         {

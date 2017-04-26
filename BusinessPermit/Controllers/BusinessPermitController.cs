@@ -1,6 +1,7 @@
 ﻿using BusinessPermit.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -55,6 +56,43 @@ namespace BusinessPermit.Controllers
             return View(businesspermit);
         }
 
+        public ActionResult ApproveApplication(int? id)
+        {
+            var permitQuery = db.BusinessPermits.Include(b => b.ZoningClearance);
+            BusinessPermit.Models.BusinessPermit permit = permitQuery.FirstOrDefault(p => p.Id == id);
+            List<Fee> fees = db.Fees.Include(p => p.ApplicationType).Where(p => p.ApplicationType.Description.Contains("Business")).ToList();
+            if (permit == null)
+            {
+                return HttpNotFound();
+            }
+
+            permit.Status = "Approved";
+            permit.PaymentReference = base.RandomString();
+            db.Entry(permit).State = EntityState.Modified;
+            permit.TotalPayment = fees.Sum(f => f.Price);
+            db.SaveChanges();
+          
+            EmailSender.SendMail(permit.ZoningClearance.EmailAddress, "Business Permit Application : Approved", EmailSender.BusinessPermitApprovedTemplate(permit, fees));
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public ActionResult DisqualifyApplication(int? id)
+        {
+            var permitQuery = db.BusinessPermits.Include(b => b.ZoningClearance);
+            var permit = permitQuery.FirstOrDefault(p => p.Id == id);
+
+            if (permit == null)
+            {
+                return HttpNotFound();
+            }
+            permit.Status = "Denied";
+            db.Entry(permit).State = EntityState.Modified;
+            db.SaveChanges();
+            EmailSender.SendMail(permit.ZoningClearance.EmailAddress, "Business Permit Application : Denied", EmailSender.BusinessPermitDeniedTemplate());
+            return RedirectToAction("Index");
+        }
+
         //     GET: /aw/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -67,7 +105,7 @@ namespace BusinessPermit.Controllers
             {
                 return HttpNotFound();
             }
-          
+
             return View(businesspermit);
         }
 
@@ -86,29 +124,7 @@ namespace BusinessPermit.Controllers
                 return File(array, System.Net.Mime.MediaTypeNames.Application.Octet, "record-not-found");
             }
 
-            return File(record.Attachments, System.Net.Mime.MediaTypeNames.Application.Octet, record.BusinessName + ".xlsx");
-        }
-        private void GenerateApplicationNumber()
-        {
-            //var purchaseOrderNumber = db.BusinessPermits.OrderByDescending(p => p.DateApplied).FirstOrDefault();
-
-            //if (purchaseOrderNumber == null)
-            //{
-            //    return "ZC-00000001";
-            //}
-
-            //string lastNumber = purchaseOrderNumber.ref;
-
-            //string numberOnly = lastNumber.Remove(0, lastNumber.IndexOf('-') + 1);
-            //int numberResult = Convert.ToInt32(numberOnly);
-            //int numberResultLength = numberResult.ToString().Length;
-            //int startIndex = (numberOnly.Length) - numberResultLength;
-
-            //numberOnly = numberOnly.Remove(startIndex, numberResultLength);
-
-            //numberResult++;
-
-            //return string.Format("ZC-{0}{1}", numberOnly, numberResult.ToString());
+            return File(record.Attachments, System.Net.Mime.MediaTypeNames.Application.Octet, record.BusinessName + ".docx");
         }
     }
 }

@@ -1,68 +1,63 @@
 ﻿@model BusinessPermit.Models.Payment
 
 @{
-    Layout = null;
+    Layout = "~/Views/Shared/_FrontEnd.cshtml";
 }
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Create</title>
-</head>
-<body>
-    @using (Html.BeginForm()) 
-    {
-        @Html.AntiForgeryToken()
-        
+@using (Html.BeginForm("Create", "Payment", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="ibox-content">
+        <div class="pull-left" style="margin-left: 15px;">
+            <span style="font-size:24px;">Payment Verification Form</span>
+        </div>
+
+        <br />
+        <br />
+        <br />
+        @Html.ValidationSummary(true)
         <div class="form-horizontal">
-            <h4>Payment</h4>
-            <hr />
-            @Html.ValidationSummary(true)
-    
-            <div class="form-group">
-                @Html.LabelFor(model => model.ReferenceNumber, new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.ReferenceNumber)
-                    @Html.ValidationMessageFor(model => model.ReferenceNumber)
-                </div>
-            </div>
-    
-            <div class="form-group">
-                @Html.LabelFor(model => model.DateApplied, new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.DateApplied)
-                    @Html.ValidationMessageFor(model => model.DateApplied)
-                </div>
-            </div>
-    
-            <div class="form-group">
-                @Html.LabelFor(model => model.DatePaid, new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.DatePaid)
-                    @Html.ValidationMessageFor(model => model.DatePaid)
-                </div>
-            </div>
-    
-            <div class="form-group">
-                @Html.LabelFor(model => model.Status, new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.Status)
-                    @Html.ValidationMessageFor(model => model.Status)
-                </div>
-            </div>
-    
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Create" class="btn btn-default" />
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Permit Type</label>
+                            <div class="col-md-9">
+                                @Html.DropDownList("ApplicationType", new SelectList(ViewBag.ApplicationType, "Value", "Text"), "Select ApplicationType Type", new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.ApplicationType)
+                            </div>
+                        </div>                      
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Reference No.</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.ReferenceNumber, new { @class = "form-control", @placeholder = "Payment Reference Number" })
+                                @Html.ValidationMessageFor(model => model.ReferenceNumber)
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3">OR No.</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.OfficialReceiptNumber, new { @class = "form-control", @placeholder = "Official Receipt Number" })
+                                @Html.ValidationMessageFor(model => model.OfficialReceiptNumber)
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
-    }
-    
-    <div>
-        @Html.ActionLink("Back to List", "Index")
+
+        <div class="pull-left" style="margin-right: 15px;margin-top: 10px;">
+            <button class="btn btn-success">SUBMIT</button>
+            <a href="~/" class="btn btn-default">CANCEL</a>
+        </div>
     </div>
-</body>
-</html>
+}
+
+
+@section scripts {
+    <script src="~/dist/js/app.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+}

@@ -27,6 +27,8 @@ namespace BusinessPermit.Models
         public int TotalFloorArea { get; set; }
         [Required(ErrorMessage = "This field is required.")]
         public int FloorAreaBusiness { get; set; }
+        public string PaymentReference { get; set; }
+        public float TotalPayment { get; set; }
         public string Status { get; set; }
         [Required(ErrorMessage = "Attachments are required.")]
         public byte[] Attachments { get; set; }

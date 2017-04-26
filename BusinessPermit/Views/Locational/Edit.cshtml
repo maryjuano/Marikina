@@ -138,17 +138,22 @@
 
 @section scripts {
     <script>
-          $('#btnApprove').click(function () {
+        $('#btnApprove').click(function () {           
+
             $.ajax({
                 url: '/Locational/ApproveApplication', type: 'POST',
                 data: { id: '@Model.LocationalClearanceId' }
             }).then(function () {
                 alert('Locational Application has been approved!');
                 window.location.href = "/Locational/";
-            })
+            });
+
         });
 
         $('#btnDisqualify').click(function () {
+            var html = $(this).html();
+
+            $(this).addClass('disabled');
             $.ajax({
                 url: '/Locational/DisqualifyApplication', type: 'POST',
                 data: { id: '@Model.LocationalClearanceId' }

@@ -14,7 +14,7 @@ using System.IO;
 namespace BusinessPermit.Controllers
 {
     public class ZoningFormController : BaseController
-    {
+    {       
         // GET: /ZoningForm/
         public ActionResult Index()
         {
@@ -40,9 +40,9 @@ namespace BusinessPermit.Controllers
         public ActionResult Create()
         {
             //   ViewBag.Fees = db.Fees.Include(p => p.ApplicationType).Where(p => p.ApplicationType.Description.Contains("Zoning"));
-            List<Fee> fees = db.Fees.Include(p => p.ApplicationType).Where(p => p.ApplicationType.Description.Contains("Zoning")).ToList();
+            //List<Fee> fees = db.Fees.Include(p => p.ApplicationType).Where(p => p.ApplicationType.Description.Contains("Zoning")).ToList();
 
-            return View(new ZoningClearance { Fees = fees });
+            return View();
         }
 
         // POST: /ZoningForm/Create
@@ -58,6 +58,7 @@ namespace BusinessPermit.Controllers
                 zoningclearance.DateApplied = DateTime.Now;
                 zoningclearance.ApplicationNumber = GenerateApplicationNumber();
                 zoningclearance.Status = "Pending";
+                zoningclearance.Fees = db.Fees.Include(p => p.ApplicationType).Where(p => p.ApplicationType.Description.Contains("Zoning")).ToList();
                 db.ZoningClearance.Add(zoningclearance);
                 db.SaveChanges();
                 return RedirectToAction("ApplicationSuccess");
@@ -69,14 +70,21 @@ namespace BusinessPermit.Controllers
         public ActionResult ApproveApplication(int? id)
         {
             ZoningClearance zoningclearance = db.ZoningClearance.Find(id);
+            List<Fee> fees = db.Fees.Include(p => p.ApplicationType).Where(p => p.ApplicationType.Description.Contains("Locational")).ToList();
+
             if (zoningclearance == null)
             {
                 return HttpNotFound();
             }
+
             zoningclearance.Status = "Approved";
+            zoningclearance.TotalPayment = fees.Sum(f => f.Price);
+            zoningclearance.PaymentReference = base.RandomString();
             db.Entry(zoningclearance).State = EntityState.Modified;
-            db.SaveChanges();
-            EmailSender.SendMail(zoningclearance.EmailAddress, "Zoning Clearance Application : Approved", "Thank you");
+            db.SaveChanges();  
+            EmailSender.SendMail(zoningclearance.EmailAddress,
+                "Zoning Clearance Application : Approved",
+                EmailSender.ZoningClearanceApprovedTemplate(zoningclearance, fees));
             return RedirectToAction("Index");
         }
 
@@ -91,7 +99,7 @@ namespace BusinessPermit.Controllers
             zoningclearance.Status = "Denied";
             db.Entry(zoningclearance).State = EntityState.Modified;
             db.SaveChanges();
-            EmailSender.SendMail(zoningclearance.EmailAddress, "Zoning Clearance Application : Denied", "Thank you");
+            EmailSender.SendMail(zoningclearance.EmailAddress, "Zoning Clearance Application : Denied", EmailSender.ZoningClearanceDeniedTemplate());
             return RedirectToAction("Index");
         }
 

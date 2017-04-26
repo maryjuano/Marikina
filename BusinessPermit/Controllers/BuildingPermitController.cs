@@ -36,6 +36,9 @@ namespace BusinessPermit.Controllers
         // GET: /BuildingPermit/Create
         public ActionResult Create()
         {
+            ViewBag.BuildingType = new BuildingTypePermit().ToSelectList();
+            ViewBag.ScopeOfWork = new ScopeOfWork().ToSelectList();
+            ViewBag.BuildingUse = new BuildingUse().ToSelectList();
             return View();
         }
 
@@ -44,16 +47,77 @@ namespace BusinessPermit.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="BuildingPermitId,BuildingTypePermit,ApplicationNumber,AreaNumber,Owner,LastName,FirstName,MiddleInitial,TIN,FormOfOwnerShip,OwnerStreetNumber,OwnerStreet,OwnerBarangay,OwnerCity,OwnerZipCode,TelephoneNumber,LocationLotNumber,LocationBlockNumber,LocationTCTNumber,LocationTaxDescriptionNumber,LocationStreet,LocationBarangay,LocationCity,ScopeOfWork,ScopeOfWorkOther,BuildingUse,BuildingUseOther,OccupancyClassified,NumberOfUnits,TotalFloorArea,TotalEstimatedCost,ProposedConstructionDate,ExpectedCompletionDate,Attachment,Status,LocationalId")] BuildingPermit buildingpermit)
+        public ActionResult Create([Bind(Include = "BuildingPermitId,BuildingTypePermit,ApplicationNumber,AreaNumber,LastName,FirstName,MiddleInitial,TIN,FormOfOwnerShip,OwnerStreetNumber,OwnerStreet,OwnerBarangay,OwnerCity,OwnerZipCode,TelephoneNumber,LocationLotNumber,LocationBlockNumber,LocationTCTNumber,LocationTaxDescriptionNumber,LocationStreet,LocationBarangay,LocationCity,ScopeOfWork,ScopeOfWorkOther,BuildingUse,BuildingUseOther,OccupancyClassified,NumberOfUnits,TotalFloorArea,TotalEstimatedCost,ProposedConstructionDate,ExpectedCompletionDate,CreatedOn,Status,PaymentReference,LocationaClearanceReference")] BuildingPermit buildingpermit, HttpPostedFileBase uploadFile)
         {
-            if (ModelState.IsValid)
+            if (uploadFile != null)
             {
-                db.BuildingPermits.Add(buildingpermit);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
+                LocationalClearance locational = db.LocationalClearance.SingleOrDefault(z => z.ApplicationNumber == buildingpermit.LocationaClearanceReference);
 
+                if (locational == null)
+                {
+                    ViewBag.BuildingType = new BuildingTypePermit().ToSelectList();
+                    ViewBag.ScopeOfWork = new ScopeOfWork().ToSelectList();
+                    ViewBag.BuildingUse = new BuildingUse().ToSelectList();
+                    return View(buildingpermit);
+                }
+
+                buildingpermit.ApplicationNumber = GenerateApplicationNumber();
+                buildingpermit.Attachment = base.GetFileBytes(uploadFile);
+                buildingpermit.CreatedOn = DateTime.Now;
+                buildingpermit.Status = "Pending";
+                buildingpermit.LocationalId = locational.LocationalClearanceId;               
+                db.BuildingPermits.Add(buildingpermit);              
+                db.SaveChanges();
+                return RedirectToAction("ApplicationSuccess");
+            }
+               
+          
+            ViewBag.BuildingType = new BuildingTypePermit().ToSelectList();
+            ViewBag.ScopeOfWork = new ScopeOfWork().ToSelectList();
+            ViewBag.BuildingUse = new BuildingUse().ToSelectList();
             return View(buildingpermit);
+        }
+
+        [HttpPost]
+        public ActionResult ApproveApplication(int? id)
+        {
+            var permitQuery = db.BuildingPermits.Include(b => b.LocationalClearance);
+            var permit = permitQuery.FirstOrDefault(p => p.BuildingPermitId == id);
+            List<Fee> fees = db.Fees.Include(p => p.ApplicationType).Where(p => p.ApplicationType.Description.Contains("Building")).ToList();
+            if (permit == null)
+            {
+                return HttpNotFound();
+            }
+            permit.Status = "Approved";
+            permit.PaymentReference = base.RandomString();
+            permit.TotalPayment = fees.Sum(f => f.Price);
+            db.Entry(permit).State = EntityState.Modified;
+            db.SaveChanges();
+           
+            EmailSender.SendMail(permit.LocationalClearance.EmailAddress, "Building Permit Application : Approved", EmailSender.BuildingPermitApprovedTemplate(permit, fees));
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public ActionResult DisqualifyApplication(int? id)
+        {
+            var permitQuery = db.BuildingPermits.Include(b => b.LocationalClearance);
+            var permit = permitQuery.FirstOrDefault(p => p.BuildingPermitId == id);
+
+            if (permit == null)
+            {
+                return HttpNotFound();
+            }
+            permit.Status = "Denied";
+            db.Entry(permit).State = EntityState.Modified;
+            db.SaveChanges();
+            EmailSender.SendMail(permit.LocationalClearance.EmailAddress, "Building Permit Application : Denied", EmailSender.BuildingPermitDeniedTemplate());
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult ApplicationSuccess()
+        {
+            return View();
         }
 
         // GET: /BuildingPermit/Edit/5
@@ -68,6 +132,10 @@ namespace BusinessPermit.Controllers
             {
                 return HttpNotFound();
             }
+
+            ViewBag.BuildingType = buildingpermit.BuildingTypePermit.GetEnumDescription();
+            ViewBag.ScopeOfWork = buildingpermit.ScopeOfWork.GetEnumDescription();
+            ViewBag.BuildingUse = buildingpermit.BuildingUse.GetEnumDescription();
             return View(buildingpermit);
         }
 
@@ -76,7 +144,7 @@ namespace BusinessPermit.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include="BuildingPermitId,BuildingTypePermit,ApplicationNumber,AreaNumber,Owner,LastName,FirstName,MiddleInitial,TIN,FormOfOwnerShip,OwnerStreetNumber,OwnerStreet,OwnerBarangay,OwnerCity,OwnerZipCode,TelephoneNumber,LocationLotNumber,LocationBlockNumber,LocationTCTNumber,LocationTaxDescriptionNumber,LocationStreet,LocationBarangay,LocationCity,ScopeOfWork,ScopeOfWorkOther,BuildingUse,BuildingUseOther,OccupancyClassified,NumberOfUnits,TotalFloorArea,TotalEstimatedCost,ProposedConstructionDate,ExpectedCompletionDate,Attachment,Status,LocationalId,CreatedOn")] BuildingPermit buildingpermit)
+        public ActionResult Edit([Bind(Include = "BuildingPermitId,BuildingTypePermit,ApplicationNumber,AreaNumber,LastName,FirstName,MiddleInitial,TIN,FormOfOwnerShip,OwnerStreetNumber,OwnerStreet,OwnerBarangay,OwnerCity,OwnerZipCode,TelephoneNumber,LocationLotNumber,LocationBlockNumber,LocationTCTNumber,LocationTaxDescriptionNumber,LocationStreet,LocationBarangay,LocationCity,ScopeOfWork,ScopeOfWorkOther,BuildingUse,BuildingUseOther,OccupancyClassified,NumberOfUnits,TotalFloorArea,TotalEstimatedCost,ProposedConstructionDate,ExpectedCompletionDate,CreatedOn,Attachment,Status,PaymentReference,LocationaClearanceReference")] BuildingPermit buildingpermit)
         {
             if (ModelState.IsValid)
             {
@@ -134,6 +202,20 @@ namespace BusinessPermit.Controllers
             numberResult++;
 
             return string.Format("BP-{0}{1}", numberOnly, numberResult.ToString());
+        }
+
+        [HttpGet]
+        public FileResult DownloadAttachment(int id)
+        {
+            var record = db.BuildingPermits.Find(id);
+
+            if (record == null)
+            {
+                Byte[] array = new Byte[64];
+                return File(array, System.Net.Mime.MediaTypeNames.Application.Octet, "record-not-found");
+            }
+
+            return File(record.Attachment, System.Net.Mime.MediaTypeNames.Application.Octet, record.ApplicationNumber + ".docx");
         }
     }
 }

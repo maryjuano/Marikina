@@ -55,6 +55,7 @@ namespace BusinessPermit.Controllers
                 locationalclearance.DateApplied = DateTime.Now;
                 locationalclearance.DateIssued = DateTime.Now;
                 locationalclearance.ApplicationNumber = GenerateApplicationNumber();
+                locationalclearance.Fees = db.Fees.Include(p => p.ApplicationType).Where(p => p.ApplicationType.Description.Contains("Locational")).ToList();
                 db.LocationalClearance.Add(locationalclearance);
                 db.SaveChanges();
                 return RedirectToAction("ApplicationSuccess");
@@ -67,14 +68,19 @@ namespace BusinessPermit.Controllers
         public ActionResult ApproveApplication(int? id)
         {
             LocationalClearance clearance = db.LocationalClearance.Find(id);
+            List<Fee> fees = db.Fees.Include(p => p.ApplicationType).Where(p => p.ApplicationType.Description.Contains("Locational")).ToList();
             if (clearance == null)
             {
                 return HttpNotFound();
             }
+
             clearance.Status = "Approved";
+            clearance.TotalPayment = fees.Sum(f => f.Price);
+            clearance.PaymentReference = base.RandomString();
             db.Entry(clearance).State = EntityState.Modified;
             db.SaveChanges();
-            EmailSender.SendMail(clearance.EmailAddress, "Locational Clearance Application : Approved", "Thank you");
+           
+            EmailSender.SendMail(clearance.EmailAddress, "Locational Clearance Application : Approved", EmailSender.LocationalClearanceApprovedTemplate(clearance, fees));
             return RedirectToAction("Index");
         }
 
@@ -89,7 +95,7 @@ namespace BusinessPermit.Controllers
             clearance.Status = "Denied";
             db.Entry(clearance).State = EntityState.Modified;
             db.SaveChanges();
-            EmailSender.SendMail(clearance.EmailAddress, "Locational Clearance Application : Denied", "Thank you");
+            EmailSender.SendMail(clearance.EmailAddress, "Locational Clearance Application : Denied", EmailSender.LocationalClearanceDeniedTemplate());  
             return RedirectToAction("Index");
         }
 
@@ -170,7 +176,7 @@ namespace BusinessPermit.Controllers
 
             if (purchaseOrderNumber == null)
             {
-                return "ZC-00000001";
+                return "LC-00000001";
             }
 
             string lastNumber = purchaseOrderNumber.ApplicationNumber;

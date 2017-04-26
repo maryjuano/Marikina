@@ -8,18 +8,18 @@
 {
     @Html.AntiForgeryToken()
     <div class="ibox-content">
-       
-            <div class="pull-right" style="margin-right: 15px;">
-                <button class="btn btn-success">SUBMIT</button>
-                <a href="~/" class="btn btn-default">CANCEL</a>
-            </div>
-            <div class="pull-left" style="margin-left: 15px;">
-                <span style="font-size:24px;">Zoning Clearance Form</span>
-            </div>
-      
+
+        <div class="pull-right" style="margin-right: 15px;">
+            <button class="btn btn-success">SUBMIT</button>
+            <a href="~/" class="btn btn-default">CANCEL</a>
+        </div>
+        <div class="pull-left" style="margin-left: 15px;">
+            <span style="font-size:24px;">Zoning Clearance Form</span>
+        </div>
+
         <br />
-        <br />     
-        <br />     
+        <br />
+        <br />
         @Html.ValidationSummary(true)
         <div class="form-horizontal">
             <div class="row">
@@ -59,7 +59,7 @@
                                 @Html.TextAreaFor(model => model.BusinessAddress, new { @class = "form-control", @placeholder = "Business Addres", @style = "resize:none" })
                                 @Html.ValidationMessageFor(model => model.BusinessAddress)
                             </div>
-                        </div>                        
+                        </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
@@ -118,7 +118,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>        
     </div>
     <input type="submit" value="Create" class="btn btn-default hidden" />
 }

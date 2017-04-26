@@ -28,10 +28,7 @@
     </th>
     <th>
         Created On
-    </th>
-    <th>
-        Created By
-    </th>
+    </th>  
     <th></th>
     </thead>
 
@@ -49,10 +46,7 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.CreatedOn)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CreatedBy.FullName)
-            </td>
+            </td>            
             <td>
                 @Html.LinkWithIcon("Fee", "Edit", item.FeeId, "fa fa-pencil")
                 @Html.LinkWithIcon("Fee", "Details", item.FeeId, "fa fa-info")

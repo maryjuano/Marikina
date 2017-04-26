@@ -31,6 +31,8 @@ namespace BusinessPermit.Models
         public int UsableOpenSpace { get; set; }
         [Required(ErrorMessage = "This field is required.")]
         public string TCTNumber { get; set; }
+        public float TotalPayment { get; set; }
+        public string PaymentReference { get; set; }
         public string Status { get; set; }
         [Required(ErrorMessage = "Attachments are required.")]
         public byte[] Attachments { get; set; }

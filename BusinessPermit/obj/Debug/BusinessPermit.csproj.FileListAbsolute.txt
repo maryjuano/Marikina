@@ -145,3 +145,13 @@ C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Debug\Business
 C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Debug\BusinessPermit.Migrations.BuildingPermitUpdate.resources
 C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Debug\BusinessPermit.Migrations.BUildingPermitUpdate2.resources
 C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Debug\BusinessPermit.Migrations.BUildingPermitUpdate3.resources
+C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Debug\BusinessPermit.Migrations.PaymentUpdate.resources
+C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Debug\BusinessPermit.Migrations.DatabaseUpdate.resources
+C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Debug\BusinessPermit.Migrations.RequiredFieldUpdate.resources
+C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Debug\BusinessPermit.Migrations.Payments.resources
+C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Debug\BusinessPermit.Migrations.PaymentsUpdate.resources
+C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Debug\BusinessPermit.Migrations.paymentapplicationtype.resources
+C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Debug\BusinessPermit.Migrations.PaymentUpdates.resources
+C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\bin\itextsharp.dll
+C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\bin\itextsharp.xml
+C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Debug\BusinessPermit.Migrations.PaymentModification.resources

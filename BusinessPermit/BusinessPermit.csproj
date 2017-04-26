@@ -42,6 +42,9 @@
     <Reference Include="AutoMapper">
       <HintPath>..\packages\AutoMapper.4.1.1\lib\net45\AutoMapper.dll</HintPath>
     </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\packages\iTextSharp.5.5.11\lib\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -183,6 +186,7 @@
     <Compile Include="Controllers\BuildingPermitController.cs" />
     <Compile Include="Controllers\BusinessPermitController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
+    <Compile Include="Controllers\ewController.cs" />
     <Compile Include="Controllers\FeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LocationalController.cs" />
@@ -238,6 +242,38 @@
     <Compile Include="Migrations\201704221634087_BUildingPermitUpdate3.Designer.cs">
       <DependentUpon>201704221634087_BUildingPermitUpdate3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201704241048320_PaymentUpdate.cs" />
+    <Compile Include="Migrations\201704241048320_PaymentUpdate.Designer.cs">
+      <DependentUpon>201704241048320_PaymentUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704250737265_DatabaseUpdate.cs" />
+    <Compile Include="Migrations\201704250737265_DatabaseUpdate.Designer.cs">
+      <DependentUpon>201704250737265_DatabaseUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704250842545_RequiredFieldUpdate.cs" />
+    <Compile Include="Migrations\201704250842545_RequiredFieldUpdate.Designer.cs">
+      <DependentUpon>201704250842545_RequiredFieldUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704260330240_Payments.cs" />
+    <Compile Include="Migrations\201704260330240_Payments.Designer.cs">
+      <DependentUpon>201704260330240_Payments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704260336297_PaymentsUpdate.cs" />
+    <Compile Include="Migrations\201704260336297_PaymentsUpdate.Designer.cs">
+      <DependentUpon>201704260336297_PaymentsUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704260546300_paymentapplicationtype.cs" />
+    <Compile Include="Migrations\201704260546300_paymentapplicationtype.Designer.cs">
+      <DependentUpon>201704260546300_paymentapplicationtype.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704260612262_PaymentUpdates.cs" />
+    <Compile Include="Migrations\201704260612262_PaymentUpdates.Designer.cs">
+      <DependentUpon>201704260612262_PaymentUpdates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704260639220_PaymentModification.cs" />
+    <Compile Include="Migrations\201704260639220_PaymentModification.Designer.cs">
+      <DependentUpon>201704260639220_PaymentModification.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\ApplicationForms.cs" />
@@ -258,6 +294,8 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="dist\css\bootstrap-datetimepicker.min.css" />
+    <Content Include="dist\js\bootstrap-datetimepicker.min.js" />
     <Content Include="dist\css\agency.min.css" />
     <Content Include="dist\css\bootstrap-fileinput\css\fileinput.css" />
     <Content Include="dist\css\bootstrap-fileinput\css\fileinput.min.css" />
@@ -362,6 +400,7 @@
     <Content Include="dist\css\font-awesome-4.5.0\fonts\fontawesome-webfont.woff2" />
     <Content Include="dist\css\font-awesome-4.5.0\fonts\FontAwesome.otf" />
     <None Include="Properties\PublishProfiles\beb.pubxml" />
+    <None Include="Properties\PublishProfiles\hey.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="dist\js\helpers.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -440,7 +479,8 @@
     <Content Include="Views\BuildingPermit\Details.cshtml" />
     <Content Include="Views\BuildingPermit\Edit.cshtml" />
     <Content Include="Views\BuildingPermit\Index.cshtml" />
-    <Content Include="Views\BuildingPermit\aw.cshtml" />
+    <Content Include="Views\BuildingPermit\ApplicationSuccess.cshtml" />
+    <Content Include="Views\Payment\ApplicationSuccess.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -448,6 +488,7 @@
     <Folder Include="dist\js\angular\Filters\" />
     <Folder Include="Views\Audit\" />
     <Folder Include="Views\aw\" />
+    <Folder Include="Views\ew\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -483,6 +524,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201704221634087_BUildingPermitUpdate3.resx">
       <DependentUpon>201704221634087_BUildingPermitUpdate3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704241048320_PaymentUpdate.resx">
+      <DependentUpon>201704241048320_PaymentUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704250737265_DatabaseUpdate.resx">
+      <DependentUpon>201704250737265_DatabaseUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704250842545_RequiredFieldUpdate.resx">
+      <DependentUpon>201704250842545_RequiredFieldUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704260330240_Payments.resx">
+      <DependentUpon>201704260330240_Payments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704260336297_PaymentsUpdate.resx">
+      <DependentUpon>201704260336297_PaymentsUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704260546300_paymentapplicationtype.resx">
+      <DependentUpon>201704260546300_paymentapplicationtype.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704260612262_PaymentUpdates.resx">
+      <DependentUpon>201704260612262_PaymentUpdates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704260639220_PaymentModification.resx">
+      <DependentUpon>201704260639220_PaymentModification.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

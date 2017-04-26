@@ -39,10 +39,10 @@
             @Html.DisplayNameFor(model => model.MainOffice)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.TotalFloorArea)
+           Attachments
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.FloorAreaBusiness)
+           Status
         </th>      
        
     </tr>
@@ -75,10 +75,10 @@
             @Html.DisplayFor(modelItem => item.MainOffice)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.TotalFloorArea)
+            <a href="~/ZoningForm/DownloadAttachment?id=@item.ZoningClearanceId">Requirements</a>
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.FloorAreaBusiness)
+            @Html.DisplayFor(modelItem => item.Status)
         </td>
     </tr>
 }

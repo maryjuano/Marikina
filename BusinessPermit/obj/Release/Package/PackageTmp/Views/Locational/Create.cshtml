@@ -43,14 +43,14 @@
                         <div class="form-group">
                             <label class="control-label col-md-3">LC Permit Number</label>
                             <div class="col-md-9">
-                                @Html.TextBoxFor(model => model.LCPermitNumber, new { @class = "form-control", @placeholder = "Business Name" })
+                                @Html.TextBoxFor(model => model.LCPermitNumber, new { @class = "form-control", @placeholder = "LC Permit Number" })
                                 @Html.ValidationMessageFor(model => model.LCPermitNumber)
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-md-3">Date Issued</label>
                             <div class="col-md-9">
-                                @Html.TextBoxFor(model => model.DateIssued, new { @type = "date", @class = "form-control", @placeholder = "Owner Name" })
+                                @Html.TextBoxFor(model => model.DateIssued, new { @type = "date", @class = "form-control" })
                                 @Html.ValidationMessageFor(model => model.DateIssued)
                             </div>
                         </div>
@@ -58,7 +58,7 @@
                         <div class="form-group">
                             <label class="control-label col-md-3">Project</label>
                             <div class="col-md-9">
-                                @Html.TextBoxFor(model => model.Project, new { @class = "form-control", @placeholder = "Owner Name" })
+                                @Html.TextBoxFor(model => model.Project, new { @class = "form-control", @placeholder = "Project" })
                                 @Html.ValidationMessageFor(model => model.Project)
                             </div>
                         </div>
@@ -66,7 +66,7 @@
                         <div class="form-group">
                             <label class="control-label col-md-3">Location</label>
                             <div class="col-md-9">
-                                @Html.TextBoxFor(model => model.Location, new { @class = "form-control", @placeholder = "Owner Name" })
+                                @Html.TextBoxFor(model => model.Location, new { @class = "form-control", @placeholder = "Location" })
                                 @Html.ValidationMessageFor(model => model.Location)
                             </div>
                         </div>

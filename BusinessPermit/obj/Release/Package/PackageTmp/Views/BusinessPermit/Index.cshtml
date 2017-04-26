@@ -38,6 +38,9 @@
                 Assessed Amount            
             </th>
             <th>
+                Attachments
+            </th>
+            <th>
                 Status
             </th>
         </tr>
@@ -45,30 +48,35 @@
 
 
     @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.IsNew)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BusinessAccountNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BusinessName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OwnerName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BusinessNature)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AssessedAmount)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Status)
-            </td>
-        </tr>
-    }
+{
+    <tr ondblclick="OpenRecord('/BusinessPermit/Edit/' + @item.Id);" style="cursor:pointer">
+        <td>
+            @Html.DisplayFor(modelItem => item.IsNew)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BusinessAccountNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BusinessName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OwnerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BusinessNature)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AssessedAmount)
+        </td>
+       
+        <td>
+            <a href="~/BusinessPermit/DownloadAttachment?id=@item.Id">Requirements</a>
+        </td>
+      
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+    </tr>
+}
 
 </table>

@@ -52,6 +52,8 @@ namespace BusinessPermit.Models
         public string Status { get; set; }
         [Required(ErrorMessage = "Attachments are required.")]
         public byte[] Attachments { get; set; }
+        public string PaymentReference { get; set; }
+        public float TotalPayment { get; set; }
         public string ZoningClearanceReferenceNumber { get; set; }
         public int ZoningClearanceId { get; set; }
         public ZoningClearance ZoningClearance { get; set; }

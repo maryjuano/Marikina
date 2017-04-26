@@ -139,3 +139,17 @@ C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Release\Busine
 C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Release\BusinessPermit.Migrations.PaymentsIncluded.resources
 C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Release\BusinessPermit.Migrations.BusinessPermitUpdate.resources
 C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Release\BusinessPermit.Migrations.BusinessPermitUpdate1.resources
+C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Release\BusinessPermit.Migrations.BuildingPermit.resources
+C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Release\BusinessPermit.Migrations.BuildingPermitUpdate.resources
+C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Release\BusinessPermit.Migrations.BUildingPermitUpdate2.resources
+C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Release\BusinessPermit.Migrations.BUildingPermitUpdate3.resources
+C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Release\BusinessPermit.Migrations.PaymentUpdate.resources
+C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Release\BusinessPermit.Migrations.DatabaseUpdate.resources
+C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Release\BusinessPermit.Migrations.RequiredFieldUpdate.resources
+C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Release\BusinessPermit.Migrations.Payments.resources
+C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Release\BusinessPermit.Migrations.PaymentsUpdate.resources
+C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\bin\itextsharp.dll
+C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\bin\itextsharp.xml
+C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Release\BusinessPermit.Migrations.paymentapplicationtype.resources
+C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Release\BusinessPermit.Migrations.PaymentUpdates.resources
+C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Release\BusinessPermit.Migrations.PaymentModification.resources
