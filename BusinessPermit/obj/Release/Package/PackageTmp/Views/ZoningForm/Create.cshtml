@@ -110,11 +110,34 @@
         </div>
         <div class="form-horizontal">
             <div class="col-md-12">
-                <div class="form-group">
-                    <label class="control-label col-md-1">Attachments</label>
-                    <div class="col-md-11">
-                        <input id="Attachments" style="margin-top:5px;" name="attachments" class="attachments" type="file">
-                        @Html.ValidationMessageFor(model => model.Attachments)
+                <div class="col-md-6">
+                    <div class="alert alert-warning" role="alert">
+                        <p>
+                            <b>
+                                Important Note
+                                The following are the required attachment for this application:
+                            </b>
+                        </p>
+                        <ul>
+                            <li>
+                                Certified of Title
+                            </li>                 
+                            <li>
+                                Pro-Forms Affidavit
+                            </li>     
+                            <li>
+                               Barangay Clearance
+                            </li>         
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label col-md-3">Attachments</label>
+                        <div class="col-md-9">
+                            <input id="Attachments" style="margin-top:5px;" name="attachments" class="attachments" type="file">
+                            @Html.ValidationMessageFor(model => model.Attachments)
+                        </div>
                     </div>
                 </div>
             </div>

@@ -155,3 +155,8 @@ C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Debug\Business
 C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\bin\itextsharp.dll
 C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\bin\itextsharp.xml
 C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Debug\BusinessPermit.Migrations.PaymentModification.resources
+C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Debug\BusinessPermit.Migrations.UpdateHey.resources
+C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Debug\BusinessPermit.Migrations.Hey.resources
+C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Debug\BusinessPermit.Migrations.HeyHey.resources
+C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Debug\BusinessPermit.Migrations.bebeko.resources
+C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Debug\BusinessPermit.Migrations.locationalId.resources

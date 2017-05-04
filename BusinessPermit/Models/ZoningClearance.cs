@@ -20,7 +20,7 @@ namespace BusinessPermit.Models
         [Required(ErrorMessage = "This field is required.")]
         public string BusinessNature { get; set; }
         [Required(ErrorMessage = "This field is required.")]
-        public int ContactNumber { get; set; }
+        public string ContactNumber { get; set; }
         [Required(ErrorMessage = "This field is required.")]
         public string MainOffice { get; set; }
         [Required(ErrorMessage = "This field is required.")]

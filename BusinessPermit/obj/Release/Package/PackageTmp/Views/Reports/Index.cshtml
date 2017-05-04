@@ -1,0 +1,74 @@
+﻿@model IEnumerable<BusinessPermit.Models.Payment>
+
+
+@{
+    ViewBag.Title = "Reports";
+    ViewBag.CurrentEntity = "Payment";
+    ViewBag.WebPageTitle = "Payment Reports";
+}
+
+@section toolbarleft {
+    <li class="breadcrumb-item"><a href="~/Dashboard/Index">Home</a></li>
+    <li class="breadcrumb-item active">Payment List</li>
+}
+
+@section ToolbarRight {
+    <li><a href="~/Reports/" title="Payments"><span class="fa fa-money"></span>&nbsp;Payments</a></li>
+    <li><a href="~/Reports/BusinessPermit" title="Business Permit"><span class="fa fa-briefcase"></span>&nbsp;Business</a></li>
+    <li><a href="~/Reports/BuildingPermit" title="Building Permit"><span class="fa fa-building"></span>&nbsp;Building</a></li>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Application Type</th>
+            <th>
+                Payment Reference Number
+            </th>
+            <th>
+                Official Receipt Number
+            </th>
+            <th>
+                Total Payment
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>           
+        </tr>
+    </thead>
+
+    <tbody>
+
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.ApplicationType.GetEnumDescription()
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ReferenceNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OfficialReceiptNumber)
+                </td>
+                <td>
+                    @Html.DisplayForCurrency(item.TotalPayment)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>              
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section scripts {
+<script src="~/dist/js/tableExport.js"></script>
+<script src="~/dist/js/ga.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.table').bootstrapTable({ search: true, showExport : true, showToggle: true, showColumns: true });
+    });
+</script>
+}

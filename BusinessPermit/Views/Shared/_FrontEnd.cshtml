@@ -13,10 +13,10 @@
     <link href="~/dist/css/metro-bootstrap.min.css" rel="stylesheet" />
     <link href="~/dist/css/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
     <link href="~/dist/css/marikina.css" rel="stylesheet" />
-    <link href="~/dist/css/inspinia/animate.css" rel="stylesheet" />
-    <link href="~/dist/css/site-template.css" rel="stylesheet" />
+    <link href="~/dist/css/inspinia/animate.css" rel="stylesheet" />    
     <link href="~/dist/css/bootstrap-fileinput/css/fileinput.min.css" rel="stylesheet" />
     <link href="~/dist/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+    <link href="~/dist/css/site-template.css" rel="stylesheet" />
     @RenderSection("css", required: false)
 </head>
 <body>
@@ -25,7 +25,7 @@
             <div id="headerTitles">
                 <img src="~/Images/Marikina.png" width="451" height="79" border="0" usemap="#Map">
                 <map name="Map" id="Map">
-                    <area shape="rect" coords="27,25,425,53" href="http://marikina.gov.ph">
+                    <area shape="rect" coords="27,25,425,53" href="~/">
                 </map>
             </div>
         </div>
@@ -34,7 +34,22 @@
         <div class="animated fadeIn">
             @RenderBody()
         </div>
+
     </div>
+
+    <div class="footer">
+        <div class="pull-left footer-left">
+            <div class="record-status">
+               
+            </div>
+        </div>
+        <div class="pull-right footer-right">
+            <div class="status">
+               2017 Function Five | All Rights Reserved
+            </div>
+        </div>
+    </div>
+   
     <!-- jQuery -->
     <script src="~/dist/js/jQuery-2.1.4.min.js"></script>
     <!-- Bootstrap Core JavaScript -->

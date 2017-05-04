@@ -54,6 +54,8 @@
                             </div>
                         </div>
                     </div>
+
+
                 </div>
             </div>
         </div>
@@ -65,7 +67,7 @@
                         <div class="form-group">
                             <label class="control-label col-md-3">Permit Type</label>
                             <div class="col-md-9">
-                                @Html.DropDownList("BuildingTypePermit", new SelectList(ViewBag.BuildingType, "Value", "Text"), "Select Building Type", new { @class = "form-control" })
+                                @Html.DropDownList("BuildingTypePermit", new SelectList(ViewBag.BuildingType, "Value", "Text"), "Select Permit Type", new { @class = "form-control" })
                                 @Html.ValidationMessageFor(model => model.BuildingTypePermit)
                             </div>
                         </div>
@@ -91,6 +93,24 @@
                                 @Html.ValidationMessageFor(model => model.FormOfOwnerShip)
                             </div>
                         </div>
+                     
+              
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Lot No.</label>
+                                <div class="col-md-9">
+                                    @Html.TextBoxFor(model => model.LocationLotNumber, new { @class = "form-control", @placeholder = "Lot Number", })
+                                    @Html.ValidationMessageFor(model => model.LocationLotNumber)
+                                </div>
+                            </div>
+                       
+                        <div class="form-group">
+                            <label class="control-label col-md-3">TCT No.</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.LocationTCTNumber, new { @class = "form-control", @placeholder = "Location TCT Number", })
+                                @Html.ValidationMessageFor(model => model.LocationTCTNumber)
+                            </div>
+                        </div>
+
                         <div class="form-group">
                             <label class="control-label col-md-3">Total Cost</label>
                             <div class="col-md-9">
@@ -128,21 +148,39 @@
                                 @Html.ValidationMessageFor(model => model.ProposedConstructionDate)
                             </div>
                         </div>
+                       
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Block No.</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.LocationBlockNumber, new { @class = "form-control", @placeholder = "Block Number", })
+                                @Html.ValidationMessageFor(model => model.LocationBlockNumber)
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Brgy.</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.LocationBarangay, new { @class = "form-control", @placeholder = "Barangay", })
+                                @Html.ValidationMessageFor(model => model.LocationBarangay)
+                            </div>
+                        </div>
+
                         <div class="form-group">
                             <label class="control-label col-md-3">Work Scope</label>
                             <div class="col-md-9">
-                                @Html.DropDownList("ScopeOfWork", new SelectList(ViewBag.ScopeOfWork, "Value", "Text"), "Select Scope of Work", new { @class = "form-control", @id="scope" })
+                                @Html.DropDownList("ScopeOfWork", new SelectList(ViewBag.ScopeOfWork, "Value", "Text"), "Select Scope of Work", new { @class = "form-control", @id = "scope" })
                                 @Html.ValidationMessageFor(model => model.ScopeOfWork)
                             </div>
                         </div>
-                        <div class="form-group">            
-                            <label class="control-label col-md-3"></label>               
-                            <div class="col-md-9">                               
+                        <div class="form-group">
+                            <label class="control-label col-md-3"></label>
+                            <div class="col-md-9">
                                 @Html.TextBoxFor(model => model.ScopeOfWorkOther, new { @class = "form-control hidden", @placeholder = "Please specify scope of work", @required = true, @id = "scopetext" })
                                 @Html.ValidationMessageFor(model => model.ScopeOfWorkOther)
                             </div>
                         </div>
-                           
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
@@ -173,33 +211,78 @@
                                 @Html.ValidationMessageFor(model => model.TelephoneNumber)
                             </div>
                         </div>
+                       
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Street </label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.LocationStreet, new { @class = "form-control", @placeholder = "Location Street", })
+                                @Html.ValidationMessageFor(model => model.LocationStreet)
+                            </div>
+                        </div>             
+                        <div class="form-group">
+                            <label class="control-label col-md-3">City</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.LocationCity, new { @class = "form-control", @placeholder = "Location City", })
+                                @Html.ValidationMessageFor(model => model.LocationCity)
+                            </div>
+                        </div> 
+
                         <div class="form-group">
                             <label class="control-label col-md-3">Occupancy</label>
                             <div class="col-md-9">
-                                @Html.DropDownList("BuildingUse", new SelectList(ViewBag.BuildingUse, "Value", "Text"), "Use or Character of Occupancy", new { @class = "form-control", @id="buildinguse" })
+                                @Html.DropDownList("BuildingUse", new SelectList(ViewBag.BuildingUse, "Value", "Text"), "Use or Character of Occupancy", new { @class = "form-control", @id = "buildinguse" })
                                 @Html.ValidationMessageFor(model => model.BuildingUse)
                             </div>
-                        </div>   
+                        </div>
                         <div class="form-group">
                             <label class="control-label col-md-3"></label>
                             <div class="col-md-9">
                                 @Html.TextBoxFor(model => model.BuildingUseOther, new { @class = "form-control hidden", @placeholder = "Specify Use or Character of Occupancy", @required = true, @id = "buildingusetext" })
                                 @Html.ValidationMessageFor(model => model.BuildingUseOther)
                             </div>
-                        </div>                
+                        </div>  
                     </div>
                 </div>
             </div>
         </div>
         <div class="form-horizontal">
             <div class="col-md-12">
-                <div class="form-group">
-                    <label class="control-label col-md-1">Attachments</label>
-                    <div class="col-md-11">
-                        <input id="Attachments" style="margin-top:5px;" name="uploadFile" class="attachments" type="file">
-                        @Html.ValidationMessageFor(model => model.Attachment)
+                <div class="col-md-6">
+                    <div class="alert alert-warning" role="alert">
+                        <p>
+                            <b>
+                                Important Note
+                                The following are the required attachment for this application:
+                            </b>
+                            <ul>
+                                <li>
+                                    Barangay Clearance / Ceritification, Association Certificate
+                                </li>
+                                <li>
+                                    Consent of owner, Special Power of Attorney
+                                </li>
+                                <li>
+                                    Transfer Certificate of Title, Tax Declaration, Deed of Absolute Sale
+                                </li>
+                                <li>
+                                    Waiver of Rihts, Contract of Lot Award
+                                </li>
+                                <li>
+                                    Contract agreement with general constructor.
+                                </li>
+                            </ul>
+</div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label col-md-3">Attachments</label>
+                        <div class="col-md-9">
+                            <input id="Attachments" style="margin-top:5px;" name="uploadFile" class="attachments" type="file">
+                            @Html.ValidationMessageFor(model => model.Attachment)
+                        </div>
                     </div>
                 </div>
+               
             </div>
         </div>
     </div>

@@ -153,3 +153,8 @@ C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\bin\itextsharp.xml
 C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Release\BusinessPermit.Migrations.paymentapplicationtype.resources
 C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Release\BusinessPermit.Migrations.PaymentUpdates.resources
 C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Release\BusinessPermit.Migrations.PaymentModification.resources
+C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Release\BusinessPermit.Migrations.UpdateHey.resources
+C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Release\BusinessPermit.Migrations.Hey.resources
+C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Release\BusinessPermit.Migrations.HeyHey.resources
+C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Release\BusinessPermit.Migrations.bebeko.resources
+C:\Users\i-jcadiao\Documents\z\Marikina-master\BusinessPermit\obj\Release\BusinessPermit.Migrations.locationalId.resources

@@ -27,7 +27,7 @@
                 <div class="col-md-12">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label class="control-label col-md-3">App Number</label>
+                            <label class="control-label col-md-3">LC Permit Number</label>
                             <div class="col-md-9">
                                 @Html.TextBoxFor(model => model.ApplicationNumber, new { @class = "form-control", @readonly = "readonly", @placeholder = "Application Number" })
                                 @Html.ValidationMessageFor(model => model.ApplicationNumber)
@@ -40,7 +40,14 @@
                                 @Html.ValidationMessageFor(model => model.DateApplied)
                             </div>
                         </div>
-                        <div class="form-group">
+                        @*<div class="form-group">
+                            <label class="control-label col-md-3">TCT Permit Number</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.TCTNumber, new { @class = "form-control", @placeholder = "TCT Permit Number" })
+                                @Html.ValidationMessageFor(model => model.TCTNumber)
+                            </div>
+                        </div>*@
+                        @*<div class="form-group">
                             <label class="control-label col-md-3">LC Permit Number</label>
                             <div class="col-md-9">
                                 @Html.TextBoxFor(model => model.LCPermitNumber, new { @class = "form-control", @placeholder = "LC Permit Number" })
@@ -53,7 +60,7 @@
                                 @Html.TextBoxFor(model => model.DateIssued, new { @type = "date", @class = "form-control" })
                                 @Html.ValidationMessageFor(model => model.DateIssued)
                             </div>
-                        </div>
+                        </div>*@
 
                         <div class="form-group">
                             <label class="control-label col-md-3">Project</label>
@@ -104,21 +111,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.UsableOpenSpace, new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
-                                @Html.TextBoxFor(model => model.UsableOpenSpace, new { @class = "form-control", @placeholder = "Usable Open Space" })
-                                @Html.ValidationMessageFor(model => model.UsableOpenSpace)
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.TCTNumber, new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
-                                @Html.TextBoxFor(model => model.TCTNumber, new { @class = "form-control", @placeholder = "Usable Open Space" })
-                                @Html.ValidationMessageFor(model => model.TCTNumber)
-                            </div>
-                        </div>
+                     
 
                         <div class="form-group">
                             <label class="control-label col-md-2">Email Address</label>
@@ -135,13 +128,37 @@
     </div>
     <div class="form-horizontal">
         <div class="col-md-12">
-            <div class="form-group">
-                <label class="control-label col-md-1">Attachments</label>
-                <div class="col-md-11">
-                    <input id="Attachments" style="margin-top:5px;" name="attachments" class="attachments" type="file">
-                    @Html.ValidationMessageFor(model => model.Attachments)
+            <div class="col-md-6">
+                <div class="alert alert-warning" role="alert">
+                    <p>
+                        <b>
+                            Important Note
+                            The following are the required attachment for this application:
+                        </b>
+                    </p>
+                    <ul>
+                        <li>
+                           Certified True Copy of Transfer Certificate of Title (TCT)
+                        </li>
+                        <li>
+                           Affidavid of Consent to Construct
+                        </li>
+                        <li>
+                           Barangay Clearance
+                        </li>
+                    </ul>
                 </div>
             </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label col-md-3">Attachments</label>
+                    <div class="col-md-9">
+                        <input id="Attachments" style="margin-top:5px;" name="attachments" class="attachments" type="file">
+                        @Html.ValidationMessageFor(model => model.Attachments)
+                    </div>
+                </div>
+            </div>
+           
         </div>
     </div>
     <div class="form-group">

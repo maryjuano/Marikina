@@ -19,7 +19,7 @@ namespace BusinessPermit.Models
         public string BusinessNature { get; set; }
         public int DeliveryVehicles { get; set; }
         public double TotalAreaBusiness { get; set; }
-        public int ContactNumber { get; set; }
+        public string ContactNumber { get; set; }
         public int TotalEmployee { get; set; }
         public string RentedOwnerName { get; set; }
 

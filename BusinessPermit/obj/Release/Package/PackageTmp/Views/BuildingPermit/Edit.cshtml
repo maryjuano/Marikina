@@ -19,7 +19,7 @@
 }
 
 
-@using (Html.BeginForm("Create", "BusinessPermit", FormMethod.Post, new { enctype = "multipart/form-data" }))
+@using (Html.BeginForm("Edit", "BusinessPermit", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
     <div class="ibox-content">
@@ -158,8 +158,7 @@
                         <div class="form-group">
                             <label class="control-label col-md-3">Tel No.</label>
                             <div class="col-md-9">
-                                @Html.TextBoxFor(model => model.TelephoneNumber, new { @class = "form-control", @placeholder = "Telephone Number", })
-                                @Html.ValidationMessageFor(model => model.TelephoneNumber)
+                                <h4><span class="label label-default">@Model.ExpectedCompletionDate.ToLongDateString()</span></h4>
                             </div>
                         </div>
                         <div class="form-group">
@@ -183,7 +182,7 @@
     <input type="submit" value="Create" class="btn btn-default hidden" />
 }
 
-@section scripts 
+@section scripts {
     <script>
         $('#btnApprove').click(function () {
             $.ajax({

@@ -16,7 +16,7 @@ namespace BusinessPermit.Controllers
         // GET: /Payment/
         public ActionResult Index()
         {
-            return View(db.Payments.ToList());
+            return View(db.Payments.Where(p => p.Status == "Pending").ToList());
         }
 
         // GET: /Payment/Details/5
@@ -51,6 +51,7 @@ namespace BusinessPermit.Controllers
             if (ModelState.IsValid)
             {
                 payment.Status = "Pending";
+                payment.ReferenceNumber = payment.ReferenceNumber;
                 db.Payments.Add(payment);
                 db.SaveChanges();
                 return RedirectToAction("ApplicationSuccess");
@@ -80,24 +81,9 @@ namespace BusinessPermit.Controllers
             {
                await ApproveBusiness(payment);
             }
-            //ZoningClearance zoning = new ZoningClearance();
-            //LocationalClearance locational = new LocationalClearance();
-            //BuildingPermit building = new BuildingPermit();
-            //BusinessPermit.Models.BusinessPermit buiness = new Models.BusinessPermit();
-
-            //ZoningClearance zoningclearance = db.ZoningClearance.Find(id);
-            //if (zoningclearance == null)
-            //{
-            //    return HttpNotFound();
-            //}
-            //zoningclearance.Status = "Approved";
-            //zoningclearance.PaymentReference = base.RandomString();
-            //db.Entry(zoningclearance).State = EntityState.Modified;
-            //db.SaveChanges();
-            //List<Fee> fees = db.Fees.Include(p => p.ApplicationType).Where(p => p.ApplicationType.Description.Contains("Zoning")).ToList();
-            //EmailSender.SendMail(zoningclearance.EmailAddress, "Zoning Clearance Application : Approved", EmailSender.ZoningClearanceApprovedTemplate(zoningclearance, fees));
+           
             return RedirectToAction("Index");
-        }
+        }     
 
         public ActionResult ApplicationSuccess()
         {
@@ -174,7 +160,7 @@ namespace BusinessPermit.Controllers
                 db.Entry(payment).State = EntityState.Modified;
                 await db.SaveChangesAsync();
                 // email ung attachment with congratulations
-                EmailSender.SendMail(permit.EmailAddress, "Zoning Clearance Certification", EmailSender.ZoningClearanceCertifyTemplate());
+                EmailSender.SendMail(permit.EmailAddress, "Zoning Clearance Certification", EmailSender.ZoningClearanceCertifyTemplate(), EmailSender.CreateAttachment(permit));
             }           
         }
 
@@ -193,7 +179,7 @@ namespace BusinessPermit.Controllers
                 await db.SaveChangesAsync();
 
                 // email ung attachment with congratulations
-                EmailSender.SendMail(permit.EmailAddress, "Locational Clearance Certification", EmailSender.LocationalClearanceCertifyTemplate());
+                EmailSender.SendMail(permit.EmailAddress, "Locational Clearance Certification", EmailSender.LocationalClearanceCertifyTemplate(), EmailSender.CreateAttachment(permit));
             }   
         }
         private async Task ApproveBusiness(Payment payment)
@@ -210,7 +196,7 @@ namespace BusinessPermit.Controllers
                 await db.SaveChangesAsync();
 
                 // email ung attachment with congratulations
-                EmailSender.SendMail(permit.ZoningClearance.EmailAddress, "Business Permit Certification", EmailSender.LocationalClearanceCertifyTemplate());
+                EmailSender.SendMail(permit.ZoningClearance.EmailAddress, "Business Permit Certification", EmailSender.LocationalClearanceCertifyTemplate(), EmailSender.CreateAttachment(permit));
             }   
         }
 
@@ -228,7 +214,7 @@ namespace BusinessPermit.Controllers
                 await db.SaveChangesAsync();
 
                 // email ung attachment with congratulations
-                EmailSender.SendMail(permit.LocationalClearance.EmailAddress, "Building Permit Certification", EmailSender.LocationalClearanceCertifyTemplate());
+                EmailSender.SendMail(permit.LocationalClearance.EmailAddress, "Building Permit Certification", EmailSender.BuildingPermitCertifyTemplate(), EmailSender.CreateAttachment(permit));
             }   
         }
     }

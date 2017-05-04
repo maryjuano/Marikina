@@ -1,0 +1,79 @@
+﻿@model IEnumerable<BusinessPermit.Models.BuildingPermit>
+
+
+@{
+    ViewBag.Title = "Reports";
+    ViewBag.CurrentEntity = "Building Permit";
+    ViewBag.WebPageTitle = "Building Permit Reports";
+}
+
+@section toolbarleft {
+    <li class="breadcrumb-item"><a href="~/Dashboard/Index">Home</a></li>
+    <li class="breadcrumb-item active">Building Permit List</li>
+}
+
+@section ToolbarRight {
+    <li><a href="~/Reports/" title="Payments"><span class="fa fa-money"></span>&nbsp;Payments</a></li>
+    <li><a href="~/Reports/BusinessPermit" title="Business Permit"><span class="fa fa-briefcase"></span>&nbsp;Business</a></li>
+    <li><a href="~/Reports/BuildingPermit" title="Building Permit"><span class="fa fa-building"></span>&nbsp;Building</a></li>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Application Number
+            </th>
+            <th>
+                Full Name
+            </th>
+            <th>
+                TIN
+            </th>
+            <th>
+                Estimated Cost
+            </th>          
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+           
+        </tr>
+    </thead>
+
+    <tbody>
+
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ApplicationNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)&nbsp;@Html.DisplayFor(modelItem => item.LastName)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.TIN)
+                </td>
+                <td>
+                    @Html.DisplayForCurrency(item.TotalEstimatedCost)
+                </td>               
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>               
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+@section scripts {
+    <script src="~/dist/js/tableExport.js"></script>
+    <script src="~/dist/js/ga.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.table').bootstrapTable({ search: true, showExport : true, showToggle: true, showColumns: true });
+        });
+    </script>
+}

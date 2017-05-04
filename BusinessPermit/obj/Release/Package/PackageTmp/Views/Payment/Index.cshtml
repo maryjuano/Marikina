@@ -18,33 +18,49 @@
 
 <table class="table table-hover">
     <thead>
-        <tr>            
+        <tr>
+            <th>Application Type</th>
             <th>
                 Payment Reference Number
-            </th>      
+            </th>
             <th>
                 Official Receipt Number
-            </th>         
+            </th>
+            <th>
+                Total Payment
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.Status)
             </th>
+            <th></th>
         </tr>
     </thead>
 
+    <tbody>
 
-    @foreach (var item in Model)
-{
-    <tr ondblclick="OpenRecord('/Payment/Edit/' + @item.Id);" style="cursor:pointer">       
-        <td>
-            @Html.DisplayFor(modelItem => item.ReferenceNumber)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.OfficialReceiptNumber)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Status)
-        </td>
-    </tr>
-}
 
+        @foreach (var item in Model)
+        {
+            <tr ondblclick="OpenRecord('/Payment/Edit/' + @item.Id);" style="cursor:pointer">
+                <td>
+                   @item.ApplicationType.GetEnumDescription()
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ReferenceNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OfficialReceiptNumber)
+                </td>
+                <td>
+                    @Html.DisplayForCurrency(item.TotalPayment)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.LinkWithIcon("Payment", "Edit", item.Id, "fa fa-pencil")
+                </td>
+            </tr>
+        }
+    </tbody>
 </table>

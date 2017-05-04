@@ -15,7 +15,7 @@ namespace BusinessPermit.Controllers
         // GET: /BuildingPermit/
         public ActionResult Index()
         {
-            return View(db.BuildingPermits.ToList());
+            return View(db.BuildingPermits.Where(p => p.Status == "Pending").ToList());
         }
 
         // GET: /BuildingPermit/Details/5
@@ -45,13 +45,12 @@ namespace BusinessPermit.Controllers
         // POST: /BuildingPermit/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+        [HttpPost]    
         public ActionResult Create([Bind(Include = "BuildingPermitId,BuildingTypePermit,ApplicationNumber,AreaNumber,LastName,FirstName,MiddleInitial,TIN,FormOfOwnerShip,OwnerStreetNumber,OwnerStreet,OwnerBarangay,OwnerCity,OwnerZipCode,TelephoneNumber,LocationLotNumber,LocationBlockNumber,LocationTCTNumber,LocationTaxDescriptionNumber,LocationStreet,LocationBarangay,LocationCity,ScopeOfWork,ScopeOfWorkOther,BuildingUse,BuildingUseOther,OccupancyClassified,NumberOfUnits,TotalFloorArea,TotalEstimatedCost,ProposedConstructionDate,ExpectedCompletionDate,CreatedOn,Status,PaymentReference,LocationaClearanceReference")] BuildingPermit buildingpermit, HttpPostedFileBase uploadFile)
         {
             if (uploadFile != null)
             {
-                LocationalClearance locational = db.LocationalClearance.SingleOrDefault(z => z.ApplicationNumber == buildingpermit.LocationaClearanceReference);
+                LocationalClearance locational = db.LocationalClearance.Where(z => z.ApplicationNumber == buildingpermit.LocationaClearanceReference).FirstOrDefault();
 
                 if (locational == null)
                 {
@@ -65,7 +64,7 @@ namespace BusinessPermit.Controllers
                 buildingpermit.Attachment = base.GetFileBytes(uploadFile);
                 buildingpermit.CreatedOn = DateTime.Now;
                 buildingpermit.Status = "Pending";
-                buildingpermit.LocationalId = locational.LocationalClearanceId;               
+                buildingpermit.LocationalClearanceId = locational.LocationalClearanceId;               
                 db.BuildingPermits.Add(buildingpermit);              
                 db.SaveChanges();
                 return RedirectToAction("ApplicationSuccess");

@@ -13,6 +13,7 @@
     <link href="~/dist/css/site-template.css" rel="stylesheet" />
     <link href="~/dist/css/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
     <link href="~/dist/css/inspinia/animate.css" rel="stylesheet" />
+    <link href="~/dist/bootstrap-table.min.css" rel="stylesheet" />
 </head>
 <body>
     @Html.Partial("_Navigation")
@@ -37,11 +38,20 @@
         </div>
         <div id="modal-container"></div>
     </div>
+   
+   
     <script src="~/dist/js/jQuery-2.1.4.min.js"></script>
     <script src="~/dist/js/bootstrap.min.js"></script>
     <script src="~/dist/js/app.js"></script>
     <script src="~/Scripts/jquery.validate.min.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/bootstrap-table.min.js"></script>
+    <script src="~/dist/js/bootstrap-table-export.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.table.table-hover').bootstrapTable({ search: true });
+        });       
+    </script>
     @*@Scripts.Render("~/dist/js")
     @Scripts.Render("~/bundles/jqueryval")*@
     @RenderSection("scripts", required: false)

@@ -13,6 +13,7 @@ namespace BusinessPermit.Models
         public string ReferenceNumber { get; set; }
         [Required(ErrorMessage = "Official Receipt Number is required")]
         public string OfficialReceiptNumber { get; set; }
+        [Required(ErrorMessage = "Application Type is required")]
         public PaymentApplicationType? ApplicationType { get; set; }
         public float TotalPayment { get; set; }
         public string Status { get; set; }

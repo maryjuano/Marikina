@@ -31,15 +31,22 @@ namespace BusinessPermit.Models
         public int OwnerZipCode { get; set; }
         [Required(ErrorMessage = "Telephone Number is required.")]
         public string TelephoneNumber { get; set; }
+        [Required(ErrorMessage = "Lot Number is required.")]
         public string LocationLotNumber { get; set; }
+        [Required(ErrorMessage = "Block Number is required.")]
         public string LocationBlockNumber { get; set; }
+        [Required(ErrorMessage = "TCT Number is required.")]
         public string LocationTCTNumber { get; set; }
+
         public string LocationTaxDescriptionNumber { get; set; }
+        [Required(ErrorMessage = "Street is required.")]
         public string LocationStreet { get; set; }
+        [Required(ErrorMessage = "Barangay is required.")]
         public string LocationBarangay { get; set; }
+        [Required(ErrorMessage = "City is required.")]
         public string LocationCity { get; set; }
         [Required(ErrorMessage = "Scope of Work is required.")]
-        public ScopeOfWork ScopeOfWork { get; set; }     
+        public ScopeOfWork ScopeOfWork { get; set; }
         public string ScopeOfWorkOther { get; set; }
         [Required(ErrorMessage = "Building Use is required.")]
         public BuildingUse BuildingUse { get; set; }
@@ -59,7 +66,7 @@ namespace BusinessPermit.Models
         public float TotalPayment { get; set; }
         [Required(ErrorMessage = "LC Reference Number is required.")]
         public string LocationaClearanceReference { get; set; }
-        public int LocationalId { get; set; }
+        public int LocationalClearanceId { get; set; }
         public LocationalClearance LocationalClearance { get; set; }
     }
 

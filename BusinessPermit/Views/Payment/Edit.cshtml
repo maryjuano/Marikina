@@ -10,9 +10,10 @@
     <li class="breadcrumb-item"><a href="~/Payment/">Pending Payments</a></li>
     <li class="breadcrumb-item active">@Model.ReferenceNumber<li>
 }
+
+
 @section toolbarright {
-<li><a href="#" id="btnApprove" title="Save User"><span class="fa fa-check"></span>&nbsp;APPROVE</a></li>
-<li><a href="#" id="btnDisqualify" title="Save User"><span class="fa fa-ban"></span>&nbsp;DENIED</a></li>
+<li><a href="#" id="btnApprove" title="Save User"><span class="fa fa-check"></span>&nbsp;VERIFY</a></li>
 }
 
 
@@ -68,12 +69,9 @@
     <script>
         $('#btnApprove').click(function () {
             $('#status').val('Approved');
+            $(this).addClass('disabled');
             $('#submit').click();
         });
-
-        $('#btnDisqualify').click(function () {
-           $('#status').val('Denied');
-            $('#submit').click();
-        })
+     
     </script>
 }

@@ -24,7 +24,7 @@
                         <div class="form-group">
                             <label class="control-label col-md-3">Permit Type</label>
                             <div class="col-md-9">
-                                @Html.DropDownList("ApplicationType", new SelectList(ViewBag.ApplicationType, "Value", "Text"), "Select ApplicationType Type", new { @class = "form-control" })
+                                @Html.DropDownList("ApplicationType", new SelectList(ViewBag.ApplicationType, "Value", "Text"), "Select Application Type", new { @class = "form-control" })
                                 @Html.ValidationMessageFor(model => model.ApplicationType)
                             </div>
                         </div>                      

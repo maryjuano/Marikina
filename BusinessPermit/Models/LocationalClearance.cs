@@ -10,10 +10,8 @@ namespace BusinessPermit.Models
     {
         public int LocationalClearanceId { get; set; }
         public string ApplicationNumber { get; set; }
-        public DateTime DateApplied { get; set; }
-        [Required(ErrorMessage = "This field is required.")]
-        public string LCPermitNumber { get; set; }
-        [Required(ErrorMessage = "This field is required.")]
+        public DateTime DateApplied { get; set; }       
+        public string LCPermitNumber { get; set; }        
         public DateTime DateIssued { get; set; }
         [Required(ErrorMessage = "This field is required.")]
         public string Project { get; set; }
@@ -28,8 +26,7 @@ namespace BusinessPermit.Models
         [Required(ErrorMessage = "This field is required.")]
         public double LandArea { get; set; }
         [Required(ErrorMessage = "This field is required.")]
-        public int UsableOpenSpace { get; set; }
-        [Required(ErrorMessage = "This field is required.")]
+        public int UsableOpenSpace { get; set; }     
         public string TCTNumber { get; set; }
         public float TotalPayment { get; set; }
         public string PaymentReference { get; set; }

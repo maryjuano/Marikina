@@ -25,8 +25,7 @@ namespace BusinessPermit.Controllers
             return View();
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+        [HttpPost]     
         public ActionResult Create([Bind(Include = "Id,IsNew,BusinessAccountNumber,DateApplied,BusinessName,OwnerName,BusinessAddress,BusinessNature,DeliveryVehicles,TotalAreaBusiness,ContactNumber,TotalEmployee,RentedOwnerName,MonthlyRental,JanGrossReceipt,FebGrossReceipt,MarGrossReceipt,AprGrossReceipt,MayGrossReceipt,JunGrossReceipt,JulGrossReceipt,AugGrossReceipt,SepGrossReceipt,OctGrossReceipt,NovGrossReceipt,DecGrossReceipt,TotalGrossReceipt,CapitalInvestment,DateStartedRemarks,CapitalInvestmentRemarks,AreaRemarks,GrossSalesPerDay,GrossSalesPerYear,PreviousBasisLicenseTax,CurrentBasisLicenseTax,AssessedAmount,Status,ZoningClearanceReferenceNumber")] BusinessPermit.Models.BusinessPermit businesspermit, HttpPostedFileBase uploadFile)
         {
             if (uploadFile != null)
@@ -34,11 +33,23 @@ namespace BusinessPermit.Controllers
                 businesspermit.Attachments = base.GetFileBytes(uploadFile);
                 businesspermit.DateApplied = DateTime.Now;
                 businesspermit.Status = "Pending";
-                ZoningClearance zoning = db.ZoningClearance.SingleOrDefault(z => z.ApplicationNumber == businesspermit.ZoningClearanceReferenceNumber);
+                ZoningClearance zoning = db.ZoningClearance.Where(z => z.ApplicationNumber == businesspermit.ZoningClearanceReferenceNumber).FirstOrDefault();
 
                 if (zoning == null)
                 {
                     return View(businesspermit);
+                }
+
+                if (businesspermit.IsNew == false)
+                {
+                    BusinessPermit.Models.BusinessPermit previous = db.BusinessPermits.Where(z => z.BusinessAccountNumber == businesspermit.BusinessAccountNumber).OrderBy(p => p.DateApplied).FirstOrDefault();
+                    if (previous != null)
+                    {
+                        if (previous.TotalGrossReceipt > businesspermit.TotalGrossReceipt)
+                        {
+                            businesspermit.TotalGrossReceipt = previous.TotalGrossReceipt;
+                        }
+                    }
                 }
 
                 businesspermit.BusinessAddress = zoning.BusinessAddress;

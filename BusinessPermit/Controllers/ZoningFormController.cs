@@ -48,8 +48,7 @@ namespace BusinessPermit.Controllers
         // POST: /ZoningForm/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+        [HttpPost]     
         public ActionResult Create([Bind(Include = "ZoningClearanceId,ApplicationNumber,DateApplied,BusinessName,OwnerName,BusinessAddress,BusinessNature,ContactNumber,MainOffice,TotalFloorArea,FloorAreaBusiness,EmailAddress,Fees")] ZoningClearance zoningclearance, HttpPostedFileBase attachments)
         {
             if (attachments != null)
@@ -81,7 +80,7 @@ namespace BusinessPermit.Controllers
             zoningclearance.TotalPayment = fees.Sum(f => f.Price);
             zoningclearance.PaymentReference = base.RandomString();
             db.Entry(zoningclearance).State = EntityState.Modified;
-            db.SaveChanges();  
+            db.SaveChanges();
             EmailSender.SendMail(zoningclearance.EmailAddress,
                 "Zoning Clearance Application : Approved",
                 EmailSender.ZoningClearanceApprovedTemplate(zoningclearance, fees));
@@ -176,7 +175,7 @@ namespace BusinessPermit.Controllers
                 return File(array, System.Net.Mime.MediaTypeNames.Application.Octet, "record-not-found");
             }
 
-            return File(record.Attachments, System.Net.Mime.MediaTypeNames.Application.Octet, record.ApplicationNumber + ".xlsx");
+            return File(record.Attachments, System.Net.Mime.MediaTypeNames.Application.Octet, record.ApplicationNumber + ".docx");
         }
 
         private string GenerateApplicationNumber()
